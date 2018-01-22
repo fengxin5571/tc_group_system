@@ -1,0 +1,25 @@
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body {
+    font-family: Tahoma, Arial, Helvetica, "寰蒋闆呴粦";
+    font-size: 12px;
+    background: #eee;
+    color: #999;
+    width: 100%;
+    height: auto;
+}
+html {
+    overflow-y: scroll;
+    width: 100%;
+    height: auto;
+}
+ul,
+ol {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}

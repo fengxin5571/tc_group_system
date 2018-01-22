@@ -1,0 +1,172 @@
+body,html{
+	background: #fff;
+}
+.header_qty{
+	width: 100%;
+	height: 0.86rem;
+	margin: auto;
+	overflow: hidden;
+	background: #F9F9F9;
+}
+.headerNav_qty{
+	width: 6rem;
+	height: 0.86rem;
+	margin: auto;
+	overflow: hidden;
+}
+.logoImg_qty{
+	width: 1.47rem;
+	height: 0.53rem;
+	float: left;
+	background-image: url(../images/logo_qty.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-top: 0.165rem;
+}
+.register_qty{
+	float: right;
+	font-size: 0.24rem;
+	line-height: 0.86rem;
+	color: #333333;
+}
+.register_qty a{
+	color: #F69C1C;
+}
+.registerBox_qty{
+	width: 100%;
+	margin: auto;
+	overflow: hidden;
+}
+.loginInput_qty{
+	width: 5.6rem;
+	overflow: hidden;
+	margin: auto;
+	margin-top: 0.2rem;
+}
+.loginInputBox_qty,.loginInputBox_qty_qty{
+	width: 5.6rem;
+	height: 0.8rem;
+	float: left;
+	position: relative;
+	margin-top: 0.1rem;
+}
+.loginInputBox_qty input{
+	width: 5.6rem;
+	height: 0.8rem;
+	float: left;
+	outline: none;
+	border-bottom: 1px solid #ccc;
+	text-indent: 0.5rem;
+	font-size: 0.24rem;
+	letter-spacing: 0.02rem;
+}
+.loginInputBox_qty_qty .verInput{
+	width: 3.32rem;
+	height: 0.8rem;
+	float: left;
+	outline: none;
+	border-bottom: 1px solid #ccc;
+	text-indent: 0.5rem;
+	font-size: 0.24rem;
+	letter-spacing: 0.02rem;
+}
+.iphone,.key,.ver,.info{
+	height: 0.3rem;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	top: 0.25rem;
+	left: 0rem;
+}
+.iphone{
+	width: 0.21rem;
+	background-image: url(../images/ipone_qty.png);
+}
+.key{
+	width: 0.24rem;
+	background-image: url(../images/key_qty.png);
+}
+.ver{
+	width: 0.24rem;
+	background-image: url(../images/ver_qty.png);
+}
+.info{
+	width: 0.28rem;
+	height: 0.32rem;
+	top: 0.24rem;
+	background-image: url(../images/info_qty.png);
+}
+.verImg_qty{
+	float: right;
+	width: 1.85rem;
+	height: 0.6rem;
+	margin-top: 0.2rem;
+	border-radius: 0.08rem;
+}
+.verImg_qty img{
+	float: left;
+	width: 1.85rem;
+	height: 0.6rem;
+	border-radius: 0.08rem;
+}
+.submit_qty{
+	float: right;
+	width: 1.85rem;
+	height: 0.6rem;
+	margin-top: 0.2rem;
+	border-radius: 0.08rem;
+}
+.submit_qty input{
+	float: left;
+	width: 1.85rem;
+	height: 0.6rem;
+	font-size: 0.24rem;
+	outline: none;
+	color: #fff;
+	border-radius: 0.08rem;
+	background: #CCCCCC;
+}
+.checkBox{
+	width: 5.6rem;
+	height: 0.8rem;
+	float: left;
+}
+.checkBox label{
+	width: 5.6rem;
+	height: 0.8rem;
+	float: left;
+	font-size: 0.2rem;
+	line-height: 0.8rem;
+}
+.checkBox label input{
+	width: 0.24rem;
+	height: 0.24rem;
+	float: left;
+	margin-top: 0.28rem;
+	margin-right: 0.1rem;
+	background-color: #fe6d32;
+}
+.checkBox label span{
+	color: #F69C1C;
+}
+.btn_qty{
+	width: 5.6rem;
+	height: 0.8rem;
+	background: #fff;
+	outline: none;
+	border: none;
+	float: left;
+	margin-top: 0.2rem;
+	padding: 0rem;
+	border-radius: 0.1rem;
+	border: 1px solid #ccc;
+}
+.btn_qty a{
+	width: 5.6rem;
+	height: 0.8rem;
+	float: left;
+	line-height: 0.8rem;
+	color: #333333;
+	font-size: 0.34rem;
+	letter-spacing: 0.05rem;
+}

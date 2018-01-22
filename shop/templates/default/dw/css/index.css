@@ -1,0 +1,743 @@
+.banner_yyt{
+    width: 100%;
+    height: 539px;
+    margin-bottom: 30px;
+}
+.banner_con{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.banner_b{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.8s ease;
+}
+.banner_b:first-child{
+    z-index: 1;
+}
+.banner_s{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+.banner_link{
+    width: 100%;
+    height: 100%;
+}
+.banner_link img{
+    width: 100%;
+    height: 100%;
+}
+.banner_btn{
+    width: 96px;
+    height: 14px;
+    position: absolute;
+    left: 50%;
+    margin-left: -48px;
+    bottom: 36px;
+    z-index: 99999;
+}
+.btn_one{
+    width: 14px;
+    height: 14px;
+    margin: 0 5px;
+    float: left;
+    box-sizing: border-box;
+    border: 1px solid #9dc919;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.btn_left{
+    width: 40px;
+    height: 70px;
+    position: absolute;
+    left: 50%;
+    margin-left: -590px;
+    top: 50%;
+    margin-top: -35px;
+    background: url("../image/left_green.png");
+    background-size: 100% 100%;
+    z-index: 99999;
+    cursor: pointer;
+}
+.btn_left:hover{
+	margin-top: -34px;
+    background: url("../image/left_orange.png");
+}
+.btn_right{
+    width: 40px;
+    height: 70px;
+    position: absolute;
+    right: 50%;
+    margin-right: -590px;
+    top: 50%;
+    margin-top: -35px;
+    background: url("../image/right_green.png");
+    background-size: 100% 100%;
+    z-index: 99999;
+    cursor: pointer;
+}
+.btn_right:hover{
+	margin-top: -34px;
+    background: url("../image/right_orange.png");
+}
+.health_area{
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 27px;
+}
+.area_title{
+    width: 151px;
+    height: 47px;
+    background: url("../image/health_area.png");
+    background-size: 100% 100%;
+    margin-bottom: 10px;
+}
+.area_con{
+    width: 100%;
+    height: 386px;
+    margin-top: 61px;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background: #fff;
+}
+.area_left{
+    width: 465px;
+    height: 100%;
+    float: left;
+    /*465  */
+}
+.area_cut_off{
+    float: left;
+    width: 1px;
+    height: 384px;
+    background: url("../image/cut_off.png");
+    background-size: 100% 100%;
+}
+.find_dct{
+    width: 137px;
+    height: 100%;
+    float: left;
+}
+.find_dct_a{
+    width: 100%;
+    height: 25%;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+.find_dct_a:hover{
+    background: #9cc813;
+}
+.dct_a_a{
+    width: 23px;
+    height: 23px;
+    background: url("../image/find_md.png");
+    background-size: 100% 100%;
+    margin-top: 36px;
+    margin-left: 12px;
+    float: left;
+}
+.find_dct_a:hover .dct_a_a{
+    background: url("../image/find_md2.png");
+}
+.dct_a_b{
+    float: left;
+    width: 100px;
+    height: 100%;
+    line-height: 96px;
+    font-size: 22px;
+    color: #4d4d4d;
+    text-align: center;
+}
+.find_dct_a:hover .dct_a_b{
+    color: #fff;
+}
+.dct_one_yyt{
+    background: url("../image/find_ys.png");
+}
+.find_dct_a:hover .dct_one_yyt{
+    background: url("../image/find_ys2.png");
+}
+.dct_two_yyt{
+    background: url("../image/find_cp.png");
+}
+.find_dct_a:hover .dct_two_yyt{
+    background: url("../image/find_cp2.png");
+}
+.dct_three_yyt{
+    background: url("../image/find_sp.png");
+}
+.find_dct_a:hover .dct_three_yyt{
+    background: url("../image/find_sp2.png");
+}
+.area_left_con{
+    width: 328px;
+    height: 100%;
+    float: left;
+}
+.find_md{
+    width: 100%;
+    height: auto;
+}
+.find_md_title{
+    width: 250px;
+    height: 76px;
+    border-bottom: 1px dashed #e3e3e3;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 76px;
+    font-size: 24px;
+    margin-top: 10px;
+    color: #f69c1c;
+}
+.find_md_con{
+    width: 250px;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-top: 10px;
+}
+.find_md_one{
+    width: auto;
+    height: auto;
+    line-height: 24px;
+    font-size: 18px;
+    margin: 25px 0;
+    padding: 0 13px;
+    color: #a7a7a7;
+    cursor: pointer;
+    float: left;
+}
+.find_md_one a{
+    width: 100%;
+    height: 100%;
+    color: #a7a7a7;
+}
+.find_md_one a:hover{
+    color: #f69c1c;
+}
+.find_md_more{
+    width: 116px;
+    height: 39px;
+    margin: 0 auto;
+    border-radius: 19px;
+    background: #f69c1c;
+    text-align: center;
+    line-height: 39px;
+    color: #fff;
+    font-size: 18px;
+    display: block;
+}
+.find_product{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: 18px;
+    margin: 15px 0;
+    color: #a7a7a7;
+}
+.find_product a{
+    color: #a7a7a7;
+}
+.find_product a:hover{
+    color: #f69c1c;
+}
+/************************************************************************************************************************/
+.area_right{
+    width: 730px;
+    height: 100%;
+    float: right;
+    position: relative;
+}
+.health_select{
+    width: 310px;
+    height: 62px;
+    position: absolute;
+    top: -62px;
+    left: 37px;
+    border: 1px solid #dddddd;
+    box-sizing: border-box;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+}
+.health_k_q{
+    cursor: pointer;
+}
+.health_k_q:first-child{
+    width: 154px;
+    height: 61px;
+    background: #fff;
+    color: #9cc813;
+    float: left;
+    text-align: center;
+    line-height: 62px;
+    font-size: 24px;
+}
+.health_k_q:nth-child(2){
+    width: 154px;
+    height: 61px;
+    background: #dddddd;
+    color: #717171;
+    float: left;
+    text-align: center;
+    line-height: 62px;
+    font-size: 24px;
+}
+.health_zs{
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+    padding-left: 30px;
+    box-sizing: border-box;
+}
+.health_zs_{
+    display: none;
+}
+.health_zs_one{
+    width: 680px;
+    height: auto;
+    overflow: hidden;
+    margin: 25px 0;
+}
+.zs_one_a{
+    width: auto;
+    font-size: 24px;
+    color: #f69c1c;
+    line-height: 30px;
+    float: left;
+}
+.zs_one_b{
+    width: 30px;
+    font-size: 12px;
+    line-height: 30px;
+    float: left;
+    text-align: center;
+    color: #a7a7a7;
+}
+.zs_one_c{
+    width: 290px;
+    float: left;
+    line-height: 30px;
+    font-size: 18px;
+    color: #a0a0a0;
+}
+.zs_one_c:hover{
+    color: #f7a32b;
+}
+.zs_one_d{
+    width: 290px;
+    float: left;
+    line-height: 30px;
+    font-size: 18px;
+    color: #a0a0a0;
+}
+.zs_one_d:hover{
+    color: #f7a32b;
+}
+.haelth_wd_one{
+    padding-top: 10px;
+    box-sizing: border-box;
+    margin-top: 15px;
+}
+.wd_one_a{
+    width: auto;
+    overflow: hidden;
+    height: auto;
+    font-size: 16px;
+    color: #333333;
+    line-height: 30px;
+    display: block;
+}
+.wd_one_b{
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 25px;
+    color: #b4b4b4;
+    padding-right: 30px;
+    box-sizing: border-box;
+}
+.wd_one_c{
+    width: 46px;
+    height: 17px;
+    border-radius: 8px;
+    background: #f69c1c;
+    text-align: center;
+    line-height: 17px;
+    font-size: 12px;
+    color: #fff;
+    float: right;
+    margin-right: 40px;
+}
+.health_answer{
+    width: 1200px;
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 25px;
+}
+.health_a_title{
+    width: 239px;
+    height: 49px;
+    background: url("../image/health_a_title.png") no-repeat;
+}
+.health_a_con{
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+}
+.health_a_one{
+    width: 50%;
+    height: 160px;
+    overflow: hidden;
+    margin-top: 35px;
+    float: left;
+}
+.health_a_header{
+    width: 129px;
+    height: 129px;
+    border-radius: 50%;
+    background: url("../image/health_a_img.png") no-repeat;
+    background-size: 100% 100%;
+    float: left;
+}
+.health_a_right{
+    float: left;
+    margin-left: 20px;
+    width: 375px;
+    height: 40px;
+    border-bottom: 1px dashed #c8c8c8;
+    overflow: hidden;
+}
+.health_a_name{
+    width: auto;
+    float: left;
+    height: auto;
+    overflow: hidden;
+    font-size: 18px;
+    text-align: left;
+    color: #404040;
+    text-decoration: none;
+}
+.health_a_name span{
+    display: block;
+}
+.health_a_name span:nth-child(2){
+    font-size: 8px;
+    color: #c0c0c0;
+}
+.health_a_phone{
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    font-size: 12px;
+    color: #404040;
+    margin-left: 25px;
+}
+.health_a_mendian{
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    font-size: 12px;
+    color: #404040;
+    margin-left: 25px;
+}
+.health_b_right{
+    width: 395px;
+    height: auto;
+    overflow: hidden;
+}
+.health_b_q{
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    font-size: 14px;
+    color: #f69c1c;
+    margin-left: 23px;
+    line-height: 22px;
+    margin-top: 5px;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+.health_b_a{
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    font-size: 14px;
+    color: #999999;
+    margin-left: 23px;
+    line-height: 25px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+.health_b_more{
+    width: 65px;
+    height: 18px;
+    border-radius: 8px;
+    background: #f69c1c;
+    text-align: center;
+    line-height: 18px;
+    font-size: 12px;
+    color: #fff;
+    margin-left: 25px;
+    text-decoration: none;
+}
+.health_jt{
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 27px;
+}
+.health_jt_title{
+    width: 149px;
+    height: 45px;
+    background: url("../image/health_jt_title.jpg") no-repeat;
+    margin-bottom: 40px;
+}
+.health_jt_con{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.health_jt_a{
+    width: 287px;
+    height: 454px;
+    float: left;
+    background: #ccc;
+    border-radius: 5px;
+}
+.health_jt_b{
+    width: 438px;
+    height: 283px;
+    float: left;
+    margin-left: 18px;
+    background: url("../image/banner.png") no-repeat;
+    background-size: 100% 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 25px -6px #D8D8D8;  
+}
+.health_jt_one{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #81818a;
+}
+.health_jt_one i:first-child{
+    font-style: normal;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    line-height: 50px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: #fff;
+    float: left;
+}
+.health_jt_one i:nth-child(2){
+    font-style: normal;
+    width: auto;
+    float: right;
+    height: auto;
+    overflow: hidden;
+    line-height: 50px;
+    padding: 0 10px;
+    font-size: 18px;
+    color: #fff;
+}
+.health_jt_one i:nth-child(3){
+    float: right;
+    width: 27px;
+    height: 17px;
+    background: url("../image/watch_num.jpg");
+    margin-top: 16px;
+}
+.health_jt_circle{
+    width: 913px;
+    height: 153px;
+    float: right;
+    margin-top: 15px;
+}
+.health_jt_yyt{
+    width: 202px;
+    margin-left: 26px;
+    height: 100%;
+    float: left;
+    background: url("../image/erWeiMa.png");
+    background-size: 100% 100%;
+    box-shadow: 0 0 25px -2px #D8D8D8;
+}
+.goods_for{
+    width: 1200px;
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-bottom: 26px;
+}
+.goods_for_tirle{
+    width: 219px;
+    height: 45px;
+    background: url("../image/goods_for_title.jpg");
+    background-size: 100% 100%;
+    margin-bottom: 36px;
+}
+.goods_for_con{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.goods_for_one{
+    width: 290px;
+    height: 233px;
+    float: left;
+    margin: 0 5px;
+    border: 1px solid #e5e5e5;
+    box-sizing: border-box;
+    border-radius: 5px;
+    overflow: hidden;
+    background: #fff;
+}
+.goods_for_img{
+    width: 100%;
+    height: 233px;
+    display: block;
+}
+.goods_for_img img{
+    width: 100%;
+    height: 100%;
+}
+.goods_for_name{
+    width: 116px;
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.goods_for_name span:first-child{
+    width: 15px;
+    height: 1px;
+    float: left;
+    background: #dddddd;
+    margin-top: 39px;
+}
+.goods_for_name span:nth-child(2){
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    font-size: 14px;
+    color: #606060;
+    margin: 0 6px;
+    margin-top: 30px;
+    float: left;
+}
+.goods_for_name span:nth-child(3){
+    width: 15px;
+    height: 1px;
+    float: left;
+    background: #dddddd;
+    margin-top: 39px;
+}
+.goods_for_more{
+    width: 93px;
+    height: 28px;
+    margin: 0 auto;
+    border-radius: 14px;
+    background: #9cc813;
+    text-align: center;
+    line-height: 28px;
+    color: #fff;
+    font-size: 14px;
+    display: block;
+    margin-top: 17px;
+}
+.goods_forMore{
+    width: 88px;
+    height: 30px;
+    border: 2px solid #fff;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+    line-height: 30px;
+    background: #f69c1c;
+    border-radius: 15px;
+    margin: 0 auto;
+    margin-top: 29px;
+}
+.goods_forME{
+    width: 220px;
+    height: auto;
+    margin: 0 auto;
+    color: #d9d9d9;
+    margin-top: 7px;
+	text-align: center;
+}
+.fixedBox_qty{
+	width: 108px;
+	height: 412px;
+	background: #F69C1C;
+	position: fixed;
+	top:300px;
+	left: 150px;
+	z-index: 9999;
+}
+.fixedBox_qty ul{
+	width: 100%;
+	height: 100%;
+	float: left;
+}
+.fixedBox_qty ul li{
+	width: 100%;
+	height: 103px;
+	float: left;
+	border-bottom: 1px solid #fff;
+	line-height: 103px;
+	color: #fff;
+	text-align: center;
+	font-size: 24px;
+	cursor: default;
+	position: relative;
+	letter-spacing: 2px;
+}
+.fixedBox_qty ul li .tele_qty{
+	width: 200px;
+	height: 50px;
+	line-height: 50px;
+	background: pink;
+	position:absolute;
+	top:30%;
+	left: 115px;
+	font-size: 18px;
+	display: none;
+	letter-spacing: 0;
+}
+.fixedBox_qty ul li .weixin_qty{
+	width: 100px;
+	height: 100px;
+	line-height: 50px;
+	background: pink;
+	position:absolute;
+	top:1%;
+	left: 115px;
+	font-size: 20px;
+	border-radius: 4px;
+	display: none;
+}
+.fixedBox_qty ul li:hover .tele_qty,.fixedBox_qty ul li:hover .weixin_qty{
+	display: block;
+	transition: 5s;
+}
+.fixedBox_qty ul li:last-child{
+	border-bottom: none;
+}

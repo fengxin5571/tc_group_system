@@ -1,0 +1,215 @@
+html{
+    font-family:"微软雅黑",sans-serif;
+}
+html,body,header,section,footer,div,ul,ol,li,img,a,span,em,del,legend,center,strong,var,fieldset,form,label,dl,dt,dd,cite,input,hr,time,mark,code,figcaption,figure,textarea,h1,h2,h3,h4,h5,h6,p{
+    margin:0;
+    border:0;
+    padding:0;
+    font-style:normal;
+}
+html,body {
+    -webkit-touch-callout:none;
+    -webkit-text-size-adjust:none;
+    -webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+    -webkit-user-select:none;
+    background-color: #fff;
+}
+nav,article,aside,details,main,header,footer,section,fieldset,figcaption,figure{
+    display: block;
+}
+img,a,button,em,del,strong,var,label,cite,small,time,mark,code,textarea{
+    display:inline-block;
+}
+header,section,footer {
+    position:relative;
+}
+ol,ul{
+    list-style:none;
+}
+input,button,textarea {
+    border:0;
+    margin:0;
+    padding:0;
+    font-size:1em;
+    line-height:1em;
+    /*-webkit-appearance:none;*/
+    background-color:rgba(0, 0, 0, 0);
+}
+span{
+    display:inline-block;
+}
+a:active, a:hover {
+    outline: 0;
+}
+a, a:visited{
+    text-decoration:none;
+}
+
+label, .wordWrap{
+    word-wrap: break-word;
+    word-break: break-all;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+td,th {
+    padding: 0;
+}
+.question_con_yyt{
+    width: 1000px;
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+    border: 1px solid #cbcbcb;
+    border-radius: 5px;
+	margin-bottom: 10px;
+    padding: 10px;
+    padding-bottom: 55px;
+}
+.queDet_title_yyt{
+    width: 680px;
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+    font-size: 24px;
+    line-height: 50px;
+    margin-top: 40px;
+    color: #333;
+}
+.queDet_time_yyt{
+    width: 680px;
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.QD_left_yyt{
+    width: auto;
+    height: 40px;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 40px;
+    color: #828282;
+    vertical-align: middle;
+    float: left;
+}
+.QD_one_yyt,.QD_two_yyt,.QD_three_yyt{
+    width: 100px;
+    height: 40px;
+    overflow: hidden;
+    float: left;
+}
+.QD_two_yyt{
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 20px;
+    color: #a8ce32;
+    border: 1px solid #cbcbcb;
+    border-radius: 2px;
+    margin-top: 8px;
+    padding: 0 6px;
+}
+.QD_three_yyt{
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 20px;
+    color: #fff;
+    border: 1px solid #cbcbcb;
+    border-radius: 2px;
+    margin-top: 8px;
+    padding: 0 6px;
+    background: #a8ce32;
+    margin-left: 10px;
+	cursor: pointer;
+}
+.QD_right_yyt{
+    float: right;
+    font-size: 10px;
+    line-height: 40px;
+    color: #999999;
+}
+.question_yyt{
+    width: 680px;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px 25px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #848484;
+    border: 1px solid #cbcbcb;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+.answer_yyt{
+    width: 680px;
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.answer_a_yyt{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.answer_name_yyt{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.name_left_yyt{
+    width: auto;
+    height: auto;
+    float: left;
+    font-size: 14px;
+    line-height: 60px;
+    color: #6d6d6d;
+}
+.name_right_yyt{
+    width: auto;
+    height: auto;
+    float: right;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 60px;
+    color: #6d6d6d;
+}
+.answer_b_yyt{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px 25px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #848484;
+    border: 1px solid #cbcbcb;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.docAns_yyt{
+    width: 680px;
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+}
+textarea{
+    outline: none;
+}
+.submit_yyt{
+    width: auto;
+    height: auto;
+    font-size: 14px;
+    line-height: 20px;
+    color: #f6a22b;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    outline: none;
+    cursor: pointer;
+}

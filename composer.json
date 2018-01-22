@@ -1,0 +1,7 @@
+{
+  "name" : "TC__group_system",
+  "repositories" : [ {
+    "type" : "composer",
+    "url" : "https://packagist.org/"
+  } ]
+}

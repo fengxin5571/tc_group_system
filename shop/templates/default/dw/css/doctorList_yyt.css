@@ -1,0 +1,143 @@
+.doctor_header_yyt{
+    width: 1200px;
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.doctor_header_yyt span:first-child{
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    font-size: 14px;
+    color: #a8ce32;
+    float: left;
+    padding: 0 10px;
+}
+.doctor_header_yyt span:nth-child(2){
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    font-size: 14px;
+    color: #9b9b9b;
+    float: left;
+    padding: 0 5px;
+}
+.doctor_header_yyt span:nth-child(3){
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    font-size: 14px;
+    color: #9b9b9b;
+    float: left;
+    padding: 0 5px;
+}
+.doctor_con{
+    width: 1200px;
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 18px;
+}
+.doctor_title{
+    width: 283px;
+    height: 45px;
+    background: url("../image/doctor_title.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+.doctor_ad{
+    width: 1200px;
+    height: 254px;
+    margin: 0 auto;
+    background: url("../image/doctor_ad.jpg") no-repeat;
+    background-size: 100% 100%;
+    margin-top: 27px;
+}
+.doctor_list{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.doctor_one{
+    width: 100%;
+    height: 185px;
+    border-bottom: 1px solid #d0d0d0;
+    padding: 18px 0;
+    box-sizing: border-box;
+}
+.doctor_one_photo{
+    float: left;
+    width: 150px;
+    height: 150px;
+    background: url("../image/doctor_one_photo.jpg");
+    background-size: 100% 100%;
+    margin-right: 25px;
+}
+.doctor_oneName{
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    font-size: 18px;
+    color: #333;
+    margin-top: 20px;
+    float: left;
+}
+.doctor_icon{
+    width: 14px;
+    height: 16px;
+    float: left;
+    background: url("../image/doctor_icon.jpg") no-repeat;
+    background-size: 100% 100%;
+    margin-top: 23px;
+    margin-left: 15px;
+}
+.doctor_phoneNum{
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    float: left;
+    font-size: 14px;
+    color: #333;
+    margin-top: 22px;
+    margin-left: 5px;
+}
+.doctor_md{
+    width: 970px;
+    height: auto;
+    overflow: hidden;
+    display: block;
+    font-size: 14px;
+    color: #999999;
+}
+.doctor_md_ab{
+    width: 620px;
+    height: auto;
+    overflow: hidden;
+    display: block;
+    font-size: 14px;
+    color: #999999;
+    margin-top: 15px;
+}
+.doctor_one_more{
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+    background: #f69c1c;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    font-size: 14px;
+    float: right;
+}
+.doctor_next{
+    width: 91px;
+    height: 27px;
+    text-align: center;
+    line-height: 27px;
+    background: #f69c1c;
+    color: #fff;
+    font-size: 14px;
+    margin: 0 auto;
+    border-radius: 13px;
+    margin-top: 28px;
+    margin-bottom: 28px;
+}

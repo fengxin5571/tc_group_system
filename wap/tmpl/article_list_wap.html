@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>title</title>
+    <link rel="stylesheet" href="../css/dw/dyz_mobile_zn.css">
+    <link rel="stylesheet" href="../css/dw/health_information_list_zn.css">
+    <script src="../js/dw/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/config.js"></script>
+	<script type="text/javascript" src="../js/zepto.min.js"></script>
+	<script type="text/javascript" src="../js/template.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/tmpl/article_list_wap.js"></script> 
+	<script src="../js/dw/rem.js"></script>
+</head>
+<body>
+<!-- 健康资讯头部开始 -->
+<div class="title_box_zn" id="article_class_show">
+
+</div>
+
+
+<!-- 健康资讯头部结束 -->
+<script type="text/html" id="article_class">
+    <div class="logo_box">
+        <a href="/wap">首页</a>
+    </div>
+    <ul class="title_teacher_box">
+		<% for(var i in a_class) {%>
+        <li class="title_teacher_list" id="nav_<%=a_class[i].ac_id%>">
+            <a href="<%=WapSiteUrl%>article_list_wap.html?article_id=<%=a_class[i].ac_id%>"><%=a_class[i].ac_name %></a>
+        </li>
+		<%}%>
+    </ul>
+</script>
+
+<div class="health_box_zn">
+    <div class="teacher_title_zn">
+        <div class="teacher_zn">
+            <i></i>
+            <div class="intro_duce_zn">
+                <p class="top_title_zn">
+                    <span class="title_left_zn">健康</span>
+                    <span class="title_right_zn">资讯</span>
+                </p>
+                <p class="bottom_title_zn">
+                    <span class="title_left_zn_bottom">HEALTH&nbsp;</span>
+                    <span class="title_right_zn_bottom"> INFORMATION</span>
+                </p>
+            </div>
+        </div>
+    </div>
+        <ul class="health_news_box" id="article_list_show">
+        </ul>
+</div>
+<script type="text/html" id="article_list">
+		<% for(var i in article) {%>
+            <li class="health_news_list">
+                <a href="<%=WapSiteUrl%>article_detail_wap.html?article_id=<%=article[i].article_id%>">
+                    <img src="/data/upload/shop/article/<%=article[i].file_name%>" alt="">
+                    <p class="health_title_zn">
+                    <span class="news_left_zn">
+                        <%=article[i].article_title%>
+                    </span>
+                        <span class="news_right_zn">
+                        <%=article[i].article_time%>
+                    </span>
+                    </p>
+                    <p class="news_con_zn">
+                        <%=article[i].article_content%>
+                    </p>
+                </a>
+            </li>
+       <%}%>
+</script>
+
+</body>
+<script>
+    $('.title_teacher_list').click(function(){
+        $(this).siblings().children().css('color','#999').css('border-bottom','0.03rem solid transparent');
+        $(this).children().css('color','#f69c1c').css('border-bottom','0.03rem solid #f69c1c');
+    })
+</script>
+</html>

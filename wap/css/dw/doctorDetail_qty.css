@@ -1,0 +1,337 @@
+html, body {
+    position: relative;
+    background: #F9F9F9;
+    padding-bottom: 0.8rem;
+}
+/*医师详情头部开始*/
+.healthSchoolHeader_qty{
+	width: 100%;
+	height: 0.9rem;
+	margin: auto;
+	overflow: hidden;
+}
+.healthHeader_qty{
+	width: 6rem;
+	height: 0.9rem;
+	margin: auto;
+	overflow: hidden;
+}
+.healthSchoolHeader_qty ul{
+	height: 0.9rem;
+	float: left;
+	line-height: 0.9rem;
+}
+.healthSchoolHeader_qty ul li{
+	float: left;
+	font-size: 0.28rem;
+	line-height: 0.88rem;
+	padding: 0rem 0.335rem;
+	position: relative;
+}
+.healthSchoolHeader_qty ul li:first-child{
+	padding: 0rem 0.335rem 0rem 0rem;
+}
+.healthSchoolHeader_qty ul li:first-child:after{
+	content: "";
+	width: 1px;
+	height: 0.3rem;
+	background: #ccc;
+	position: absolute;
+	top: 0.3rem;
+	right: 0rem;
+}
+.healthSchoolHeader_qty ul li:first-child a{
+	color: #333333;
+}
+.healthSchoolHeader_qty ul li a{
+	float: left;
+	color: #999999;
+}
+.color_qty a{
+	color: #F69C1C !important;
+	border-bottom: 2px solid #F69C1C;
+}
+/*医师详情头部结束*/
+/*医师介绍开始*/
+.doctorIntroduce_qty{
+	width: 6rem;
+	overflow: hidden;
+	margin: auto;
+	background: #fff;
+	margin-top: 0.02rem;
+	padding-bottom: 0.3rem;
+}
+.doctorIntroduceSmall_qty{
+	width: 5.6rem;
+	overflow: hidden;
+	margin: auto;
+}
+.doctorImg_qty{
+	width: 2.42rem;
+	height: 3rem;
+	float: left;
+	margin-top: 0.3rem;
+}
+.doctorImg_qty img{
+	width: 2.42rem;
+	height: 3rem;
+	float: left;
+}
+.doctorRight_qty{
+	width: 2.94rem;
+	float: left;
+	margin-top: 0.3rem;
+	margin-left: 0.24rem;
+}
+.doctorName_qty{
+	font-size: 0.28rem;
+	float: left;
+	color: #F69C1C;
+	letter-spacing: 0.01rem;
+	font-weight: bold;
+}
+.doctorWorkTime_qty{
+	width: 2.94rem;
+	float: left;
+	margin-top: 0.1rem;
+	font-size: 0.24rem;
+	color: #999999;
+	text-align: justify;
+	margin-top: 0.1rem;
+}
+.introduce_qty{
+	letter-spacing: 0.01rem;
+	text-align: justify;
+	line-height: 0.35rem;
+}
+.workTime_qty{
+	width: 1.2rem;
+	font-size: 0.24rem;
+	float: left;
+	color: #333333;
+}
+.wotkTime_qty_qty{
+	width: 1.74rem;
+	float: left;
+	font-size: 0.24rem;
+	color: #999999;
+	text-align: justify;
+}
+/*医师介绍结束*/
+/*荣誉墙开始*/
+.honorWall_qty{
+	width: 6rem;
+	margin: auto;
+	overflow: hidden;
+	background: #fff;
+	margin-top: 0.2rem;
+	padding-bottom: 0.3rem;
+}
+.honorSmallWall_qty{
+	width: 5.6rem;
+	margin: auto;
+	overflow: hidden;
+}
+.questionColorBox_qty{
+	width: 5.6rem;
+	margin: auto;
+	overflow: hidden;
+	margin-top: 0.15rem;
+	letter-spacing: 0.02rem;
+}
+.questionColorBox_qty a{
+	width: 5.4rem;
+	float: left;
+	display: block;
+}
+.questionImg_qty{
+	width: 0.02rem;
+	height: 0.45rem;
+	background-image: url(../images/store_qty.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	float: left;
+	margin-top: 0.08rem;
+}
+.questionTopFont_qty{
+	width: 5.4rem;
+	float: left;
+	font-size: 0.24rem;
+	margin-left: 0.2rem;
+	color: #606060;
+	position: relative;
+}
+.questionTopFont_qty span{
+	color: #9cc813;
+}
+.questionBoFont_qty{
+	width: 5.4rem;
+	float: left;
+	font-size: 0.18rem;
+	margin-left: 0.2rem;
+	color: #a7a7a7;
+}
+.questionBoFont_qty span{
+	color: #F69C1C;
+	margin-left: 0.1rem;
+}
+.change_qty{
+	float: right;
+	color: #F69C1C !important;
+}
+.more_qty{
+	float: right;
+    padding: 0rem;
+    width: 1rem;
+    text-align: right;
+    background: #fff;
+    border: none;
+    outline: none;
+    position: absolute;
+    right: 0.4rem;
+    z-index: 999;
+}
+.more_qty a{
+	width: 1rem !important;
+	color: #F69C1C !important;
+	float: left;
+}
+.honorImgBox_qty{
+	width: 5.6rem;
+	height: 1.5rem;
+	float: left;
+	margin-top: 0.2rem;
+}
+.honorImgBox_qty ul{
+	width: 5.6rem;
+	height: 1.5rem;
+	float: left;
+}
+.honorImgBox_qty ul li{
+	width: 1.73rem;
+	height: 1.5rem;
+	float: left;
+	margin-left: 0.2rem;
+	border-radius: 0.08rem;
+} 
+.honorImgBox_qty ul li:first-child{
+	margin-left: 0rem;
+}
+.honorImgBox_qty ul li img{
+	width: 1.73rem;
+	height: 1.5rem;
+	float: left;
+}
+/*荣誉墙结束*/
+/*问题记录开始*/
+.questionRecord_qty{
+	width: 6rem;
+	margin: auto;
+	overflow: hidden;
+	background: #fff;
+	margin-top: 0.2rem;
+	padding-bottom: 0.3rem;
+}
+.questionSmallRecord_qty{
+	width: 5.6rem;
+	margin: auto;
+	overflow: hidden;
+}
+.questionSmallRecord_qty h5{
+	width: 5.6rem;
+	line-height: 0.6rem;
+	font-size: 0.24rem;
+	color: #999999;
+	letter-spacing: 0.02rem;
+}
+.questionSmallRecord_qty h4{
+	width: 5.6rem;
+	line-height: 0.4rem;
+	font-size: 0.24rem;
+	color: #333333;
+	letter-spacing: 0.02rem;
+}
+.questionSmallRecord_qty p{
+	width: 5.6rem;
+	margin-top: 0.2rem;
+	line-height: 0.4rem;
+	font-size: 0.24rem;
+	color: #999999;
+	letter-spacing: 0.01rem;
+	text-align: justify;
+}
+/*问题记录结束*/
+/*视频专区开始*/
+.videoBox_qty{
+	width: 6rem;
+	margin: auto;
+	overflow: hidden;
+	background: #fff;
+	margin-top: 0.2rem;
+	padding-bottom: 0.3rem;
+}
+.videoSmallBox_qty{
+	width: 5.6rem;
+	margin: auto;
+	overflow: hidden;
+}
+.hotVideoSmallBox_qty{
+	width: 5.6rem;
+	float: left;
+	margin-top: 0.3rem;
+}
+.hotVideoSmallBox_qty li{
+	width: 2.6rem;
+	height: 1.74rem;
+	float: left;
+	box-shadow: 0rem 0rem 0.12rem #ccc;
+	margin-bottom: 0.2rem;
+	border-radius: 0.1rem;
+	position: relative;
+}
+.hotVideoSmallBox_qty li a{
+	width: 2.6rem;
+	height: 1.74rem;
+	float: left;
+}
+.right_qty{
+	margin-left: 0.4rem;
+}
+.hotVideoSmallBox_qty li img{
+	width: 2.6rem;
+	height: 1.74rem;
+	float: left;
+	border-radius: 0.1rem;
+}
+.maskBox_qty{
+	width: 2.6rem;
+	height: 0.4rem;
+	background: rgba(0,0,0,0.4);
+	position: absolute;
+	bottom: 0rem;
+	left: 0rem;
+	border-bottom-left-radius: 0.1rem;
+	border-bottom-right-radius: 0.1rem;
+}
+.videoFont_qty{
+	line-height: 0.4rem;
+	float: left;
+	color: #fff;
+	font-size: 0.24rem;
+	margin-left: 0.1rem;
+}
+.eye_qty{
+	float: right;
+	line-height: 0.4rem;
+	font-size: 0.24rem;
+	margin-right: 0.1rem;
+	color: #fff;
+}
+.eye_qty img{
+	float: left;
+	width: 0.27rem !important;
+	height: 0.17rem !important;
+	margin-top: 0.115rem;
+	margin-right: 0.1rem;
+}
+/*视频专区结束*/

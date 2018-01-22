@@ -1,0 +1,97 @@
+#foot_zn {
+    width: 100%;
+    height: auto;
+    background: #fafafa;
+    overflow: hidden;
+    box-shadow: 0 0 12px #cbcaca;
+}
+
+.foot_box_zn {
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.foot_list_zn {
+    width: 240px;
+    height: 225px;
+    float: left;
+    text-align: center;
+    letter-spacing: 1px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.foot_title_zn {
+    margin: 0 auto;
+    height: 28px;
+    letter-spacing: 1px;
+    font-size: 16px;
+    width: 68px;
+    border-bottom: 2px solid #f5b55c;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.foot_list_zn a {
+    display: block;
+    line-height: 41px;
+    font-size: 14px;
+}
+
+.foot_list_zn img {
+    width: 101px;
+    height: 101px;
+    margin-top: 16px;
+}
+
+.tel_zn {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+    color: #f5b55c;
+    font-weight: bold;
+}
+
+.foot_partling_zn {
+    width: 1200px;
+    height: 1px;
+    background: #e4e4e4;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.friendship_zn {
+    width: 100%;
+    text-align: center;
+    height: 64px;
+    line-height: 64px;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.friendship_zn a {
+    color: #222;
+}
+
+.parting_span {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 10px;
+    color: #c0c0c0;
+}
+
+.foot_end_zn {
+    width: 100%;
+    line-height: 25px;
+    margin: 0 auto;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 12px;
+    color: #666;
+}
+
+.foot_end_zn:last-child {
+    margin-bottom: 40px;
+}

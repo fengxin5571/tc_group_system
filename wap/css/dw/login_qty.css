@@ -1,0 +1,117 @@
+body,html{
+	background: #fff;
+}
+.login_qty{
+	width: 2.64rem;
+	height: 0.82rem;
+	margin: auto;
+	margin-top: 1rem;
+	background-image: url(../images/logoBig_qty.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.loginInput_qty{
+	width: 5.6rem;
+	overflow: hidden;
+	margin: auto;
+	margin-top: 0.86rem;
+}
+.loginInputBox_qty,.loginInputBox_qty_qty{
+	width: 5.6rem;
+	height: 0.8rem;
+	float: left;
+	position: relative;
+	margin-top: 0.1rem;
+}
+.loginInputBox_qty input{
+	width: 5.6rem;
+	height: 0.8rem;
+	float: left;
+	outline: none;
+	border-bottom: 1px solid #ccc;
+	text-indent: 0.5rem;
+	font-size: 0.24rem;
+	letter-spacing: 0.02rem;
+}
+.loginInputBox_qty_qty .verInput{
+	width: 3.32rem;
+	height: 0.8rem;
+	float: left;
+	outline: none;
+	border-bottom: 1px solid #ccc;
+	text-indent: 0.5rem;
+	font-size: 0.24rem;
+	letter-spacing: 0.02rem;
+}
+.iphone,.key,.ver{
+	height: 0.3rem;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	top: 0.25rem;
+	left: 0rem;
+}
+.iphone{
+	width: 0.21rem;
+	background-image: url(../images/ipone_qty.png);
+}
+.key{
+	width: 0.24rem;
+	background-image: url(../images/key_qty.png);
+}
+.ver{
+	width: 0.24rem;
+	background-image: url(../images/ver_qty.png);
+}
+.verImg_qty{
+	float: right;
+	width: 1.65rem;
+	height: 0.6rem;
+	margin-top: 0.2rem;
+	border-radius: 0.08rem;
+}
+.verImg_qty img{
+	float: left;
+	width: 1.65rem;
+	height: 0.6rem;
+	border-radius: 0.08rem;
+}
+.btn_qty{
+	width: 5.6rem;
+	height: 0.8rem;
+	background: #6FBA2B;
+	outline: none;
+	border: none;
+	float: left;
+	margin-top: 0.5rem;
+	padding: 0rem;
+	border-radius: 0.1rem;
+}
+.btn_qty a{
+	width: 5.6rem;
+	height: 0.8rem;
+	float: left;
+	line-height: 0.8rem;
+	color: #fff;
+	font-size: 0.34rem;
+	letter-spacing: 0.05rem;
+}
+.freeBox_qty{
+	width: 5.6rem;
+	height: 0.8rem;
+	float: left;
+	line-height: 0.8rem;
+	font-size: 0.24rem;
+}
+.free_qty{
+	float: left;
+}
+.free_qty a{
+	color: #F69C1C;
+}
+.password_qty{
+	float: right;
+}
+.password_qty a{
+	color: #333333;
+}

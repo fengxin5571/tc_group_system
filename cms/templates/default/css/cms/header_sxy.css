@@ -1,0 +1,111 @@
+/*头部nav开始*/
+.header_sxy {
+    width: 100%;
+    height: 80px;
+    background: #0457b7;
+    -moz-box-shadow: 0 3px 14px #9ca8b0;
+    -webkit-box-shadow: 0 3px 14px #9ca8b0;
+    box-shadow: 0 3px 14px #9ca8b0;
+}
+
+.header_sxy .header_box {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_sxy .header_box .logo {
+    width: 220px;
+    height: 80px;
+    display: block;
+}
+
+.header_sxy .header_box .logo img {
+    width: 100%;
+}
+
+.big_nav {
+    width: 750px;
+    padding-right: 40px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.big_nav li {
+    width: 160px;
+    height: 80px;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.big_nav li .line {
+    width: 10px;
+    height: 2px;
+    background: #fff;
+    opacity: 0;
+}
+
+.big_nav li .title {
+    text-align: center;
+}
+
+.big_nav li .title p {
+    font-size: 16px;
+    color: #fff;
+}
+
+.big_nav li .title h5 {
+    font-size: 12px;
+    color: #fff;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.header_sxy .search {
+    width: 192px;
+    height: 32px;
+    border-radius: 5px;
+    border: 1px solid #acb5d8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_sxy .search input {
+    width: 150px;
+    height: 26px;
+    border: none;
+    outline: none;
+    background: #0457b7;
+    padding-left: 8px;
+    color: #fff;
+}
+
+.header_sxy .search .search_ {
+    width: 36px;
+}
+
+/*选中效果*/
+.big_nav li.active {
+    background: #094181;
+}
+
+.big_nav li .line_show {
+    opacity: 1;
+}
+
+.big_nav li:hover {
+    background: #094181;
+}
+
+.big_nav li:hover .line {
+    opacity: 1;
+}
+
+/*头部nav结束*/

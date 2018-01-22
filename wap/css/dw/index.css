@@ -1,0 +1,387 @@
+html, body {
+    position: relative;
+    background: #F9F9F9;
+    overflow-x: hidden;
+}
+/*轮播图*/
+.banner_qty{
+	height: 3rem;
+}
+.swiper-container {
+    width:100%;
+	height: 3rem;
+	position: relative;
+}
+.swiper-slide {
+    background: #fff;
+}
+.swiper-slide a{
+	width:100%;
+ 	height:100%;
+ 	display: block;
+}
+.swiper-slide img{
+ 	width:100%;
+ 	height:3rem;
+}
+.swiper-pagination-bullet-active{
+ 	background: #F69C1C !important;
+}
+.swiper-pagination span{
+	width: 0.4rem;
+	height: 0.08rem;
+	border-radius: 0rem;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{
+	bottom: 0px;
+}
+.swiper-pagination-bullet{
+	background: #CCCCCC;
+	opacity: 1;
+}
+/*轮播图*/
+/*找寻各类开始*/
+.seekBox_qty{
+	width: 6.2rem;
+	height: 3.18rem;
+	float: left;
+	margin-left: 0.2rem;
+	margin-top: 0.4rem;
+}
+.swiper-containerBox {
+    width: 100%;
+    height: 3.18rem;
+}
+.swiper-slide{
+    text-align: center;
+}
+.swiper{
+	height: 3.18rem;
+	width: 2.44rem !important;
+	margin-right: 0.1rem !important;
+	border: 1px solid #a7a7a7;
+	position: relative;
+}
+.storeFont_qty{
+	width: 2.44rem;
+	height: 0.98rem;
+	line-height: 0.98rem;
+	color: #3c3c3c;
+	font-size: 0.3rem;
+	float: left;
+}
+.store_qty{
+	width: 2.44rem;
+	font-size: 0.24rem;
+	line-height: 0.45rem;
+	float: left;
+	letter-spacing: 0.02rem;
+}
+.store_qty a{
+	color: #3c3c3c;
+}
+.more_qty{
+	width: 0.82rem;
+	height: 0.4rem;
+	background: #9CC813;
+	float: left;
+	margin-top: 0.28rem;
+	margin-left: 0.81rem;
+	font-size: 0.28rem;
+	line-height: 0.4rem;
+	text-align: center;
+	position: absolute;
+	bottom: 0.2rem;
+}
+.more_qty a{
+	width: 0.82rem;
+	height: 0.4rem;
+	float: left;
+	color: #fff;
+}
+.doctor_qty{
+	width: 1.20rem;
+	font-size: 0.24rem;
+	line-height: 0.45rem;
+	float: left;
+	letter-spacing: 0.02rem;
+}
+.doctor_qty a{
+	width: 1.20rem;
+	height: 0.4rem;
+	float: left;
+	color: #3c3c3c;
+}
+/*找寻各类结束*/
+/*健康知识开始*/
+.healthBox_qty{
+	width: 6rem;
+	height: 1.06rem;
+	margin: auto;
+	overflow: hidden;
+	color: #9CC813;
+	font-size: 0.28rem;
+	line-height: 1.06rem;
+}
+.style_qty{
+	width: 0.08rem;
+	height: 0.3rem;
+	float: left;
+	background: #9CC813;
+	margin-top: 0.38rem;
+	margin-right: 0.1rem;
+}
+.moreFont_qty{
+	float: right;
+}
+.moreFont_qty a{
+	color: #999999;
+}
+.arrow{
+	width:0; 
+    height:0; 
+    border-top:0.12rem solid transparent;
+    border-bottom: 0.12rem solid transparent;
+    border-left: 0.12rem solid #9CC813;
+    float: right;
+    margin-top: 0.45rem;
+    margin-left: 0.1rem;
+}
+.healthBigBox_qty{
+	width: 6rem;
+	height: 2.06rem;
+	margin: auto;
+	overflow: hidden;
+	color: #9CC813;
+	font-size: 0.28rem;
+	line-height: 1.06rem;
+	background: #fff;
+}
+.healthBigBox_qty li{
+	width: 1.5rem;
+	height: 2.06rem;
+	float: left;
+}
+.healthBigBox_qty li a{
+	width: 1.5rem;
+	height: 2.06rem;
+	float: left;
+}
+.healthImg_qty{
+	width: 0.86rem;
+	height: 0.86rem;
+	margin: 0.32rem auto;
+	border-radius: 50%;
+}
+.healthImg_qty img{
+	width: 0.86rem;
+	height: 0.86rem;
+	border-radius: 50%;
+}
+.healthFont_qty{
+	width: 0.86rem;
+	height: 0.4rem;
+	line-height: 0.4rem;
+	color: #6e6e6e;
+	font-size: 0.3rem;
+	text-align: center;
+	margin: auto;
+	overflow: hidden;
+	letter-spacing: 0.05rem;
+}
+/*健康知识结束*/
+/*健康问答开始*/
+.healthQuestion_qty{
+	width: 6rem;
+	height: 3.4rem;
+	margin: auto;
+	overflow: hidden;
+	font-size: 0.28rem;
+	background: #fff;
+}
+.healthQuestion_qty ul{
+	width: 6rem;
+	height: 3.4rem;
+	float: left;
+}
+.healthQuestion_qty ul li{
+	width: 5.6rem;
+	height: 1.7rem;
+	float: left;
+	margin-left: 0.2rem;
+	border-bottom: 1px solid #e4e4e4;
+}
+.healthQuestion_qty ul li:last-child{
+	border-bottom: none;
+}
+.healthTop_qty{
+	width: 100%;
+	float: left;
+	margin-top: 0.28rem;
+	font-weight: bold;
+	color: #F69C1C;
+}
+.healthTop_qty span{
+	width: 0.3rem;
+	color: #9CC813;
+	float: left;
+}
+.healthTop_qty a{
+	width: 5.3rem;
+	float: left;
+	color: #F69C1C;
+}
+.healthBottom_qty{
+	width: 100%;
+	float: left;
+	margin-top: 0.1rem;	
+}
+.healthBottom_qty span{
+	width: 0.3rem;
+	color: #F69C1C;
+	font-weight: bold;
+	float: left;
+}
+.healthBottom_qty a{
+	width: 5.3rem;
+	float: left;
+	color: #262626;
+}
+/*健康问答结束*/
+/*视频专区开始*/
+.video_qty{
+	width: 6rem;
+	height: 2.84rem;
+	margin: auto;
+	overflow: hidden;
+	background: #fff;
+	border: 1px solid #e4e4e4;
+	margin-bottom: 1rem;
+}
+.left_qty{
+	width: 2.74rem;
+	height: 2.84rem;
+	float: left;
+	background: #F69C1C;
+	border-right: 1px solid #e4e4e4;
+}
+.left_qty a{
+	width: 2.74rem;
+	height: 2.84rem;
+	float: left;
+}
+.right_qty{
+	width: 3.22rem;
+	height: 2.84rem;
+	float: left;
+	background: #F69C1C;
+}
+.right_qty ul{
+	width: 3.22rem;
+	height: 2.84rem;
+	float: left;
+}
+.right_qty ul li{
+	width: 3.22rem;
+	height: 1.42rem;
+	float: left;
+	border-bottom: 1px solid #e4e4e4;
+}
+.right_qty ul li:last-child{
+	border-bottom: none;
+}
+.right_qty ul li a{
+	width: 3.22rem;
+	height: 1.42rem;
+	float: left;
+}
+/*视频专区结束*/
+/*联系我们*/
+.contact_qty{
+	width: 100%;
+	line-height: 0.88rem;
+	background: #9CC813;
+	margin: auto;
+}
+.contact_qty{
+	width: 100%;
+	float: left;
+}
+.arrowTop_qty{
+	width: 0.19rem;
+	height: 0.18rem;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: auto;
+	margin-top: 0.1rem;
+	-webkit-animation:arrows 0.5s ease-in-out infinite both alternate;
+	background-image: url(../images/arrowTop_qty.png);
+}
+@keyframes arrows{
+ 	100%{
+ 		transform:translateY(0.02rem);
+		opacity:0.8;
+ 	}
+}
+.contactFont_qty{
+	width: 100%;
+	font-size: 0.28rem;
+	text-align: center;
+	color: #fff;
+	float: left;
+	line-height: 0.7rem;
+}
+.contactBox_qty{
+	width: 100%;
+	height: 1.54rem;
+	float: left;
+	background: #9CC813;
+	display: none;
+}
+.contactSmall_qty{
+	width: 5.1rem;
+	height: 1.54rem;
+	margin: auto;
+	overflow: hidden;
+	border-top: 1px solid #fff;
+}
+.contactLeft_qty{
+	width: 3.25rem;
+	height: 1.54rem;
+	float: left;
+}
+.tele_qty{
+	width: 3.25rem;
+	line-height: 0.74rem;
+	font-size: 0.28rem;
+	text-align: left;
+	color: #fff;
+	float: left;
+}
+.question_qty{
+	width: 3.25rem;
+	height: 0.44rem;
+	border-radius: 0.1rem;
+	border: 1px solid #fff;
+	float: left;
+}
+.question_qty a{
+	width: 3.25rem;
+	height: 0.44rem;
+	display: block;
+	color: #fff;
+	font-size: 0.24rem;
+	line-height: 0.42rem;
+	text-align: center;
+}
+.contactEr_qty{
+	width: 0.98rem;
+	height: 0.98rem;
+	float: right;
+	margin-top: 0.2rem;
+}
+.contactEr_qty img{
+	width: 0.98rem;
+	height: 0.98rem;
+	float: left;
+}

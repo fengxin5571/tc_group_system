@@ -1,0 +1,520 @@
+.healthSchoolBox_qty{
+	width: 100%;
+	height: auto;
+	float: left;
+	background: #F8F8F8;
+}
+.healthSchoolSmallBox_qty{
+	width: 1200px;
+	height: auto;
+	margin: auto;
+}
+.detailHome_qty{
+	width: 100%;
+	float: left;
+	padding: 5px 0px;
+	font-size: 14px;
+}
+.homeFont a{
+	color: #9CC813;
+}
+.homeFont span{
+	color: #AEAEAE;
+}
+.healthBannerBox_qty{
+	width: 100%;
+	height: 456px;
+	float: left;
+	margin-top: 20px;
+	position: relative;
+}
+/*banner左边开始*/
+.healthBannerLeft{
+	width: 220px;
+	height: 100%;
+	float: left;
+	z-index: 9999;
+	position: absolute;
+}
+.healthLeft_qty{
+	width: 100%;
+	height: 100%;
+	float: left;
+	background: rgba(0,0,0,0.2);
+}
+.healthBannerLeft li{
+	width: 100%;
+	float: left;
+	height: 91.2px;
+	text-align: center;
+	line-height: 91.2px;
+	color: #fff;
+	font-size: 24px;
+	cursor: pointer;
+	position: relative;
+}
+.healthBannerLeft li span{
+	font-size: 14px;
+	position: absolute;
+	right: 30px;
+}
+.color_qty{
+	background: rgba(0,0,0,0.3);
+	color: #FFFFFF !important;
+}
+.healthHidden_qty{
+	width: 638px;
+	height: 456px;
+	background: #FFFFFF;
+	border-left: 1px solid #9E9E9E;
+	position: absolute;
+	left: 220px;
+	top:0px;
+	display: none;
+	z-index: 9999;
+}
+.healthBannerLeft li:nth-child(2) .healthHidden_qty{
+	top:-91.2px;
+}
+.healthBannerLeft li:nth-child(3) .healthHidden_qty{
+	top:-182.4px;
+}
+.healthBannerLeft li:nth-child(4) .healthHidden_qty{
+	top:-273.6px;
+}
+.healthBannerLeft li:nth-child(5) .healthHidden_qty{
+	top:-364.8px;
+}
+.healthBannerLeft li:hover .healthHidden_qty{
+	display: block;
+}
+.healthHiddenSmall_qty{
+	width: 560px;
+	float: left;
+	margin-left: 39px;
+	margin-top: 20px;
+}
+.healthHiddenSmall_qty h4{
+	width: 100%;
+	float: left;
+	color: #4E4E4E;
+	line-height: 30px;
+	text-align: left;
+	font-size: 18px;
+	font-weight: 500;
+}
+.top_qty{
+	margin-top: 20px;
+}
+.studyBox_qty{
+	width: 100%;
+	float: left;
+	margin-top: 10px;
+}
+.studyBox_qty div{
+	float: left;
+	line-height: 25px;
+	background: #F69C1C;
+	color: #FFFFFF;
+	font-size: 14px;
+	border-radius: 4px;
+	width: 50px;
+}
+.studyBox_qty p{
+	width: 500px;
+	float: left;
+	font-size: 14px;
+	line-height: 1.5;
+	color: #9E9E9E;
+	margin-left: 10px;
+	text-align: left;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #9D9D9D;
+}
+.school_qty{
+	width: 100%;
+	float: left;
+	text-align: left;
+}
+.school_qty .list_qty{
+	width: 100%;
+	float: left;
+	text-align: left;
+}
+.school_qty .list_qty a{
+	float: left;
+	height: 40px;
+	line-height: 40px;
+	font-size: 14px;
+	color: #9E9E9E;
+	width: 65px;
+	position: relative;
+	text-align: center;
+}
+.school_qty .list_qty a:hover{
+	color: #F69C1C;
+}
+.school_qty .list_qty a:after{
+	content: "";
+	position: absolute;
+	right: 0%;
+	top:13px;
+	border-right:1px solid #9E9E9E;
+	width: 1px;
+	height: 15px;
+	transform:rotate(20deg)
+}
+.school_qty .list_qty a:last-child:after{
+	border-right: none;
+}
+/*banner左边结束*/
+/*banner右边开始*/
+.healthBannerRight{
+	width:1200px;
+	height:100%;
+	float: left;
+	position: absolute;
+	left: 0;
+	overflow:hidden;
+	z-index: 0;
+}
+.ImgBox_qty{
+	width: 100%;
+	height: 100%;
+}
+.ImgBox_qty a{
+	display:block;
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0px;
+	left:0px;
+	font-size:0px;
+}
+.ImgBox_qty a img{
+	width: 100%;
+	height: 100%;
+}
+.healthBannerRight ul{
+	width:100px;
+	height:15px;
+	position:absolute;
+	left:50%;
+	bottom:20px;
+	z-index:10;
+}
+.healthBannerRight li{
+	width: 15px;
+	height: 15px;
+	float: left;
+	display:inline;
+	margin-right: 10px;
+	background: #FFFFFF;
+	border: 1px solid #9CC813;
+	text-align: center;
+	line-height: 40px;
+	color: white;
+	border-radius: 50%;
+	cursor: pointer;
+	font-size: 0px;
+}
+.btn_qty .hot_qty{
+	width: 30px;	
+	background: #9CC813;
+	border-radius: 10px;
+	cursor: pointer;
+}
+.healthBannerRight .lrbtn_qty{
+	width: 100%;
+	height: 70px;
+	position: absolute;
+	margin:auto 0;
+	top:0;
+	bottom:0;
+	cursor: pointer;
+	line-height:70px;
+}
+.healthBannerRight .lrbtn_qty div{
+	width:40px;
+	height:70px;
+	text-align: center;
+}
+.healthBannerRight .lrbtn_qty div:hover{
+	color: #F69C1C;
+}
+.healthBannerRight .lrbtn_qty div.left_qty{
+	float:left;
+	margin-left: 220px;
+	text-align: center;
+	background-image: url(../image/left_green.png);
+}
+.healthBannerRight .lrbtn_qty div.left_qty:hover{
+	background-image: url(../image/left_orange.png);
+	margin-top: 1px;
+}
+.healthBannerRight .lrbtn_qty div.right_qty{
+	float:right;
+	text-align: center;
+	background-image: url(../image/right_green.png);
+}
+.healthBannerRight .lrbtn_qty div.right_qty:hover{
+	background-image: url(../image/right_orange.png);
+	margin-top: 1px;
+}
+/*banner右边结束*/
+/*热门视频开始*/
+.healthBox_qty{
+	width: 100%;
+	float: left;
+	margin-top: 15px;
+}
+.healthImgBox_qty{
+	float: left;
+}
+.healthRightBox_qty{
+	float: left;
+	margin-left: 10px;
+}
+.healthBannerLeft li a {
+    color: #FFFFFF;
+}
+.healthBannerLeft li a:hover {
+    text-decoration: none;;
+}
+.healthTopFont_qty{
+	color: #9CC813;
+	line-height: 24px;
+	font-size: 18px;
+}
+.healthTopFont_qty span,.healthBottomFont_qty span{
+	color: #AEAEAE;
+}
+.healthBottomFont_qty{
+	color: #F69C1C;
+	font-size: 18px;
+}
+.videoBox_qty{
+	width: 100%;
+	float: left;
+}
+.videoFont_qty{
+	width: 100%;
+	float: left;
+	color: #F69C1C;
+	font-size: 18px;
+	letter-spacing: 2px;
+	margin-top: 20px;
+}
+.videoList_qty{
+	width: 100%;
+	height: 206px;
+	float: left;
+	margin-top: 20px;
+}
+.videoList_qty ul{
+	width: 100%;
+	height: 100%;
+	float: left;
+}
+.videoList_qty ul li{
+	width: 285px;
+	height: 100%;
+	float: left;
+	margin-left: 20px;
+	border-radius: 5px 5px 0px 0px;
+	position: relative;
+	-webkit-box-shadow:0 0 20px 6px #D8D8D8;  
+  	-moz-box-shadow:0 0 20px 6px #D8D8D8;
+  	box-shadow:0 0 20px 6px #D8D8D8;
+}
+.videoList_qty ul li:nth-child(1){
+	margin-left: 0;
+}
+.videoList_qty ul li a{
+	width: 100%;
+	height: 100%;
+	float: left;
+	color: #FFFFFF;
+}
+.videoList_qty ul li a img{
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+}
+.videoSmall_qty{
+	width: 100%;
+	height: 50px;
+	position: absolute;
+	bottom: 0px;
+	background: rgba(0,0,0,0.5);
+	line-height: 50px;
+	text-align: center;
+	font-size: 18px;
+	border-radius: 0px 0px 5px 5px;
+}
+/*热门视频结束*/
+/*保健讲堂开始*/
+.healthRoom_qty{
+	width: 100%;
+	height: 487px;
+	float: left;
+	margin-top: 15px;
+	margin-bottom: 30px;
+}
+.healthRoomLeft_qty{
+	width: 285px;
+	height: 100%;
+	float: left;
+	background: #F69C1C;
+	border-radius: 4px;
+}
+.healthRoomRight_qty{
+	width: 896px;
+	height: 100%;
+	float: left;
+	margin-left: 19px;
+}
+.healthRoomTop_qty{
+	width: 100%;
+	height: 319px;
+	float: left;
+}
+.healthRoomTop_qty ul{
+	width: 100%;
+	height: 100%;
+	float: left;
+}
+.healthRoomTop_qty ul li{
+	width: 440px;
+	height: 100%;
+	float: left;
+	margin-left: 16px;
+	border-radius: 5px 5px 0px 0px;
+	position: relative;
+	-webkit-box-shadow:0 0 20px 6px #D8D8D8;  
+  	-moz-box-shadow:0 0 20px 6px #D8D8D8;
+  	box-shadow:0 0 20px 6px #D8D8D8;
+  	border: none;
+  	position: relative;
+}
+.healthRoomTop_qty ul li:nth-child(1){
+	margin-left: 0;
+}
+.healthRoomTop_qty ul li a{
+	width: 100%;
+	height: 100%;
+	float: left;
+	float: left;
+	display: block;
+}
+.healthRoomTop_qty ul li a img{
+	width: 100%;
+	height: 100%;
+}
+.heathRoomFont_qty{
+	width: 100%;
+	height: 50px;
+	float: left;
+	background: rgba(0,0,0,0.5);
+	line-height: 50px;
+	font-size: 18px;
+	border-radius: 0px 0px 5px 5px;
+	color: #FFFFFF;
+	cursor: default;
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+}
+.heathRoomFont_qty span{
+	
+	margin-left: 10px;
+}
+.heathRoomFont_qty div{
+	float: right;
+	margin-right: 10px;
+}
+.heathRoomFont_qty div img{
+	width: 27px !important;
+	height: 17px !important;
+	float: left;
+	margin-top: 15px;
+	margin-right: 5px;
+}
+.healthRoomBottom_qty{
+	width: 100%;
+	height: 149px;
+	float: left;
+	margin-top: 19px;
+	position: relative;
+	overflow: hidden;
+}
+.healthRoomBottom_qty .img_qty{
+	width: 200%;
+	height: 100%;
+	float: left;
+}
+.healthRoomBottom_qty .img_qty li{
+	width: 206px;
+	height: 100%;
+	float: left;
+	margin-left: 24px;
+	-webkit-box-shadow:1px 2px 5px #D8D8D8;
+  	-moz-box-shadow:1px 2px 5px #D8D8D8;
+  	box-shadow: 1px 2px 5px #D8D8D8;
+  	position: relative;
+}
+.healthRoomBottom_qty .img_qty li:nth-child(1){
+	margin-left: 0;
+}
+.healthRoomBottom_qty .img_qty li a{
+	width: 100%;
+	height: 100%;
+	float: left;
+	display: block;
+	color: #fff;
+}
+.healthRoomBottom_qty .img_qty li a img{
+	width: 100%;
+	height: 100%;
+}
+.healthRoomBs_qty{
+	width: 100%;
+	height: 30px;
+	float: left;
+	background: rgba(0,0,0,0.5);
+	border-radius: 0px 0px 4px 4px;
+	position: absolute;
+	bottom: 0;
+	line-height: 30px;
+	text-align: center;
+	font-size: 14px;
+	cursor: default;
+}
+.lrbtns_qty{
+	/*width: 100%;
+	height: 30px;*/
+	position: relative;
+	top:50%;
+	margin-top:-20px;
+	cursor: pointer;
+}
+.lrbtns_qty li{
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    text-align: center;
+    color: #9CC813;
+    line-height: 30px;
+}
+.lrbtns_qty li:hover{
+	color: #F69C1C;
+}
+.lbtns_qty{
+	position: absolute;
+	left: 0px;
+}
+.rbtns_qty{
+	position: absolute;
+	right: 0px;
+}
+/*保健讲堂结束*/

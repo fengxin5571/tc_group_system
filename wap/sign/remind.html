@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>签到完毕</title>
+    <script src="../js/sign/rem.js"></script>
+    <script src="../js/sign/jquery.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        .sign{
+            width: 6.4rem;
+            height: 9.11rem;
+            background-image: url("../images/sign/sign.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+        }
+        .sign_bg{
+            width: 5.4rem;
+            height: 7.3rem;
+            margin-top: 1rem;
+            background-image: url("../images/sign/remind_05.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            box-shadow: 0 0 0.12rem #ddd;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        .sign_title{
+            width: 5.4rem;
+            height: 1.63rem;
+            display: block;
+        }
+        .remind_title{
+            width: 5.4rem;
+            height: 0.7rem;
+            display: block;
+            margin-top: 0.5rem;
+        }
+        .remind_info{
+            font-size: 0.28rem;
+            color: #2f2f2f;
+            text-align: center;
+            margin-top: 0.2rem;
+            line-height:0.4rem;
+            font-family: "微软雅黑", "Ping Fang";
+        }
+        .remind_line{
+            width: 5.4rem;
+            height: 0.1rem;
+            display: block;
+            margin-top: 0.1rem;
+        }
+        .remind_code{
+            width: 2.18rem;
+            height: 2.18rem;
+            margin-top: 0.4rem;
+        }
+    </style>
+</head>
+<body>
+<div class="sign">
+    <div class="sign_bg">
+        <img src="../images/sign/sign_title_03.png" alt="" class="sign_title">
+        <img src="../images/sign/remind_03.png" alt="" class="remind_title">
+        <pre class="remind_info">请扫描下方二维码提前了解
+项目详情</pre>
+        <img src="../images/sign/remind_06.png" alt="" class="remind_line">
+        <img src="../images/sign/remind_09.png" alt="" class="remind_code">
+    </div>
+</div>
+</body>
+</html>
