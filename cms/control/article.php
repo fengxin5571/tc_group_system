@@ -17,27 +17,29 @@ class articleControl extends CMSHomeControl{
     public function indexOp() {
         $this->article_listOp();
     }
-
+    /*
+     * 公司信息首页
+     */
+    public function article_indexOp(){
+        Tpl::showpage("article_index");
+    }
     /**
      * 文章列表
      */
     public function article_listOp() {
         //获取文章分类
         $cms_article=Model('cms_article_class');
-        $condition=array();
-        //$condition['class_code']="";
-        $article_class=$cms_article->getTreeClassList(2,$condition);
-        
+        $condition=array("class_code"=>"");
+        $article_class=$cms_article->getTreeClassList(1,$condition);
+        $condition1=array("class_code"=>"admin");
+        $wx_article_class=$cms_article->getTreeClassList(1,$condition1);
         //获取文章列表
         /**
 		 * 分页
 		 */
         if(empty($_GET['type'])) {
-            $page_number = 10;
+            $page_number = 8;
             $template_name = 'article_list';
-        } else {
-            $page_number = 40;
-            $template_name = 'article_list.modern';
         }
         $condition = array();
         if(!empty($_GET['class_id'])) {
@@ -46,13 +48,22 @@ class articleControl extends CMSHomeControl{
         $condition['article_state'] = self::ARTICLE_STATE_PUBLISHED;
         $model_article = Model('cms_article');
         $article_list = $model_article->getList($condition, $page_number, 'article_sort asc, article_id desc');
+        $wx_article_list = $model_article->getList(array("article_class_id"=>$wx_article_class[0]['class_id']), null, 'article_sort asc, article_id desc');
         foreach($article_list as &$v){
             $v['article_publish_time']=date("Y/m/d",$v['article_publish_time']);
+            $v['article_image']=unserialize($v['article_image']);
+            $v['article_image_all']=unserialize($v['article_image_all']);
         }
-        Tpl::output('show_page', $model_article->showpage(6));
+        foreach($wx_article_list as &$v){
+            $v['article_publish_time']=date("m/d",$v['article_publish_time']);
+            $v['article_image']=unserialize($v['article_image']);
+            $v['article_image_all']=unserialize($v['article_image_all']);
+        }
+        Tpl::output('show_page', $model_article->showpage(7));
         Tpl::output('article_list', $article_list);
+        Tpl::output('wx_article_list', $wx_article_list);
         Tpl::output('article_class', $article_class);
-        
+        Tpl::output('class_id', $_GET['class_id']);
        // $this->get_article_sidebar();
         Tpl::showpage('article_list');
     }
