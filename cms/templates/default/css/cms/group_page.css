@@ -1,0 +1,56 @@
+@CHARSET "UTF-8";
+/*分页*/
+.pagination {
+    width: 690px;
+    margin: 0 auto;
+    margin-top: 70px;
+}
+
+.pagination ul {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pagination ul li.page_ ,.pagination ul li.page_ a  {
+    width: 98px;
+    height: 40px;
+    background: #5ab3ba;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.pagination ul li.page {
+    margin-top: 2.5px;
+    color: #0d4159;
+    font-size: 18px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    font-family: 'Helvetica';
+    cursor: pointer;
+}
+
+.pagination ul li.active {
+    background: #0d4159;
+    color: #fff;
+    -moz-box-shadow: 0 3px 14px #91b2b6;
+    -webkit-box-shadow: 0 3px 14px #91b2b6;
+    box-shadow: 0 3px 14px #91b2b6;
+}
+
+.pagination ul li.page:hover{
+    background: #0d4159;
+    color: #fff;
+}
+
+.pagination ul li.page_:hover ,.pagination ul li.page_ a:hover{
+    background: #0d4159;
+    color: #fff;
+}

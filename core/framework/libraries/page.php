@@ -397,6 +397,26 @@ class Page{
 			    }
 			    $html_page .= '</ul>';
 			    break;
+			case 7:
+			    $html_page .= '<ul>';
+		        if ($this->getNowPage() <= 1){
+			        
+			        $html_page .= '<li class="page_">'.$this->left_inside_a_html.$this->pre_page.$this->right_inside_a_html.'</li>';
+			    }else {
+			        
+			        $html_page .= '<li class="page_"><a class="" href="'. $this->page_url . ($this->getNowPage()-1) .'">'.$this->left_inside_a_html.$this->pre_page.$this->right_inside_a_html.'</a></li>';
+			    }
+			    $html_page .= $this->getNowBar();
+			    if ($this->getNowPage() == $this->getTotalPage() || $this->getTotalPage() == 0){
+			        $html_page .= '<li class="page_">'.$this->left_inside_a_html.$this->next_page.$this->right_inside_a_html.'</li>';
+			      
+			    }else {
+			        $html_page .= '<li class="page_"><a class="" href="'. $this->page_url . ($this->getNowPage()+1) .'">'.$this->left_inside_a_html.$this->next_page.$this->right_inside_a_html.'</a></li>';
+			        
+			    }
+			    $html_page .= '</ul>';
+			    break;
+			    break;
 			default:
 				break;
 		}
@@ -480,11 +500,19 @@ class Page{
 		 * 判断是否是当前页
 		 */
 		if ($this->getNowPage() == $page){
-			$result = $this->left_current_html.$page.$this->right_current_html;
+		    if(in_array($this->style,array(7))){
+		        $result = "<li class='page active'>".$page.$this->right_current_html;
+		    }else{
+		        $result = $this->left_current_html.$page.$this->right_current_html;
+		    }
+			
 		}else {
 		    if (in_array($this->style, array(4,5))) {     // 商城伪静态使用
 		        $result = $this->left_html."<a class='demo' href='". $this->setShopPseudoStaticPageUrl($page) ."'>".$this->left_inside_a_html.$page_name.$this->right_inside_a_html."</a>".$this->right_html;
-            } else {                                      // 普通分页使用
+            }else if(in_array($this->style,array(7))){//太常官网
+                $result = "<li class='page'><a class='demo' href='". $this->page_url . $page ."'>".$this->left_inside_a_html.$page_name.$this->right_inside_a_html."</a>".$this->right_html;
+            }
+            else {                                      // 普通分页使用
                 $result = $this->left_html."<a class='demo' href='". $this->page_url . $page ."'>".$this->left_inside_a_html.$page_name.$this->right_inside_a_html."</a>".$this->right_html;
 		    }
 		}
