@@ -325,7 +325,7 @@ class web_apiControl extends SystemControl {
 		$flag = intval($_REQUEST['flag']);
 		$model_web_config = Model('web_config');
 		$code = $model_web_config->getCodeRow($code_id,$web_id);
-		
+
 		if (!empty($code)) {
 			$code_type = $code['code_type'];
 			$var_name = $code['var_name'];

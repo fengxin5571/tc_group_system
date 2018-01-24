@@ -1,159 +1,117 @@
 <?php defined('InShopNC') or exit('Access Invalid!');?>
- <link rel="stylesheet" href="<?php echo CMS_TEMPLATES_URL;?>/css/cms/news_list_sxy.css">
+ <link rel="stylesheet" href="<?php echo CMS_TEMPLATES_URL;?>/css/cms/newslist_sxy.css">
+ <link rel="stylesheet" href="<?php echo CMS_TEMPLATES_URL;?>/css/cms/group_page.css">
  <script src="<?php echo RESOURCE_SITE_URL;?>/js/cms/cms_jquery.pagination.js"></script>
-<!--中间内容部分--> 
-<section class="sxy_content">
-    <div id="cont_box">
-        <div id="news_left">
-            <!--标题--> 
-            <div class="jump_title">
-                <p><a href="<?php echo urlShop('index','groupindex')?>">首页</a></p>
-                <img src="<?php echo CMS_TEMPLATES_URL.DS.'images/cms/news_list_03.png';?>" alt="">
-                <p><a href="<?php echo urlCMS('index','index')?>">健康云</a></p>
-                <img src="<?php echo CMS_TEMPLATES_URL.DS.'images/cms/news_list_03.png';?>" alt="">
-               <?php foreach($output['article_class'] as $class){?>
-                <p class="show"><?php if($_GET['class_id']==$class['class_id']){echo $class['class_name'];}?></p>
-                <?php }?>
-            </div>
-            <!--选项卡导航-->
-            <div class="title_taichang">
-                <div class="title_info">
-                    <img src="<?php echo CMS_TEMPLATES_URL.DS.'images/cms/news_list_07.png';?>" alt="">
-                    <p>太常资讯</p>
-                </div>
-                <ul class="nav">
-               <?php foreach($output['article_class'] as $class){?>
-                  
-                    <li>
-                        <p <?php if($_GET['class_id']==$class['class_id']){?>class="nav_active"<?php }?>><a href="<?php echo urlCMS('article','article_list',array('class_id'=>$class['class_id']))?>"><?php echo $class['class_name']?></a></p><span></span>
-                    </li>
-                <?php }?>    
-                </ul>
-            </div>
-            <!--选项卡内容-->
-           
-             <div class="news_cont_list on">
-                <ul class="news_list">
-                     <?php foreach($output['article_list'] as $list){?>
-                    <li>
-                        <a href="<?php echo urlCMS('article','article_detail',array('article_id'=>$list['article_id']))?>">
-                            <div class="news_title">
-                                <img src="<?php echo CMS_TEMPLATES_URL.DS.'images/cms/health_day_06.png';?>" alt="" class="gray">
-                                <img src="<?php echo CMS_TEMPLATES_URL.DS.'images/cms/health_day_05.png';?>" alt="" class="orange">
-                                <p><?php echo $list['article_title']?></p>
-                            </div>
-                            <h1><?php echo $list['article_publish_time'];?></h1>
+
+<!--中间内容部分-->
+<section class="content_sxy">
+    <!--左边列表-->
+    <div class="left_content">
+        <!--二级导航开始-->
+        <div class="second_nav">
+            <span>当前位置</span>
+            <i>|</i>
+            <a href="<?php echo urlCMS("index","index" )?>">首页</a>
+            <img src="<?php echo CMS_TEMPLATES_URL ?>/img/newslist_sxy/arrow_03.png" alt="">
+             <a href="<?php echo urlCMS("article","article_index")?>">公司信息</a>
+            <img src="<?php echo CMS_TEMPLATES_URL ?>/img/newslist_sxy/arrow_03.png" alt="">
+            <a href="<?php echo urlCMS("article","article_list" ,array("class_id"=>0))?>" class="active">新闻列表</a>
+        </div>
+        <!--二级导航结束-->
+        <!--文章列表开始-->
+        <!--文章分类开始-->
+        <ul class="article_cate">
+            <li class="<?php if($output['class_id']==0){echo 'active';}?>">
+               <a href="<?php echo urlCMS("article","article_list" ,array("class_id"=>0))?>">
+                    <p>全/部/新/闻</p>
+                    <span>|</span>
+                </a>
+            </li>
+            <?php if($output['article_class']&&is_array($output['article_class'])){?>
+               <?php foreach ($output['article_class'] as $article_class) {?>
+                    <li class="<?php if($output['class_id']==$article_class['class_id']){echo 'active';}?>">
+                        <a href="<?php echo urlCMS("article","article_list" ,array("class_id"=>$article_class['class_id']))?>">
+                            <p><?php echo $article_class['class_name']?></p>
+                            <span>|</span>
                         </a>
-                        
+                    </li>
+                <?php }?>
+           <?php }?>
+        </ul>
+        <!--文章分类结束-->
+       
+       
+        <ul class="article_list on">
+         <?php if($output['article_list']&&$output["article_list"]) {?>
+          <?php foreach ($output['article_list']as $article){?>
+        
+            <li>
+                    <div class="article_img">
+                        <img src="<?php echo UPLOAD_SITE_URL.DS.ATTACH_CMS.DS.'article/'.$article['article_image']['path'].'/'.$article['article_image']['name'];?>" alt="" width="207" height='136'>
+                    </div>
+                    <div class="art_detail">
+                        <div class="art_title">
+                            <p class="news_title"><?php echo str_cut($article['article_title'], 20)?></p>
+                            <span class="news_time"><?php echo $article['article_publish_time']?></span>
+                        </div>
+                        <div class="news_detail">
+                            <?php echo str_cut($article['article_abstract'], 140)?>
+                        </div>
+                        <div class="news_bot">
+                            <div class="news_push">
+                                <p class="publish_people">发表人：<span><?php echo $article['article_author']?></span></p>
+                                <i>|</i>
+                                <p class="like_people">点赞人数：<span><?php echo $article['article_click']?></span></p>
+                            </div>
+                            <a href="<?php echo urlCMS("article","article_detail",array('article_id'=>$article['article_id']))?>" class="check_details">查看详情</a>
+                        </div>
+    
+                    </div>
+                
+            </li>
+         <?php }?>
+         <?php }?>
+        </ul>
+        
+        <!--分页-->
+        <div class="pagination">
+            <?php echo $output['show_page'];?>
+            
+        </div>
+        <!--文章列表结束-->
+    </div>
+    <!--右边-->
+    <div class="right_content">
+        <div class="top_img">
+            <?php echo loadadv(1);?>
+        </div>
+        <div class="weixin_account">
+            <div class="weixin_orange"></div>
+            <div class="weixin_title">
+                <p></p>
+                <h1>微信公众号</h1>
+            </div>
+            <ul class="weixin_list">
+                <?php  if($output["wx_article_list"]&&is_array($output["wx_article_list"])) {?>
+                    <?php foreach ($output["wx_article_list"] as $article) {?>
+                    <li>
+                        <div class="list_top">
+                            <div class="list_text">
+                                <a href="<?php echo urlCMS("article","article_detail",array('article_id'=>$article['article_id']))?>" title="<?php echo $article["article_title"]?>"><?php echo str_cut($article['article_title'], 35)?></a>
+                                <p><?php echo str_cut($article['article_abstract'], 150)?></p>
+                            </div>
+                        </div>
+                        <div class="list_bottom">
+                            <span><?php echo $article['article_publish_time']?></span>
+                            <p><?php echo $article['article_author']?></p>
+                        </div>
                     </li>
                     <?php }?>
-                </ul>
-                
-            </div>
-            
-            <div class="pagination"><?php echo $output['show_page'];?></div>
-			
-        </div>
-        <div id="cont_right">
-            <div class="actity_img">
-                <?php echo loadadv(1056);?>
-            </div>
-            <div class="weixin_account">
-                <div class="weixin_orange"></div>
-                <div class="weixin_title">
-                    <p></p>
-                    <h1>微信公众号</h1>
-                </div>
-                <ul class="weixin_list">
-                    <li>
-                        <div class="list_top">
-                            <div class="wei_img">
-                                <img src="<?php echo UPLOAD_SITE_URL.DS.ATTACH_CMS.DS.'health_day_03.jpg';?>" alt="" width='65' height="65">
-                            </div>
-                            <div class="list_text">
-                                <a href="">坚持午睡竟有这么多好处!!!</a>
-                                <p>美国阿勒格尼学院研究人员的最新研究发现，如果工作压力人员的最新研究如果工作压力人员的最新研究</p>
-                            </div>
-                        </div>
-                        <div class="list_bottom">
-                            <span>09/27</span>
-                            <p>独一张</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="list_top">
-                            <div class="wei_img">
-                                <img src="<?php echo UPLOAD_SITE_URL.DS.ATTACH_CMS.DS.'health_day_03.jpg';?>" alt="" width='65' height="65">
-                            </div>
-                            <div class="list_text">
-                                <a href="">坚持午睡竟有这么多好处!!!</a>
-                                <p>美国阿勒格尼学院研究人员的最新研究发现，如果工作压力人员的最新研究如果工作压力人员的最新研究</p>
-                            </div>
-                        </div>
-                        <div class="list_bottom">
-                            <span>09/27</span>
-                            <p>独一张</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="list_top">
-                            <div class="wei_img">
-                                <img src="<?php echo UPLOAD_SITE_URL.DS.ATTACH_CMS.DS.'health_day_03.jpg';?>" alt="" width='65' height="65">
-                            </div>
-                            <div class="list_text">
-                                <a href="">坚持午睡竟有这么多好处!!!</a>
-                                <p>美国阿勒格尼学院研究人员的最新研究发现，如果工作压力人员的最新研究如果工作压力人员的最新研究</p>
-                            </div>
-                        </div>
-                        <div class="list_bottom">
-                            <span>09/27</span>
-                            <p>独一张</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="list_top">
-                            <div class="wei_img">
-                                <img src="<?php echo UPLOAD_SITE_URL.DS.ATTACH_CMS.DS.'health_day_03.jpg';?>" alt="" width='65' height="65">
-                            </div>
-                            <div class="list_text">
-                                <a href="">坚持午睡竟有这么多好处!!!</a>
-                                <p>美国阿勒格尼学院研究人员的最新研究发现，如果工作压力人员的最新研究如果工作压力人员的最新研究</p>
-                            </div>
-                        </div>
-                        <div class="list_bottom">
-                            <span>09/27</span>
-                            <p>独一张</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+                <?php }?>
+            </ul>
         </div>
     </div>
 </section>
-</body>
-</html>
-<script>
-    //移上去下拉 独易品
-    let wait;
-    $('#dyp').hover(
-        function () {
-            wait = setTimeout(() => {
-                $('.dyw_list').slideDown('normal')
-            }, 200)
-        },
-        function () {
-            clearTimeout(wait);
-            $('.dyw_list').slideUp('normal')
-        }
-    )
-    //选项卡
-    $('.nav li').click(function () {
-        $(".nav li").find('p').removeClass('nav_active');
-        $(".nav li").eq($(this).index()).find('p').addClass("nav_active");
-        $(".news_cont_list").hide().eq($(this).index()).show();
-    });
-</script>
-
 
 
 

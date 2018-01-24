@@ -80,6 +80,7 @@ focus_adv_append += '<option value="'+ap_id+'">'+adv_info['ap_name']+'</option>'
       <li class="current" form="upload_screen_form"><?php echo '首页全屏(背景)焦点大图';?></li>
       <li form="upload_join_form"><?php echo '加入我们展示';?></li>
       <li form="upload_focus_form"><?php echo '底部展示四张联动组图';?></li>
+      <li form="upload_enterprise_form"><?php echo '首页企业文化图片';?></li>
     </ul>
     <form id="upload_screen_form" class="tab-content" name="upload_screen_form" enctype="multipart/form-data" method="post" action="index.php?act=web_api&op=screen_pic" target="upload_pic">
       <input type="hidden" name="form_submit" value="ok" />

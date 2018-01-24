@@ -45,7 +45,7 @@ if(is_file($index_file)) {
                 <li>
                     <span></span>
                     <div class="news_text">
-                        <h3><?php echo $key+1;?></h3>
+                        <h3>0<?php echo $key+1;?></h3>
                         <div class="news_cont">
                             <a href=""><?php echo str_cut($article['article_title'],25)?></a>
                             <p><?php echo str_cut($article['article_abstract'],64)?></p>
