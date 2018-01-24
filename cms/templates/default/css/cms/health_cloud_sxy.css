@@ -1,0 +1,830 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background: #fdfdfd;
+}
+/*导航健康云选中*/
+.head_list_zn:first-child a.name{
+    background-color: #F5B55C;
+    color: #fff;
+    font-weight: normal;
+}
+/*中间主体部分*/
+.sxy_content{
+    width: 100%;
+    height: auto;
+    min-width: 1200px;
+    -moz-box-shadow: -1px -1px 6px #d0d0d0;
+    -webkit-box-shadow: -1px -1px 6px #d0d0d0;
+    box-shadow: -1px -1px 6px #d0d0d0;
+    background-image: url("../../images/cms/bg_sxy.png");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+}
+#cont_box{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+#cont_left{
+    width: 842px;
+    height: auto;
+}
+#cont_right{
+    width: 340px;
+    height: auto;
+    margin-top: 114px;
+    border-radius: 5px;
+}
+/*标题部分*/
+.cont_title{
+    width: 842px;
+    height: 80px;
+    margin: 40px 0;
+    padding: 14px 0 26px 34px;
+    background-image: url("../../images/cms/health_day_01.png");
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.cont_title .tit_eng{
+    font-size: 12px;
+    font-family: 'Gill Sans MT Pro-light';
+    text-transform:uppercase;
+}
+.cont_title .tit_eng span{
+    width: 94px;
+    overflow: hidden;
+    color: #fff;
+}
+.cont_title .tit_eng i{
+    color: #121212;
+    font-style: normal;
+}
+.cont_title .tit_china{
+    font-size: 14px;
+    color: #121212;
+}
+/*天天养生*/
+.cont_part{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+/*左边图片列表*/
+#health_day .cont_pic{
+    width: 406px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#health_day .cont_pic li{
+    width: 202px;
+    overflow: hidden;
+}
+#health_day .cont_pic li a{
+    display: block;
+}
+#health_day .cont_pic li .img_box{
+    width: 202px;
+    height: 126px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+#health_day .cont_pic li img{
+    width: 202px;
+    height: 126px;
+    display: block;
+}
+#health_day .cont_pic li p{
+    font-size: 14px;
+    color:#2d2d2d;
+    margin: 15px 0;
+    width: 202px;
+    height: 21px;
+    overflow: hidden;
+    word-break: keep-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+/*右边列表*/
+#health_day .cont_list{
+    width: 432px;
+    height: auto;
+}
+.cont_list .article_img{
+    width: 432px;
+    height: 270px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+.cont_list .article_img img{
+    width: 432px;
+    height: 270px;
+    display: block;
+}
+.cont_list .article_img .pic{
+    width: 432px;
+    height: 270px;
+    position: absolute;
+    top:0;
+    left:0;
+}
+.cont_list .article_img .pic li{
+    width: 432px;
+    height: 270px;
+    position: absolute;
+    top:0;
+    left:0;
+    opacity: 0;
+    overflow: hidden;
+}
+.cont_list .article_img .pic li img{
+    width: 432px;
+    height: 270px;
+}
+.cont_list .article_img .pic li.on{
+    opacity: 1;
+}
+.cont_list .article_img .point{
+    width: 80px;
+    height: 10px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left:50%;
+    margin-left: -40px;
+    bottom:16px;
+}
+.cont_list .article_img .point li.active{
+    width: 30px;
+    height: 10px;
+    border-radius: 5px;
+    background: #f5b55c;
+}
+.cont_list .article_img .point li{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+}
+.cont_list .article_list{
+    width: 100%;
+    height: 242px;
+    background: #fff;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding-top: 30px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.cont_list .article_list li{
+    width: 100%;
+}
+.cont_list .article_list li a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cont_list .article_list li .gray{
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    margin-left: 20px;
+    margin-top: 2px;
+}
+.cont_list .article_list li:hover .gray{
+    display: none;
+}
+.cont_list .article_list li .orange{
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    margin-left: 20px;
+    display: none;
+    margin-top: 2px;
+}
+
+.cont_list .article_list li:hover .orange{
+    display: block;
+}
+.cont_list .article_list li P{
+    width: 310px;
+    overflow: hidden;
+    word-break: keep-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    color: #737373;
+}
+.cont_list .article_list li:hover p{
+    color: #404040;
+}
+.cont_list .article_list li pre{
+    font-size: 12px;
+    color: #bdbdbd;
+    line-height: 20px;
+    font-family: 'Helvetiva';
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.cont_list .article_list li.more_art{
+    height: 46px;
+    width: 432px;
+    background: #9ccfca;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cont_list .article_list li.more_art a{
+    width:90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cont_list .article_list li.more_art a h1{
+    font-size: 16px;
+    color: #fff;
+    padding-left: 8px;
+    font-weight: normal;
+}
+/*人人养生*/
+.health_person .cont_top{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 32px;
+}
+/*轮播图*/
+.health_person .article_img{
+    width: 444px;
+    height: 270px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+.health_person .article_img .pic{
+    width: 444px;
+    height: 270px;
+    position: absolute;
+    top:0;
+    left:0;
+}
+.health_person .article_img img{
+    width: 444px;
+    height: 270px;
+    display: block;
+}
+.health_person .article_img .pic li{
+    width: 432px;
+    height: 270px;
+    position: absolute;
+    top:0;
+    left:0;
+    overflow: hidden;
+    opacity: 0;
+}
+.health_person .article_img .pic li img{
+    width: 432px;
+    height: 270px;
+}
+.health_person .article_img .pic li.on{
+    opacity: 1;
+}
+.health_person .article_img .point{
+    width: 80px;
+    height: 10px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left:50%;
+    margin-left: -40px;
+    bottom:16px;
+}
+.health_person .article_img .point li.active{
+    width: 30px;
+    height: 10px;
+    border-radius: 5px;
+    background: #f5b55c;
+}
+.health_person .article_img .point li{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+}
+/*热门推荐*/
+.recommend{
+    width: 331px;
+    height: 270px;
+    padding-right: 34px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.recommend .recom_title{
+    display: flex;
+    align-items: center;
+}
+.recommend .recom_title p{
+    font-size: 16px;
+    color: #f5b55c;
+}
+.recommend .recom_img{
+    width: 297px;
+    height: 180px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.recommend .recom_img img{
+    width: 297px;
+    height: 180px;
+}
+.recommend .recon_info{
+    display: block;
+}
+.recommend .recon_info .recon_info_title{
+    font-size: 16px;
+    color: #404040;
+    letter-spacing: 1px;
+    display: block;
+    width: 297px;
+    overflow: hidden;
+    word-break: keep-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.recommend .recom_time{
+    display: flex;
+    align-items: center;
+}
+.recommend .recom_time span{
+    font-size: 12px;
+    color: #606060;
+    display: block;
+}
+.recommend .recom_time i{
+    font-size: 10px;
+    color: #dfdfdf;
+    font-style: normal;
+    display: block;
+    padding: 0 10px;
+}
+.recommend .recom_time p{
+    font-size: 12px;
+    color: #bdbdbd;
+}
+.recommend .recom_time a{
+    display: block;
+    width: 20px;
+    height:20px;
+    margin-top: 4px;
+    margin-left: 150px;
+}
+.recommend .recom_time a img{
+    display: block;
+    width: 20px;
+    height:20px;
+}
+/*分割线*/
+.cont_line{
+    width: 842px;
+    height: 1px;
+    background: #eee;
+    margin: 30px 0 24px 0;
+}
+/*下半部分*/
+.health_person .cont_bottom{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 32px;
+}
+.person_list{
+    display: flex;
+    width: 444px;
+    height: 180px;
+    justify-content: space-between;
+}
+.person_list .article_list{
+    width: 386px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.person_list .article_list li{
+    width: 386px;
+}
+.person_list .article_list li a{
+     width: 386px;
+     display: flex;
+     align-items: center;
+     cursor: pointer;
+ }
+.person_list .article_list li:hover .gray{
+    display: none;
+}
+.person_list .article_list li .gray{
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+}
+.person_list .article_list li .orange{
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+    display: none;
+}
+.person_list .article_list li:hover .orange{
+    display: block;
+}
+.person_list .article_list li p{
+    margin-left: 10px;
+    width: 294px;
+    overflow: hidden;
+    word-break: keep-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    color: #737373;
+}
+.person_list .article_list li:hover p{
+    color: #404040;
+}
+.person_list .article_list li pre {
+    font-size: 12px;
+    color: #bdbdbd;
+    line-height: 20px;
+    font-family: 'Helvetiva';
+    margin-left: 20px;
+}
+.person_more{
+    width: 42px;
+    height: 180px;
+    background-image:url("../../images/cms/person_more.png") ;
+}
+.person_more a{
+    width: 20px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 11px;
+}
+.person_more a img{
+    width: 16px;
+    height: 16px;
+    margin-bottom: 6px;
+}
+.person_more a p{
+    writing-mode: vertical-lr;
+    writing-mode: tb-lr;
+    font-size:14px;
+    color: #363636;
+    letter-spacing: 2px;
+}
+.cont_bottom .top_img_box {
+    width: 297px;
+    height: 180px;
+    border-radius: 5px;
+    margin-right: 34px;
+    overflow: hidden;
+}
+.cont_bottom .topic_img{
+    width: 297px;
+    height: 180px;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+}
+.cont_bottom .topic_img li{
+    width: 193px;
+    height: 180px;
+    border-right: 1px solid #fdfdfd;
+    overflow: hidden;
+    cursor: pointer;
+    transition: width 0.3s ease;
+    background-color: #96bff3;
+}
+.cont_bottom .topic_img li:last-child{
+    border-right:none;
+}
+.cont_bottom .topic_img li img{
+    width: 193px;
+    height: 180px;
+}
+.cont_bottom .topic_img li.hidden{
+    width: 52px;
+    overflow: hidden;
+}
+/*处处养生*/
+.health_every .article_list {
+    width: 776px;
+    height: 240px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.health_every .article_list li{
+    width: 378px;
+}
+.health_every .article_list li a{
+    width: 378px;
+    display: flex;
+    align-items: center;
+}
+.health_every .article_list li:hover .gray{
+    display: none;
+}
+.health_every .article_list li .gray{
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+}
+.health_every .article_list li .orange{
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+    display: none;
+}
+.health_every .article_list li:hover .orange{
+    display: block;
+}
+.health_every .article_list li p{
+    margin-left: 10px;
+    width: 294px;
+    overflow: hidden;
+    word-break: keep-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    color: #737373;
+}
+.health_every .article_list li:hover p{
+    color: #404040;
+}
+.health_every .article_list li pre{
+    font-size: 12px;
+    color: #bdbdbd;
+    line-height: 20px;
+    font-family: 'Helvetiva';
+    margin-left: 20px;
+}
+.health_every #click_more{
+    width: 776px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.health_every #click_more a{
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.health_every #click_more a img{
+    margin-top: 2px;
+}
+.health_every #click_more a p{
+    font-size: 16px;
+    color: #f5b55c;
+}
+/*健康问答*/
+.answer_cont{
+    width: 842px;
+    height: 290px;
+    padding-left: 32px;
+    display: flex;
+    justify-content: space-between;
+}
+.answer_cont .answer_left{
+    width: 520px;
+    height: 290px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.answer_cont .answer_left .answer_img{
+    width: 520px;
+    height: 124px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.answer_cont .answer_left .answer_img img{
+    width: 520px;
+    height: 124px;
+}
+.answer_cont .answer_left .answer_list{
+    width: 520px;
+    height: 146px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.answer_list li{
+    width: 250px;
+}
+.answer_list li a{
+    width: 250px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.answer_list li span{
+    width: 8px;
+    height:8px;
+    border-radius: 2px;
+    background: #dfdfdf;
+}
+.answer_list li:hover span{
+    background-color: #f5b55c;
+}
+.answer_list li p{
+    font-size: 16px;
+    color: #737373;
+    margin-left: 8px;
+    margin-right: 10px;
+    width: 198px;
+    overflow: hidden;
+    word-break: keep-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.answer_list li:hover p{
+    color: #404040;
+}
+.answer_list li i{
+    font-size: 12px;
+    font-family: 'Helvetiva';
+    color: #bdbdbd;
+    font-style: normal;
+}
+.answer_cont .answer_right{
+    width: 257px;
+    height: 282px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.answer_cont .answer_right img{
+    width: 257px;
+    height: 282px;
+}
+.answer_more{
+    width: 842px;
+    padding-left: 32px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.answer_more a{
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.answer_more a p{
+    font-size: 16px;
+    color: #f5b55c;
+    margin-left: 10px;
+}
+/*视频专区*/
+#health_video{
+    margin-bottom: 35px;
+    z-index: 999;
+}
+.video_list{
+    width: 842px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.video_list li{
+    width: 273px;
+    height: 165px;
+    background-color: #ecf3f5;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    border: 1px solid #ecf3f5;
+}
+.video_list li a{
+    display: block;
+    width: 273px;
+    height: 165px;
+}
+.video_list li img{
+    width: 273px;
+}
+.video_list li:hover{
+    border:1px solid #ffd943;
+}
+/*右边部分*/
+#cont_right .actity_img{
+    width: 340px;
+    height: 240px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+#cont_right .actity_img img{
+    width: 340px;
+    height: 240px;
+}
+.weixin_account{
+    margin-top: 28px;
+    width: 340px;
+
+    height: auto;
+
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.weixin_orange{
+    width: 340px;
+    height: 4px;
+    background-color: #f5b55c;
+}
+.weixin_title{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    padding: 0 24px;
+}
+.weixin_title p{
+    width: 4px;
+    height: 17px;
+    background-color: #f5b55c;
+    border-radius: 2px;
+}
+.weixin_title h1{
+    font-weight: normal;
+    font-size: 18px;
+    color: #4d4d4d;
+    margin-left: 10px;
+}
+.weixin_list{
+    padding: 0 24px;
+}
+.weixin_list li{
+    margin-top: 18px;
+    border-bottom: 1px solid #f2f2f2;
+}
+.weixin_list li:last-child{
+    border-bottom: none;
+}
+.weixin_list .list_top{
+    display: flex;
+    justify-content: space-between;
+}
+.weixin_list .list_top .wei_img{
+    width: 60px;
+    height: 60px;
+    border-radius: 25px;
+    background-color: #96bff3;
+    overflow: hidden;
+}
+.weixin_list .list_top .list_text{
+    width: 212px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.weixin_list .list_top .list_text a{
+    font-size: 14px;
+    color: #3c3c3c;
+    width: 200px;
+    overflow: hidden;
+    word-break: keep-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+}
+.weixin_list .list_top .list_text p{
+    width: 208px;
+    display: -webkit-box;
+ /*   -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;*/
+    overflow: hidden;
+    font-size: 12px;
+    color: #646464;
+}
+.list_bottom{
+    font-size: 12px;
+    color: #bdbdbd;
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.article_img .pic li.on{
+    opacity: 1;
+}

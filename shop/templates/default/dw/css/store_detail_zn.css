@@ -1,0 +1,249 @@
+body,html{
+    background: #f8f8f8;
+}
+.health_title_zn{
+    width:100%;
+    height:150px;
+    overflow: hidden;
+}
+.health_title{
+    margin-top:55px;
+    line-height:0.4rem;
+    font-size:24px;
+    color:#50c3fb;
+    text-align: center;
+    position:relative;
+}
+.health_title span:first-child{
+    display: block;
+    width:53px;
+    height:14px;
+    background: url('../image/image_zn/icon_left_zn.png');
+    position:absolute;
+    left:35.8%;
+    bottom:-5px;
+}
+.health_title span:last-child{
+    display: block;
+    width:53px;
+    height:14px;
+    background: url('../image/image_zn/icon_right_zn.png');
+    position:absolute;
+    right:35.8%;
+    bottom:-5px;
+}
+.health_title span:nth-child(2){
+    letter-spacing: 9px;
+}
+.health_title_english{
+    width:100%;
+    height:12px;
+    line-height:16px;
+    text-align: center;
+    color:#999;
+    margin-top:15px;
+}
+.store_box_zn{
+    width:1200px;
+    height:450px;
+    margin:0 auto;
+    box-sizing: border-box;
+   	margin-top: 50px
+}
+.store_pic_zn{
+    width:695px;
+    height:392px;
+    float:left;
+    background: #fff;
+    padding: 14px;
+    box-sizing: border-box;
+}
+.pic_box_zn{
+    width:666px;
+    height:317px;
+    position: relative;
+    overflow: hidden;
+}
+.pic_box_zn a{
+    width:666px;
+    height:317px;
+    display: block;
+    position: absolute;
+    top:0;
+    left:0;
+}
+.pic_box_zn a img{
+    display: block;
+    width:666px;
+    height:317px;
+    position: absolute;
+    top:0;
+    left:0;
+}
+.pic_box_zn a:first-child img{
+    z-index: 10;
+}
+
+.list_zn{
+    height:40px;
+    width:666px;
+    margin:0 auto;
+    margin-top:10px;
+}
+.list_zn li{
+    float:left;
+    width:72px;
+    height:40px;
+    position: relative;
+    margin-right:15px;
+}
+.list_zn li img{
+    width:72px;
+    height:40px;
+    display: block;
+}
+.mask_zn{
+    width:72px;
+    height:40px;
+    line-height:40px;
+    background: rgba(0,0,0,0.2);
+    color:#fff;
+    font-size:10px;
+    text-align: center;
+    display: none;
+    position: absolute;
+    top:0;
+    left:0;
+}
+.address_zn{
+    float:right;
+    width:480px;
+    height:392px;
+}
+
+.develop_zn_box{
+    width:1200px;
+    height:auto;
+    margin:0 auto;
+    margin-bottom:100px;
+}
+.develop_title_zn{
+    width:160px;
+    height:60px;
+    background: #f8f8f8;
+    margin-bottom:-24px;
+    z-index: 20;
+}
+.develop_title{
+    height:26px;
+    line-height:26px;
+    color:#9cc813;
+    font-size:18px;
+}
+.english_develop{
+    font-size:10px;
+    color:#999;
+}
+.develop_box_zn{
+    overflow: hidden;
+}
+.develop_box_left{
+    height:158px;
+    width:693px;
+    float:left;
+    box-sizing: border-box;
+    border-bottom:1px solid #dcdcdc;
+}
+.develop_left_zn{
+    padding:0 40px;
+    font-size:14px;
+    width:708px;
+    box-sizing: border-box;
+    height:100px;
+    line-height:25px;
+    margin-top:35px;
+    border-right:1px solid #dcdcdc;
+    border-left:1px solid #dcdcdc;
+    color:#999;
+    letter-spacing: 1px;
+}
+.xiantiao_zn{
+    width:559px;
+    box-sizing: border-box;
+    height:1px;
+    background: #dcdcdc;
+    margin-left:133px;
+}
+.develop_box_right{
+    width:480px;
+    height:158px;
+    box-sizing: border-box;
+    float:right;
+    border-top:1px solid #dcdcdc;
+    border-bottom:1px solid #dcdcdc;
+}
+.develop_right_zn{
+    width:100%;
+    height:100px;
+    margin-top:35px;
+    border-right:1px solid #dcdcdc;
+    box-sizing: border-box;
+}
+.phone_and_address_zn{
+    height:120px;
+    width:440px;
+    margin:0 auto;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.phone_zn{
+    width:100%;
+    height:40px;
+    line-height:40px;
+    box-sizing: border-box;
+    /*overflow: hidden;*/
+}
+.phone_zn i{
+    float:left;
+    margin-top:6px;
+    display: block;
+    width:28px;
+    height:24px;
+    background: url('../image/phone_zn.png');
+    background-size: cover;
+}
+.phone_zn p{
+    float:left;
+    width:auto;
+    line-height:40px;
+    height:40px;
+    margin-left:15px;
+    font-size:12px;
+    color:#333;
+}
+.address_zn_detail{
+    width:100%;
+    height:50px;
+    line-height:50px;
+    box-sizing: border-box;
+}
+.address_zn_detail i{
+    display: block;
+    width:27px;
+    height:27px;
+    background: url('../image/address_zn.png');
+    float:left;
+    margin-top:8px;
+}
+.address_zn_detail p{
+    width:auto;
+    height:50px;
+    line-height:50px;
+    float:left;
+    margin-left:15px;
+    font-size:14px;
+    color:#333;
+}
+.list_zn li:first-child .mask_zn{
+    display: block;
+}

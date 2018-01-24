@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>预约体验</title>
+	<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+	<script src="../js/dw/rem.js"></script>
+	<link rel="stylesheet" href="../css/dw/public_qty.css">
+	<link rel="stylesheet" href="../css/dw/swiper.min.css">
+	<link rel="stylesheet" href="../css/dw/makeExper_qty.css">
+	<script src="../js/dw/swiper.min.js"></script>
+	<script src="../js/dw/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/config.js"></script>
+	<script type="text/javascript" src="../js/zepto.min.js"></script>
+	<script type="text/javascript" src="../js/template.js"></script>
+	<script type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript" src="../js/tmpl/appointment.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".btn_qty").click(function(){
+				if($("#appointment_name").val() == ""){
+					alert("姓名不能为空");
+					return false;			
+				}else if($("#appointment_mobile").val() == ""){
+					alert("联系方式不能为空");
+					return false;
+				}else if (!$("#appointment_mobile").val().match(/^(((13[0-9]{1})|159|153)+\d{8})$/)) { 
+					alert("手机号码格式不正确！");
+					return false;
+				} 
+			})	
+		})
+	</script>
+</head>
+<body>
+	<!-- 预约体验头部开始 -->
+	<div class="healthSchoolHeader_qty">
+		<div class="healthHeader_qty">
+			<ul>
+				<li><a href="/wap">首页</a></li>
+				<li class="color_qty"><a href="#form">预约填单</a></li>
+				<li><a href="#makenote">预约须知</a></li>
+				<li><a href="#process">预约流程</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- 预约体验头部结束 -->
+	
+	<!-- 预约体验块开始 -->
+	<div class="makeExper_qty">
+		<div class="makeSmallExper_qty">
+			<div class="makeExperFont_qty">预约体验介绍</div>
+			<p> 山西太常生物科技有限公司是一家专业从事骨病调养，并以此为基础综合改善各类慢性病及亚健康症状的健康调理机构，是国内健骨养生，个性化调养的开创者和领导者。</p>
+			<div class="makeExperFont_qty"><a id="form">预约填单</a></div>
+			<!-- 预约表单开始 -->
+			<div class="makeExperForm_qty">
+				<form action="/mobile/index.php?act=appointment&op=save" method="post" id="formid">
+					<table border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td>名字</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="text" name="appointment_name" id="appointment_name" oninput="writeClear($(this));">
+							</td>
+						</tr>
+						<tr>
+							<td>预约项目</td>
+						</tr>
+						<tr>
+							<td>
+								<select name="appointment_item" id="appointment_show" oninput="writeClear($(this));">									
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>联系电话</td>
+						</tr>
+						<tr>
+							<td>
+								<input type="text" name="appointment_mobile" id="appointment_mobile" oninput="writeClear($(this));">
+							</td>
+						</tr>						
+						<tr>
+							<td>备注</td>
+						</tr>
+						<tr>
+							<td>
+								<textarea name="appointment_remark" id="" cols="30" rows="10"></textarea>
+							</td>
+						</tr>
+					</table>
+					<button class="btn_qty" id="submitbtn">提交</button>
+				</form>
+			</div>
+			<!-- 预约表单结束 -->
+		</div>
+	</div>
+	
+	<!-- 预约体验块结束 -->
+	<!-- 预约须知开始 -->
+	<div class="makeNoteBox_qty">
+		<div class="makeNoteSmall_qty">
+			<div class="makeExperFont_qty"><a id="makenote">预约须知</a></div>
+			<p>
+				1.注意清淡饮食，不要吃一些大鱼大肉之类的食物，最好选择蔬菜类，体验前一天晚饭早些吃，晚上十点以后就不要再吃东西或喝水了。
+			</p>
+			<p>
+				2.要注意休息好，不要做过于劳累的体力劳动，要保证睡眠，体检前一天最好在十点左右就睡觉，以保证明天精力充沛。
+			</p>
+			<p>
+				3.不要饮酒，因为酒精留存人体的时间可以到达10到20个小时，根据个人体质不同，所以，体检前饮酒肯定会影响体检结果。
+			</p>
+			<div class="makeExperFont_qty"><a id="process">预约流程</a></div>
+			<div class="makeProcess_qty">
+				<span class="makeMath_qty">1</span>
+				<span class="makeFont_qty">请详细填写"预约体验"信息，或拨打门店电话</span>
+			</div>
+			<div class="makeProcess_qty">
+				<span class="makeMath_qty">2</span>
+				<span class="makeFont_qty">门店人员电话回访，确认体验时间及注意事项</span>
+			</div>
+			<div class="makeProcess_qty">
+				<span class="makeMath_qty">3</span>
+				<span class="makeFont_qty">请您准时到店进行免费体验</span>
+			</div>
+		</div>
+	</div>
+	<!-- 预约须知结束 -->
+</body>
+<script type="text/html" id="appointment"> 	
+	
+			<%for(var i in appointment) {%>
+				<option value="<%=appointment[i].item_id%>"><%=appointment[i].appoint_item_name%></option>
+			<%}%>
+</script>
+<script>
+	color_qty()
+		function color_qty(){
+			$('.healthHeader_qty ul li').not(":first").click(function(){
+				$('.healthHeader_qty ul li').eq($(this).index()).addClass("color_qty").siblings().removeClass("color_qty")
+			})
+		}
+</script>
+</html>

@@ -1,0 +1,172 @@
+body,html{
+	background: #F9F9F9;
+}
+/*健康问答头部开始*/
+.healthAnswer_qty{
+	width: 6rem;
+	height: 0.9rem;
+	overflow: hidden;
+	margin: auto;
+}
+.healthAnswer_qty ul{
+	width: 6rem;
+	height: 0.9rem;
+	float: left;
+}
+.healthAnswer_qty ul li{
+	font-size: 0.28rem;
+	float: left;
+	height: 0.9rem;
+	line-height: 0.9rem;
+	padding-right: 0.2rem;
+	padding-left: 0.2rem;
+	position: relative;
+	color: #333333;
+}
+.healthAnswer_qty ul li:after{
+	content: "";
+	position: absolute;
+	width: 1px;
+	height: 0.3rem;
+	right: 0rem;
+	background: #ccc;
+	top: 0.3rem;
+}
+.healthAnswer_qty ul li:last-child:after{
+	width: 0;
+}
+.healthAnswer_qty ul li a{
+	color: #999999;
+}
+/*健康问答头部结束*/
+/*健康问答开始*/
+.healthAnswerBox_qty{
+	width: 6rem;
+	margin: auto;
+	overflow: hidden;
+	border: 1px solid #E7E7E7;
+	background: #fff;
+	padding-bottom: 0.6rem;
+}
+.healthSmallAnswer_qty{
+	width: 5.6rem;
+	margin: auto;
+	overflow: hidden;
+}
+.healthFont_qty{
+	width: 5.6rem;
+	float: left;
+	font-size: 0.24rem;
+	margin-top: 0.2rem;
+	color: #F69C1C;
+	font-weight: bold;
+}
+.english_qty{
+	width: 0.4rem;
+	float: left;
+}
+.englishFont_qty{
+	width: 5.2rem;
+	float: left;
+}
+.time_qty{
+	width: 5.6rem;
+	float: left;
+	font-size: 0.22rem;
+	color: #999999;
+	margin-top: 0.1rem;
+}
+.answer_qty{
+	width: 5.6rem;
+	float: left;
+	font-size: 0.24rem;
+	color: #9cc813;
+	margin-top: 0.15rem;
+	font-weight: bold;
+}
+.answerTextarea_qty{
+	width: 5.6rem;
+	height: 1.5rem;
+	float: left;
+	margin-top: 0.1rem;
+}
+.answerTextarea_qty textarea{
+	width: 5.6rem;
+	height: 1.5rem;
+	float: left;
+	border: 1px solid #E7E7E7;
+	outline: none;
+	resize: none;
+	font-size: 0.22rem;
+	text-indent: 0.2rem;
+	line-height: 0.4rem;
+	letter-spacing: 0.02rem;
+}
+.submit_qty{
+	width: 5.6rem;
+	float: left;
+	padding-bottom: 0.3rem;
+	border-bottom: 1px solid #E7E7E7;
+}
+.submit_qty button{
+	float: left;
+	margin-top: 0.2rem;
+	background: #F69C1C;
+	outline: none;
+	border: none;
+	color: #fff;
+	font-size: 0.22rem;
+	padding: 0.05rem 0.2rem;
+	border-radius: 0.2rem;
+}
+.answerBox_qty{
+	width: 5.6rem;
+	float: left;
+	line-height: 0.6rem;
+}
+.answerName_qty{
+	font-size: 0.22rem;
+	color: #999999;
+	float: left;
+}
+.browse_qty{
+	font-size: 0.22rem;
+	color: #999999;
+	float: right;
+}
+.answerColor_qty{
+	width: 5.6rem;
+	color: #9cc813;
+	font-size: 0.24rem;
+	font-weight: bold;
+	float: left;
+	margin-top: 0.1rem;
+}
+.answerFont_qty{
+	width: 5.6rem;
+	color: #333333;
+	font-size: 0.24rem;
+	float: left;
+	margin-top: 0.2rem;
+	padding-bottom: 0.3rem;
+	border-bottom: 1px solid #E7E7E7;
+	letter-spacing: 0.01rem;
+	text-align: justify;
+	line-height: 0.4rem;
+}
+.answerNameBox_qty{
+	width: 5.6rem;
+	float: left;
+	line-height: 0.6rem;
+}
+.answerName_qty_qty{
+	font-size: 0.22rem;
+	color: #999999;
+	float: left;
+}
+.answerTime_qty{
+	font-size: 0.22rem;
+	color: #999999;
+	float: right;
+}
+/*健康问答结束*/

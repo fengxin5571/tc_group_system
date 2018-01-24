@@ -1,0 +1,523 @@
+body, html {
+    background: #ecf7f9;
+    background-image: url("../img/newslist_sxy/news_listbg.png");
+    /*background-size: cover;*/
+}
+/*banner图片开始*/
+.banner{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-top: 80px;
+}
+.banner img{
+    width: 100%;
+    display: block;
+}
+/*banner图片结束*/
+.culture_title{
+    width: 100%;
+    margin: 46px 0;
+    text-align: center;
+}
+.culture_title img{
+    width: 240px;
+}
+/*管理理念开始*/
+.company_vision{
+    width: 100%;
+    height: 762px;
+    background-image: url("../img/enterprise_culture_sxy/vision_bg_02.png");
+    background-size: cover;
+}
+.company_vision .vision_box{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+}
+.company_vision .vision_box .company_img{
+    width: 705px;
+    height: 506px;
+}
+.company_vision .vision_box .company_img img{
+    width: 705px;
+    height: 506px;
+}
+.company_vision .vision_box .company_desc{
+    width: 598px;
+    height: 426px;
+    background-color: #fff;
+    margin-left: -103px;
+    margin-top: 40px;
+    padding: 60px 40px 70px 40px;
+    background-image: url("../img/enterprise_culture_sxy/vision_text_bg_03.png");
+}
+.company_vision .vision_box .company_desc h1{
+    font-size: 24px;
+    color: #0d4159;
+    font-weight: lighter;
+    margin-bottom: 6px;
+}
+.company_vision .vision_box .company_desc h2{
+    font-size: 16px;
+    color: #5ab3ba;
+    text-transform: uppercase;
+    line-height: 16px;
+}
+.company_vision .vision_box .company_desc img{
+    display: block;
+}
+.company_vision .vision_box .company_desc p{
+    width: 518px;
+    max-height: 180px;
+    font-size: 18px;
+    color: #0d4159;
+    font-weight: lighter;
+    text-align: justify;
+    letter-spacing: 1px;
+    line-height: 30px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+    margin-top: 62px;
+}
+.vision_lb{
+    width: 1200px;
+    height: 187px;
+    margin: 0 auto;
+    margin-top: 32px;
+    position: relative;
+}
+.vision_lb .vision_arrow{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.vision_lb .vision_arrow .arrow_l,.vision_lb .vision_arrow .arrow_r{
+    width: 36px;
+    height: 36px;
+    background-color: #20b0bd;
+    position: absolute;
+    top: 50%;
+    margin-top: -18px;
+    cursor: pointer;
+}
+.vision_lb .vision_arrow .arrow_l{
+    left: 0;
+}
+.vision_lb .vision_arrow .arrow_r{
+    right: 0;
+}
+.vision_lb_box{
+    width: 1092px;
+    height: 187px;
+    position: relative;
+    overflow: hidden;
+    margin-left: 60px;
+}
+.vision_img_list{
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.vision_img_list li{
+    width: 260px;
+    height: 187px;
+    margin-right: 13px;
+    background-color: #e8f3f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.vision_img_list li img{
+    width: 256px;
+    height: 183px;
+}
+.vision_img_list li .vision_mask{
+    width: 260px;
+    height: 187px;
+    background: rgba(0,0,0,0.6);
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+}
+.cgyjc{
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
+/*管理理念结束*/
+/*公司使命开始*/
+.company_mission{
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+.mission_list{
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    /*display: grid;*/
+    /*grid-template-columns: 600px 0 600px;*/
+    /*grid-template-rows: 270px 0 168px 0 270px;*/
+}
+.mission_list li:nth-child(1){
+    width: 600px;
+    height: 270px;
+    /*grid-column: 1/ 2;*/
+    /*grid-row: 1 / 2;*/
+}
+.mission_list li:nth-child(2){
+    /*grid-column: 3/ 4;*/
+    /*grid-row: 1 / 2;*/
+    width: 600px;
+    height: 270px;
+    padding: 30px 32px 22px  32px;
+    background-color: #fff;
+}
+.mission_list li:nth-child(3){
+    width: 1200px;
+    height: 168px;
+    /*grid-column: 1/ 4;*/
+    /*grid-row: 3 / 4;*/
+}
+.mission_list li:nth-child(4){
+    /*grid-column: 1/ 2;*/
+    /*grid-row: 5 / 6;*/
+    width: 600px;
+    height: 270px;
+    padding: 30px 32px 22px  32px;
+    background-color: #fff;
+}
+.mission_list li:nth-child(5){
+    /*grid-column: 3/ 4;*/
+    /*grid-row: 5 / 6;*/
+    width: 600px;
+    height: 270px;
+}
+.mission_list li:nth-child(1) img,
+.mission_list li:nth-child(5) img{
+    width: 600px;
+    height: 270px;
+}
+.mission_list li:nth-child(3) img{
+    width: 1200px;
+    height: 168px;
+}
+.mission_list li .mission_title{
+    width: 223px;
+    height: 61px;
+    background-image: url("../img/enterprise_culture_sxy/mission_img_06.png");
+}
+.mission_list li .mission_title section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 9px;
+    margin-left: -46px;
+}
+.mission_list li .mission_title h1{
+    font-size: 14px;
+    color: #0d4159;
+    font-weight: normal;
+    text-transform: uppercase;
+    line-height: 16px;
+}
+.mission_list li .mission_title h2{
+    font-size: 20px;
+    color: #0d4159;
+    font-weight: normal;
+    line-height: 22px;
+}
+.mission_list li p{
+    width: 536px;
+    height: 104px;
+    overflow: hidden;
+    font-size: 16px;
+    color: #0d4159;
+    font-weight: lighter;
+    line-height: 26px;
+    text-align: justify;
+    margin-top: 50px;
+}
+/*公司使命结束*/
+/*员工风采开始*/
+.staff_presence{
+    width: 100%;
+    height: 762px;
+    background-image: url('../img/enterprise_culture_sxy/vision_bg_02.png');
+    background-size: cover;
+}
+.staff_presence .staff_box{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    position: relative;
+}
+.staff_presence .staff_box .staff_desc{
+    width: 598px;
+    height: 426px;
+    background-color: #fff;
+    padding: 60px 40px 70px 40px;
+    background-image: url('../img/enterprise_culture_sxy/vision_text_bg_03.png');
+    position: relative;
+    left: 0;
+    top: 40px;
+    z-index: 99;
+}
+.staff_presence .staff_box .staff_desc h1{
+    font-size: 24px;
+    color: #0d4159;
+    font-weight: lighter;
+    margin-bottom: 6px;
+}
+.staff_presence .staff_box .staff_desc h2{
+    font-size: 16px;
+    color: #5ab3ba;
+    text-transform: uppercase;
+    line-height: 16px;
+}
+.staff_presence .staff_box .staff_desc img{
+    display: block;
+}
+.staff_presence .staff_box .staff_desc p{
+    font-size: 18px;
+    color: #0d4159;
+    font-weight: lighter;
+    text-align: justify;
+    letter-spacing: 1px;
+    line-height: 30px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+    margin-top: 62px;
+}
+.staff_presence .staff_box .staff_img{
+    width: 705px;
+    height: 506px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.staff_presence .staff_box .staff_img img{
+    width: 705px;
+    height: 506px;
+}
+.staff_lb{
+    width: 1200px;
+    height: 187px;
+    margin: 0 auto;
+    margin-top: 115px;
+    position: relative;
+}
+.staff_arrow{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.staff_arrow .arrow_left,.staff_arrow .arrow_right{
+    width: 36px;
+    height: 36px;
+    background-color: #20b0bd;
+    position: absolute;
+    top: 50%;
+    margin-top: -18px;
+    cursor: pointer;
+}
+.staff_arrow .arrow_left{
+    left: 0;
+}
+.staff_arrow .arrow_right{
+    right: 0;
+}
+.staff_lb_box{
+    width: 1092px;
+    height: 187px;
+    position: relative;
+    overflow: hidden;
+    margin-left: 60px;
+}
+.staff_lb_box .staff_img_list{
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.staff_lb_box .staff_img_list li{
+    width: 260px;
+    height: 187px;
+    margin-right: 13px;
+    background-color: #e8f3f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.staff_lb_box .staff_img_list li img{
+    width: 256px;
+    height: 183px;
+}
+.staff_lb_box .staff_img_list li .staff_mask{
+    width: 260px;
+    height: 187px;
+    background: rgba(0,0,0,0.6);
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+}
+/*员工风采结束*/
+/*办公环境开始*/
+.office_environment{
+    width: 1200px;
+    margin: 0 auto;
+}
+.environment{
+    width: 1022px;
+    margin: 0 auto;
+    margin-top: 40px;
+    display: flex;
+    align-items: flex-end;
+}
+.environment li:hover img{
+    transform: scale(1.2);
+    transition: all 1.5s ease 0s;
+}
+.environment li:nth-child(1){
+    width: 350px;
+    height: 252px;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    overflow: hidden;
+    transform: scale(1);
+    transition: all 1.5s ease 0s;
+}
+.environment li:nth-child(1) img{
+    width: 349px;
+    height: 251px;
+}
+.environment li:nth-child(2){
+    width: 322px;
+    height: 319px;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    padding-left: 17px;
+    background-image: url("../img/enterprise_culture_sxy/staff_03.png");
+    background-size: cover;
+}
+.environment li:nth-child(3){
+    width: 350px;
+    height: 252px;
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+    overflow: hidden;
+    transform: scale(1);
+    transition: all 1.5s ease 0s;
+}
+.environment li:nth-child(2) h1{
+    font-size: 24px;
+    color: #0d4159;
+    font-weight: lighter;
+    margin-top: 24px;
+}
+.environment li:nth-child(2) h2{
+    font-size: 16px;
+    color: #5ab3ba;
+    font-weight: normal;
+    text-transform: uppercase;
+    line-height: 18px;
+}
+.environment li:nth-child(2) p{
+    font-size: 18px;
+    color: #0d4159;
+    text-align: justify;
+    line-height: 30px;
+    font-weight: lighter;
+    width: 286px;
+    height: 176px;
+    overflow: hidden;
+    margin-top: 40px;
+}
+.environment li:nth-child(3) img{
+    width: 349px;
+    height: 251px;
+}
+.development{
+    width: 1200px;
+    height: 316px;
+    display: flex;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+.development li:nth-child(1){
+    width: 439px;
+    height: 316px;
+    border-left: 1px solid #fff;
+    padding-left: 26px;
+    background-image: url("../img/enterprise_culture_sxy/develop_bg_03.png");
+    background-size: cover;
+}
+.development li:nth-child(2){
+    width: 322px;
+    height: 316px;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    transform: scale(1);
+    transition: all 1.5s ease 0s;
+    overflow: hidden;
+}
+.development li:nth-child(2) img{
+    width: 320px;
+    height: 314px;
+}
+.development li:nth-child(3){
+    width: 439px;
+    height: 316px;
+    border-right: 1px solid #fff;
+    transform: scale(1);
+    transition: all 1.5s ease 0s;
+    overflow: hidden;
+}
+.development li:nth-child(3) img{
+    width: 436px;
+    height: 314px;
+}
+.development li:nth-child(1) h1{
+    font-size: 24px;
+    color: #0d4159;
+    font-weight: lighter;
+    margin-top: 24px;
+}
+.development li:nth-child(1) h2{
+    font-size: 16px;
+    color: #5ab3ba;
+    font-weight: normal;
+    text-transform: uppercase;
+    line-height: 18px;
+}
+.development li:nth-child(1) p{
+    font-size: 18px;
+    color: #0d4159;
+    text-align: justify;
+    line-height: 30px;
+    font-weight: lighter;
+    width: 380px;
+    height: 174px;
+    overflow: hidden;
+    margin-top: 40px;
+}
+.development  li:hover img{
+    transform: scale(1.2);
+    transition: all 1.5s ease 0s;
+}
+/*办公环境结束*/

@@ -1,0 +1,112 @@
+html, body {
+    position: relative;
+    background: #F9F9F9;
+}
+.headerBox_qty{
+	width: 100%;
+	height: 1.38rem;
+	position: fixed;
+	left: 0rem;
+	top: 0rem;
+	z-index: 99;
+}
+.header_qty{
+	width: 6rem;
+	height: 0.78rem;
+	margin: auto;
+	overflow: hidden;
+}
+.logoImg_qty{
+	width: 1.47rem;
+	height: 0.53rem;
+	float: left;
+	margin-top: 0.125rem;
+	background-image: url(../images/logo_qty.png);
+	background-repeat: no-repeat;
+	background-size: cover;;
+}
+.loginBox_qty{
+	float: right;
+	height: 0.78rem;
+}
+.loginBox_qty button{
+	width: 1.2rem;
+	height: 0.5rem;
+	float: left;
+	border-radius: 0.1rem;
+	outline: none;
+	border: none;
+	margin-top: 0.14rem;
+	background: #F6F6F6;
+	border: 1px solid #ccc;
+	padding: 0rem;
+	font-size: 0.24rem;
+}
+.loginBox_qty button a{
+	width: 1.2rem;
+	height: 0.5rem;
+	float: left;
+	text-align: center;
+	line-height: 0.49rem;
+	border-radius: 0.1rem;
+}
+.login_qty{
+	margin-right: 0.15rem;
+}
+.login_qty a{
+	color: #F69C1C;
+}
+.register_qty a{
+	color: #3C3C3C;
+}
+.navBox_qty{
+	width: 6rem;
+	height: 0.6rem;
+	margin: auto;
+	overflow: hidden;
+}
+.navBox_qty ul{
+	width: 6rem;
+	height: 0.6rem;
+	float: left;
+}
+.navBox_qty ul li{
+	width: 1.2rem;
+	height: 0.6rem;
+	float: left;
+	font-size: 0.32rem;
+	text-align: center;
+	position: relative;
+	line-height: 0.6rem;
+}
+.navBox_qty ul li:after{
+	content: "";
+	width: 1px;
+	height: 0.2rem;
+	position: absolute;
+	right: 0rem;
+	top: 0.2rem;
+	background: #ccc;
+}
+.navBox_qty ul li:last-child:after{
+	width: 0px;
+}
+.navBox_qty ul li a{
+	width: 1.2rem;
+	height: 0.6rem;
+	float: left;
+	color: #3C3C3C;
+}
+.fixednav{
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:6rem;
+}
+p{
+	margin: auto;
+	overflow: hidden;
+	float: left;
+	font-size: 0.5rem;
+	margin-top: 2rem;
+}

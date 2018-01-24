@@ -1,0 +1,375 @@
+.docCate_con{
+    width: 1200px;
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+	position: relative;
+}
+.dicCate_title{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 27px;
+}
+.docCate_ab{
+    width: 50px;
+    height: auto;
+    overflow: hidden;
+    font-size: 14px;
+    float: left;
+    line-height: 30px;
+    color: #a8ce32;
+    text-align: center;
+}
+.teacher_cate{
+    width: 150px;
+}
+.dicCate_title span{
+    width: auto;
+    height: auto;
+    padding: 0 5px;
+    font-size: 14px;
+    line-height: 30px;
+    float: left;
+    color: #999999;
+}
+.dicCate_header{
+    width: 282px;
+    height: 45px;
+    background: url("../image/teacher_cate.jpg") no-repeat;
+    background-size: 100% 100%;
+    margin-bottom: 20px;
+}
+.dicCate_one{
+    width: 1100px;
+    height: 362px;
+    margin: 0 auto;
+    border: 1px solid #bebebe;
+    padding: 32px 87px;
+    box-sizing: border-box;
+}
+.dicCate_left{
+    width: 260px;
+    height: 260px;
+    float: left;
+    border: 1px solid #b4b4b4;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-right: 40px;
+}
+.dicCate_right{
+    width: 622px;
+    height: 290px;
+    overflow: hidden;
+    float: left;
+}
+.docCate_right_top{
+    width: 622px;
+    height: 70px;
+    border-bottom: 1px dashed #c5c5c5;
+}
+.docCate_nameYyt{
+    width: 100px;
+    height: auto;
+    overflow: hidden;
+    font-size: 18px;
+    color: #f69c1c;
+    float: left;
+}
+.docCate_listYyt{
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    font-size: 14px;
+    margin-top: 2px;
+    color: #bfbfbf;
+    float: left;
+}
+.dicCate_right_bottom{
+    margin: 15px 0;
+    line-height: 25px;
+    font-size: 14px;
+    color:#5d5d5d;
+}
+.dicCate_right_bottom>b{
+    color:#999;
+}
+.dicCate_three{
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+.dicCate_two>img,.dicCate_three>img,.dicCate_four>img{
+    display: block;
+    margin: 20px 0;
+}
+.dicCate_four img{
+    margin-top: 30px;
+}
+.dicCate_two>ul{
+    overflow: hidden;
+}
+.dicCate_two>ul>li{
+    float: left;
+    width: 288px;
+    margin-left: 12px;
+}
+
+.dicCate_two>ul>li>img{
+    width: 100%;
+    border-radius: 5px;
+}
+.dicCate_two>button{
+    padding: 5px 15px;
+    background-color: #f69c1c;
+    border: 0;
+    color: #fff;
+    font-size: 14px;
+    box-shadow: -5px 5px 5px #eec6b3;
+    border-radius: 20px;
+    display: block;
+    margin: 20px auto 0;
+}
+.dicCate_three_left{
+    padding: 18px 25px;
+    width: 770px;
+    height: 290px;
+    color: #c1c1c1;
+    border-radius: 5px;
+    background-color: #fff;
+    box-sizing: border-box;
+    float: left;
+}
+.dicCate_three_left>h2{
+    font-size: 18px;
+    margin: 10px 0;
+}
+.dicCate_three_left h2:first-child{
+     color: #c1c1c1;
+ }
+.dicCate_three_left h2{
+    color: #999;
+}
+.dicCate_three_left p{
+    line-height: 25px;
+    font-size: 14px;
+}
+.dicCate_three_right{
+    width: 400px;
+    float: right;
+    height: 290px;
+}
+.dicCate_three_right ul{
+    width: 100%;
+    height: 100%;
+}
+.question_a_yyt a{
+    color: #999999;
+    font-size: 14px;
+    line-height: 44px;
+}
+.health_jt_con{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.health_jt_a{
+    width: 287px;
+    height: 454px;
+    float: left;
+    background: #ccc;
+    border-radius: 5px;
+}
+.health_jt_b{
+    width: 438px;
+    height: 283px;
+    float: left;
+    margin-left: 18px;
+    background: url("../image/banner.png") no-repeat;
+    background-size: 100% 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+.health_jt_one{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: #81818a;
+}
+.health_jt_one i:first-child{
+    font-style: normal;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    line-height: 50px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: #fff;
+    float: left;
+}
+.health_jt_one i:nth-child(2){
+    font-style: normal;
+    width: auto;
+    float: right;
+    height: auto;
+    overflow: hidden;
+    line-height: 50px;
+    padding: 0 10px;
+    font-size: 18px;
+    color: #fff;
+}
+.health_jt_one i:nth-child(3){
+    float: right;
+    width: 27px;
+    height: 17px;
+    background: url("../image/watch_num.jpg");
+    margin-top: 16px;
+}
+.health_jt_circle{
+    width: 913px;
+    height: 153px;
+    float: right;
+    margin-top: 15px;
+}
+.health_jt_yyt{
+    width: 202px;
+    margin-left: 26px;
+    height: 100%;
+    float: left;
+    background: url("../image/erWeiMa.png");
+    background-size: 100% 100%;
+}
+.edit_member_adviso{
+	    padding: 5px 15px;
+    background-color: #f69c1c;
+    border: 0;
+    color: #fff;
+    font-size: 14px;
+    box-shadow: -5px 5px 5px #eec6b3;
+    border-radius: 20px;
+    display: block;
+    margin-left: 20px;
+}
+.edit_member_adviso:hover{
+	text-decoration: none;
+}
+/*记录为空样式*/
+.sns-norecord { padding: 100px 0; margin-left: 320px; }
+.left-content .sns-norecord { margin-left: 180px; }
+.sns-norecord i { background: url(../image/norecord_icons.png) no-repeat scroll; vertical-align: middle; width: 64px; height: 64px; float: left; margin-right: 10px;}
+.sns-norecord i.pictures { background-position: 0 0;}
+.sns-norecord i.store-ico { background-position: 0 -64px;}
+.sns-norecord i.goods-ico { background-position : 0 -128px;}
+.sns-norecord i.trace-ico { background-position : 0 -192px;}
+.sns-norecord i.circle-ico { background-position : 0 -320px;}
+.sns-norecord i.theme-ico { background-position : 0 -256px;}
+.sns-norecord span { font: normal 14px/28px arial,"microsoft yahei"; color: #999; float: left;}
+.sns-norecord span a, .sns-norecord span a:hover { color: #F60; text-decoration: none; cursor: default;}
+
+
+
+ .button  { background: #F7F7F7 url(../images/sns/repeat_bg.gif) repeat scroll 0px 0px; display: inline-block; height: 24px; padding: 3px; border: solid 1px #D8D8D8; border-radius: 4px; cursor: pointer; float:right; margin: 10px 20px 0 0;}
+ .button a {  font-weight: 600; line-height: 24px; color: #555; text-decoration: none; background-color: #FFF; display: block; height: 24px; padding: 0 12px;}
+ .button:hover { background: #FF7F00 none; border-color: #FF4000;}
+.upload-con {
+    background: #F7F7F7;
+    width: 198px;
+    max-height: 174px !important;
+    border: solid 1px #E7E7E7;
+    padding: 10px;
+    margin: 10px 0 0 0;
+    position: absolute;
+    z-index: 1;
+    top: 108px;
+    left: -1px;
+    overflow: hidden;
+}
+ .button:hover a, .album .intro .button:hover a:hover { color: #FFF ; background-color: #FF7F00;}
+ .upload-con { width:213px !important; top: 470px; right: 0 !important; left: auto;}
+ .arrow { top: 62px !important; left: auto !important; right: 80px;}
+.ncsc-upload-btn {
+    display: inline-block;
+    margin-right: 5px;
+    width: 168px;
+    height: 48px;
+    position: relative;
+    z-index: 1;
+}
+.ncsc-upload-btn .input-file {
+    width: 168px;
+    height: 48px;
+    padding: 0;
+    margin: 0;
+    border: none 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+}
+.ncsc-upload-btn p {
+    font: normal 16px/48px arial,"microsoft yahei";
+    color: #39C;
+    background: #FFF url(../image/picture_add.png) no-repeat 10px 10px!important;
+    text-align: center;
+    width: 148px !important;
+    height: 48px !important;
+    border: solid 1px #CCC;
+    border-radius: 4px;
+    padding: 0 0 0 20px!important;
+    margin: 0 auto;
+    float: none !important;
+    box-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+.upload-txt {
+    font-size: 0.85em;
+    line-height: 16px;
+    padding-top: 8px;
+    clear: both;
+}
+.upload-pmgressbar div {
+    background-color: #F7F7F7;
+    width: 146px;
+    height: 24px;
+    margin-top: 4px;
+    padding: 4px 14px;
+}
+.upload-pmgressbar div p {
+    font: 10px/12px Arial;
+    width: 146px;
+    height: 12px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.upload-pmgressbar div p.loading {
+    background: url(../image/upload_loading.gif) no-repeat 0 0;
+    height: 8px;
+    border-radius: 4px;
+}
+.delete_img_m{
+	line-height: 16px;
+    color: #555;
+    text-decoration: none;
+    background-color: #FFF;
+    display: inline-block;
+    height: 16px;
+    padding: 4px 6px;
+}
+.delete_img_m  i {
+    background: url(../image/pics.png) no-repeat scroll;
+    vertical-align: middle;
+    display: inline-block;
+    height: 16px;
+    margin-right: 8px;
+    margin-top: -2px;
+}
+.delete_img_m i{
+    background-position: -84px -80px;
+    width: 14px;
+}

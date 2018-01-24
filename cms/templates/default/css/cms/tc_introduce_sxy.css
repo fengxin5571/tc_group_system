@@ -1,0 +1,243 @@
+body, html {
+    background: #ecf7f9;
+    background-image: url("../img/newslist_sxy/news_listbg.png");
+    /*background-size: 100% auto;*/
+    min-width: 1200px;
+}
+/*中间内容部分*/
+.content_sxy {
+    width: 1200px;
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+/*二级导航开始*/
+.second_nav {
+    width: 100%;
+    height: 70px;
+    padding-top: 32px;
+    border-bottom: 1px dashed #d4e3e7;
+    font-size: 16px;
+    color: rgba(13, 65, 89, 0.65);
+}
+.second_nav i {
+    font-style: normal;
+    padding: 0 4px;
+}
+.second_nav a {
+    font-size: 14px;
+    color: rgba(13, 65, 89, 0.65);
+}
+.second_nav a.active {
+    font-size: 14px;
+    color: #0d4159;
+}
+/*二级导航结束*/
+/*太常简介开始*/
+.tc_title{
+    width: 100%;
+    height: 90px;
+    text-align: center;
+    margin-top: 30px;
+}
+.tc_title img{
+    width: 320px;
+    height: 90px;
+}
+.tc_instrduce{
+    width: 1200px;
+    height: 396px;
+    background-image: url("../img/tc_introduce_sxy/tc_instruce_01.png");
+    background-size: cover;
+    margin-top: 40px;
+    display: flex;
+}
+.tc_instrduce .tc_img{
+    margin-left: 97px;
+    margin-top: 33px;
+}
+.tc_instrduce .tc_text{
+    width: 664px;
+    margin-left: 42px;
+    height: auto;
+    overflow-y: auto;
+    box-sizing: border-box;
+
+    scrollbar-arrow-color: rgba(245, 250, 250, 1);
+    scrollbar-darkshadow-color:rgba(245, 250, 250, 1);
+    scrollbar-base-color:#5ab3ba;
+    scrollbar-track-color:rgba(245, 250, 250, 1);
+    scrollbar-3dlight-color:#D4D0C8;
+    scrollbar-highlight-color:yellowgreen;
+    scrollbar-shadow-color:rgba(90, 179, 186, 1);
+}
+.tc_text::-webkit-scrollbar {
+    width:4px;
+    height:4px;
+}
+.tc_text::-webkit-scrollbar-button    {
+    background:rgba(0,0,0,0);
+}
+.tc_text::-webkit-scrollbar-track     {
+    background:#eaf4f6;
+}
+.tc_text::-webkit-scrollbar-thumb{
+    background:#5ab3ba;
+    border-radius:4px;
+}
+.tc_text::-webkit-scrollbar-corner {
+    background:rgba(0,0,0,0);
+}
+.tc_instrduce .instrduce_title{
+    width: 625px;
+    text-align: left;
+    margin-top: 28px;
+}
+.tc_instrduce .instrduce_title h1{
+    font-size: 24px;
+    color: #0d4159;
+    font-style: normal;
+}
+.tc_instrduce .instrduce_title h2{
+    font-size: 16px;
+    color: #5ab3ba;
+    text-transform: uppercase;
+    font-style: normal;
+}
+.tc_instrduce .instrduce_title img{
+    width: 62px;
+    height: 11px;
+}
+.tc_instrduce .text_instruce{
+    width: 625px;
+    margin-top: 30px;
+    font-size: 16px;
+    color: #04373b;
+}
+.tc_instrduce .text_instruce p{
+    letter-spacing: 2px;
+    text-align: justify;
+}
+.tc_instrduce .text_instruce p{
+    margin-bottom: 20px;
+}
+.cgyjc{
+    width: 100%;
+    text-align: center;
+    margin-top: 34px;
+}
+.cgyjc img{
+    width: 293px;
+    height: 26px;
+}
+/*太常简介结束*/
+/*太常荣誉开始*/
+.tc_honor_box{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.tc_honor{
+    width: 100%;
+    height: 390px;
+    margin-top: 42px;
+    background-image: url("../img/tc_introduce_sxy/tc_02.png");
+    background-size: cover;
+}
+.honor_list{
+    width: 1200px;
+    height: 390px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+}
+.honor_list li{
+    width: 600px;
+    height: 195px;
+}
+.honor_list li .honor_img{
+    width: 300px;
+    height: 195px;
+}
+.honor_list li .honor_img img{
+    width:300px;
+}
+.honor_list li .honor_text{
+    width: 300px;
+    height: 195px;
+    padding: 40px 44px 26px 44px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.honor_list li .honor_text span{
+    width: 27px;
+    height: 1px;
+    display: block;
+    background-color: #5ab3ba;
+}
+.honor_list li .honor_text p{
+    width: 212px;
+    height: 60px;
+    font-size: 16px;
+    color: #04373b;
+    line-height: 30px;
+    letter-spacing: 2px;
+    text-align: center;
+    margin: 13px 0;
+    overflow: hidden;
+}
+.honor_list li .honor_text img{
+    width: 16px;
+    height: 11px;
+    display: block;
+    margin-top: 30px;
+}
+.honor_list li:nth-child(1) .honor_img,.honor_list li:nth-child(2) .honor_img{
+    float: left;
+}
+.honor_list li:nth-child(1) .honor_text,.honor_list li:nth-child(2) .honor_text{
+    float: right;
+}
+.honor_list li:nth-child(3) .honor_img,.honor_list li:nth-child(4) .honor_img{
+    float: right;
+}
+.honor_list li:nth-child(3) .honor_text,.honor_list li:nth-child(4) .honor_text{
+    float: left;
+}
+.honor_list li:nth-child(1) .honor_text{
+    background-image: url("../img/tc_introduce_sxy/honor_bg_02.png");
+    background-size: cover;
+}
+.honor_list li:nth-child(2) .honor_text{
+    background-image: url("../img/tc_introduce_sxy/honor_bg_01.png");
+    background-size: cover;
+}
+.honor_list li:nth-child(3) .honor_text{
+    background-image: url("../img/tc_introduce_sxy/honor_bg_03.png");
+    background-size: cover;
+}
+.honor_list li:nth-child(4) .honor_text{
+    background-image: url("../img/tc_introduce_sxy/honor_bg_04.png");
+    background-size: cover;
+}
+.honor_circle{
+    width: 50px;
+    height: 8px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 36px;
+}
+.honor_circle li{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #afdadf;
+}
+.honor_circle li.active{
+    background: #5ab3ba;
+}
+/*太常荣誉结束*/

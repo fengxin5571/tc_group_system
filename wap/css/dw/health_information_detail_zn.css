@@ -1,0 +1,95 @@
+body,html{
+    background: #f9f9f9;
+}
+.title_box_zn{
+    width:100%;
+    height:0.9rem;
+    overflow: hidden;
+}
+.logo_box{
+    padding-left:0.2rem;
+    width:0.9rem;
+    height:0.9rem;
+    float:left;
+    box-sizing: border-box;
+}
+.logo_box a{
+    color:#333;
+    font-size:0.28rem;
+    display: block;
+    height:0.4rem;
+    line-height:0.4rem;
+    width:100%;
+    font-weight:bold;
+    margin-top:0.25rem;
+    border-right:0.01rem solid #e5e5e5;
+}
+.title_teacher_box{
+    margin-left:0.15rem;
+    width:5.1rem;
+    height:0.9rem;
+    float:left;
+}
+.title_teacher_list{
+    height:0.9rem;
+    line-height:0.9rem;
+    margin-right:0.11rem;
+    box-sizing: border-box;
+    float:left;
+}
+.title_teacher_list:last-child{
+    margin-right:0;
+}
+.title_teacher_list a{
+    display: block;
+    font-size:0.28rem;
+    height:100%;
+    width:100%;
+    color:#999;
+    border-bottom:0.02rem solid transparent;
+    box-sizing: border-box;
+}
+.article_box{
+    width:6rem;
+    height:auto;
+    background: #fff;
+    margin:0 auto;
+    overflow: hidden;
+    margin-bottom:1.35rem;
+}
+.article_box_zn{
+    width:5.6rem;
+    height:auto;
+    margin:0 auto;
+}
+.title_article_zn{
+    width:100%;
+    
+    line-height:0.6rem;
+    text-align: center;
+    color:#333;
+    font-size:0.3rem;
+    margin-top:0.2rem;
+}
+.article_time_zn{
+    width:100%;
+    height:0.2rem;
+    line-height:0.2rem;
+    font-size:0.2rem;
+    text-align: center;
+}
+.article_box_zn img{
+    width:5.6rem;
+    display: block;
+    margin-top:0.25rem;
+}
+.article_con_zn{
+    margin-top:0.3rem;
+    text-indent: 0.52rem;
+    letter-spacing: 0.02rem;
+    line-height:0.35rem;
+    height:auto;
+    width:100%;
+    font-size:0.24rem;
+    padding-bottom:0.45rem;
+}

@@ -1,0 +1,276 @@
+body,html{
+	background: #F9F9F9;
+}
+/*头部开始*/
+.homeQuestionHeader_qty{
+	width: 6rem;
+	height: 0.9rem;
+	overflow: hidden;
+	margin: auto;
+}
+.homeQuestionHeader_qty ul{
+	width: 6rem;
+	height: 0.9rem;
+	float: left;
+}
+.homeQuestionHeader_qty ul li{
+	font-size: 0.28rem;
+	float: left;
+	height: 0.9rem;
+	line-height: 0.9rem;
+	padding-right: 0.2rem;
+	padding-left: 0.2rem;
+	position: relative;
+	color: #333333;
+}
+.homeQuestionHeader_qty ul li:after{
+	content: "";
+	position: absolute;
+	width: 1px;
+	height: 0.3rem;
+	right: 0rem;
+	background: #ccc;
+	top: 0.3rem;
+}
+.homeQuestionHeader_qty ul li:last-child:after{
+	width: 0;
+}
+.homeQuestionHeader_qty ul li a{
+	color: #999999;
+	float: left;
+}
+.homeQuestionHeader_qty ul li:first-child a{
+	color: #333333;
+}
+.color_qty a{
+	color: #F69C1C !important;
+	border-bottom: 2px solid #F69C1C;
+}
+/*头部结束*/
+/*提问专区开始*/
+.questionZone_qty{
+	width: 100%;
+	overflow: hidden;
+	background: #fff;
+	margin: auto;
+	margin-top: 0.01rem;
+}
+.questionZoneSmall_qty{
+	width: 6rem;
+	margin: auto;
+	overflow: hidden;
+}
+.questionColorBox_qty{
+	width: 6rem;
+	margin: auto;
+	overflow: hidden;
+	margin-top: 0.15rem;
+	letter-spacing: 0.02rem;
+}
+.questionColorBox_qty a{
+	width: 5rem;
+	float: left;
+}
+.questionImg_qty{
+	width: 0.02rem;
+	height: 0.45rem;
+	background-image: url(../images/store_qty.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	float: left;
+	margin-top: 0.1rem;
+}
+.questionTopFont_qty{
+	width: 5rem;
+	float: left;
+	font-size: 0.24rem;
+	margin-left: 0.2rem;
+	color: #606060;
+}
+.questionTopFont_qty span{
+	color: #9cc813;
+}
+.questionBoFont_qty{
+	width: 5rem;
+	float: left;
+	font-size: 0.18rem;
+	margin-left: 0.2rem;
+	color: #a7a7a7;
+}
+.questionBoFont_qty span{
+	color: #F69C1C;
+	margin-left: 0.1rem;
+}
+.questionInputBox_qty{
+	width: 6rem;
+	margin: auto;
+	overflow: hidden;
+	margin-top: 0.2rem;
+}
+.questionYou_qty{
+	width: 6rem;
+	font-size: 0.24rem;
+	color: #333333;
+	letter-spacing: 0.02rem;
+	margin-top: 0.1rem;
+	float: left;
+}
+.input_qty{
+	width: 6rem;
+	height: 0.8rem;
+	float: left;
+	margin-top: 0.1rem;
+}
+.input_qty input{
+	width: 6rem;
+	height: 0.8rem;
+	float: left;
+	background: #F69C1C;
+	outline: none;
+	border: none;
+	border-radius: 0.1rem;
+	font-size: 0.24rem;
+	color: #333333;
+	text-indent: 0.1rem;
+}
+.supp_qty{
+	width: 6rem;
+	float: left;
+	font-size: 0.22rem;
+	color: #cccccc;
+	margin-top: 0.1rem;
+}
+.btn_qty{
+	width: 2rem;
+	height: 0.6rem;
+	float: left;
+	margin-left: 2rem;
+	margin-right: 2rem;
+	margin-top: 0.2rem;
+	margin-bottom: 0.3rem;
+	outline: none;
+	border: none;
+	background: #F69C1C;
+	border-radius: 0.08rem;
+	padding: 0rem;
+	box-shadow: 0rem 0.08rem 0.12rem #F7D8C9;
+}
+.btn_qty a{
+	width: 2rem;
+	height: 0.6rem;
+	float: left;
+	color: #fff;
+	line-height: 0.6rem;
+	font-size: 0.24rem;
+}
+/*提问专区结束*/
+/*热点提问开始*/
+.hotQuestion_qty{
+	width: 100%;
+	margin: auto;
+	overflow: hidden;
+	margin-bottom: 1rem;
+}
+.hotSmallQuestion_qty{
+	width: 6rem;
+	margin: auto;
+	overflow: hidden;
+}
+.hotQuestionSmall_qty{
+	width: 6rem;
+	overflow: hidden;
+	margin: auto;
+	border: 1px solid #e5e5e5;
+	margin-top: 0.2rem;
+}
+.questionHot_qty{
+	width: 5.8rem;
+	overflow: hidden;
+	margin: auto;
+}
+.questionHotTop_qty{
+	width: 5.8rem;
+	float: left;
+	padding-bottom: 0.5rem;
+	border-bottom: 1px dashed #e5e5e5;
+}
+.englishTop_qty{
+	font-size: 0.24rem;
+	color: #F69C1C;
+	float: left;
+	margin-top: 0.2rem;
+}
+.english_qty{
+	width: 0.3rem;
+	float: left;
+	font-weight: bold;
+}
+.englishFont_qty{
+	width: 4.4rem;
+	float: left;
+	font-weight: bold;
+}
+.time_qty{
+	width: 1.1rem;
+	font-size: 0.18rem;
+	color: #999999;
+	float: left;
+}
+.englishBottom_qty{
+	font-size: 0.24rem;
+	float: left;
+	margin-top: 0.1rem;
+}
+.english_qty_qty{
+	width: 0.3rem;
+	float: left;
+	color: #9CC813;
+	font-weight: bold;
+}
+.englishFont_qty_qty{
+	width: 5.5rem;
+	float: left;
+	color: #333333;
+	letter-spacing: 0.01rem;
+	text-align: justify;
+	line-height: 0.4rem;
+}
+.questionBottom_qty{
+	width: 5.8rem;
+	height: 0.6rem;
+	float: left;
+}
+.name_qty{
+	font-size: 0.24rem;
+	float: left;
+	line-height: 0.6rem;
+	color: #999999;
+}
+.answer_qty{
+	font-size: 0.24rem;
+	float: left;
+	line-height: 0.6rem;
+	color: #999999;
+	margin-left: 0.5rem;
+}
+.nameBtn_qty{
+	width: 1.86rem;
+	float: right;
+	height: 0.36rem;
+	margin-top: 0.12rem;
+	outline: none;
+	border: none;
+	background: #F69C1C;
+	padding: 0rem;
+	border-radius: 0.15rem;
+	box-shadow: 0rem 0.08rem 0.12rem #F7D8C9;
+}
+.nameBtn_qty a{
+	width: 100%;
+	height: 0.36rem;
+	line-height: 0.36rem;
+	float: left;
+	color: #fff;
+	border-radius: 0.15rem;
+}
+/*热点提问结束*/

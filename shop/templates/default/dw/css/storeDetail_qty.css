@@ -1,0 +1,639 @@
+.detailBox_qty{
+	width: 100%;
+	height: auto;
+	float: left;
+	background: #F8F8F8;
+}
+.detailSmallBox_qty{
+	width: 1200px;
+	margin: auto;
+	overflow: hidden;
+}
+/*面包屑*/
+.detailHome_qty{
+	width: 100%;
+	float: left;
+	padding: 5px 0px;
+	font-size: 14px;
+}
+.homeFont{
+	color: #9CC813;
+}
+.homeFont a{
+	color: #AEAEAE;
+	margin-left: 5px;
+}
+.homeFont span{
+	margin-left: 5px;
+}
+/*面包屑*/
+/*所在店*/
+.ownedStoreBigBox_qty{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+.ownedStoreBox_qty{
+	width: 1200px;
+	margin: auto;
+	overflow: hidden;
+	line-height: 40px;
+	color: #999999;
+	font-size: 18px;
+}
+.ownImg_qty{
+	width: 11px;
+	height: 12px;
+	background: url(../image/ditu_qty_03.png);
+	float: left;
+	margin-top: 14px;
+	margin-right: 10px;
+}
+/*所在店*/
+/*宣传位*/
+.storePropaganda_qty{
+	width: 1200px;
+	height: 248px;
+	background: #CCCCCC;
+	margin-top: 30px;
+	margin:auto
+}
+.storePropaganda_qty img{
+	width: 100%;
+	height: 248px;
+	float: left;
+}
+/*宣传位*/
+/*门店介绍开始*/
+.storeIntroduceBox_qty{
+	width: 100%;
+	height: 890px;
+	margin: auto;
+	overflow: hidden;
+}
+.storeIntroduceSmallBox_qty{
+	width: 1200px;
+	height: 890px;
+	margin: auto;
+	overflow: hidden;
+}
+.storeIntroduceFont_qty{
+	width: 333px;
+	height: 24px;
+	background: url(../image/storeBg_qty.png);
+	text-align: center;
+	font-size: 24px;
+	letter-spacing: 10px;
+	line-height: 24px;
+	color: #00e7e4;
+	margin: auto;
+	margin-top: 50px;
+}
+.storeEnglish_qty{
+	width: 100%;
+	margin: auto;
+	overflow: hidden;
+	text-align: center;
+	font-size: 16px;
+	color: #cccccc;
+	margin-top: 5px;
+}
+.storeBottomBox_qty{
+	width: 100%;
+	margin: auto;
+	overflow: hidden;
+	margin-top: 40px;
+}
+.storeBottomLeft_qty{
+	width: 500px;
+	float: left;
+}
+.storeBottomRight_qty{
+	width: 659px;
+	height: 478px;
+	float: left;
+	margin-left: 41px;
+}
+.storeBottomRight_qty img{
+	width: 100%;
+	height: 100%;
+	float: left;
+}
+.storeSmallList_qty{
+	width: auto;
+	float: left;
+	background: #FFFFFF;
+	padding-right: 8px;
+}
+.storeSmallList_qty ul{
+	width: auto;
+	float: left;
+}
+.storeSmallList_qty ul li{
+	width: 86px;
+	float: left;
+	margin-left: 8px;
+	cursor: default;
+	margin-top: 8px;
+}
+.storeSmallList_qty ul li img{
+	width: 86px;
+	height: 62px;
+	float: left;
+}
+.stFont_qty{
+	width: 100%;
+	height: 24px;
+	text-align: center;
+	font-size: 12px;
+	color: #999999;
+	line-height: 24px;
+	float: left;
+}
+.gcBox_qty{
+	width: 100%;
+	float: left;
+	margin-top: 50px;
+}
+.gcBox_qty h4{
+	float: left;
+	color: #9CC813;
+	letter-spacing: 2px;
+	border-bottom: 2px solid #9CC813;
+	padding-bottom: 10px;
+}
+.gcDescription_qty{
+	width: 100%;
+	float: left;
+	margin-top: 40px;
+	color: #999999;
+	font-size: 14px;
+	line-height: 25px;
+	text-align: justify;
+}
+/*门店介绍结束*/
+/*指导老师开始*/
+.advisorBox_qty{
+	width: 100%;
+	height: 642px;
+	margin: auto;
+	overflow: hidden;
+	background: #FFFFFF;
+}
+.advisorSmallBox_qty{
+	width: 1200px;
+	height: 642px;
+	margin: auto;
+	overflow: hidden;
+}
+.healthBannerRight{
+	width: 1200px;
+	height: 388px;
+	margin:auto;
+	overflow:hidden;
+	position: relative;
+	margin-top: 40px;
+}
+.ImgBox_qty{
+	width: 100%;
+	height: 100%;
+}
+.ImgBox_qty li{
+	display:block;
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0px;
+	left:0px;
+	font-size:0px;
+}
+.healthBannerRight .lrbtn_qty{
+	width:60px;
+	height:30px;
+	position:absolute;
+	bottom: 80px;
+	right:0;
+	z-index:8888;
+	cursor:pointer;
+}
+.healthBannerRight .lrbtn_qty div{
+	width:30px;
+	height:30px;
+	float: left;
+}
+.healthBannerRight .lrbtn_qty div.left_qty{
+	float:left;
+	background: url(../image/arrowleftcc_qty.jpg);
+}
+.healthBannerRight .lrbtn_qty div.left_qty:hover{
+	background: url(../image/arrowleftcolor_qty.png);
+}
+.healthBannerRight .lrbtn_qty div.right_qty{
+	background: url(../image/arrowrightcc.png);
+}
+.healthBannerRight .lrbtn_qty div.right_qty:hover{
+	background: url(../image/arrowrightclolor_qty.jpg);
+}
+.bgcc_qty{
+	width: 250px;
+	height: 250px;
+	float: left;
+	background: #F8F8F8;
+	margin-left: 176px;
+}
+.lineBox_qty{
+	width: 120px;
+	height: 300px;
+	float: left;
+	background: transparent;
+	border: 3px solid #F69C1C;
+	margin-left: -270px;
+	margin-top: 30px;
+}
+.imgBox_qty{
+	width: 300px;
+	height: 300px;
+	float: left;
+	margin-left: -426px;
+	margin-top: 60px;
+}
+.seeBox_qty{
+	width: 192px;
+	height: 30px;
+	float: right;
+	border: 1px solid #F69C1C;
+	font-size: 14px;
+}
+.seeBox_qty a{
+	width: 192px;
+	height: 30px;
+	float: left;
+	color: #333333;
+	text-align: center;
+	line-height: 28px;
+}
+.nameStore_qty{
+	width: 800px;
+	float: left;
+	font-size: 18px;
+	color: #333333;
+	font-weight: bold;
+	letter-spacing: 2px;
+	margin-top: 100px;
+	margin-left: -110px;
+}
+.teleBox_qty{
+	width: 800px;
+	float: left;
+	font-size: 18px;
+	margin-top: -80px;
+	margin-left: 15px;
+}
+.ImgBox_qty li p{
+	width: 700px;
+	float: left;
+	font-size: 14px;
+	color: #999999;
+	margin-top: -20px;
+	margin-left: 25px;
+	line-height: 25px;
+	text-align: justify;
+}
+.mathBox_qty{
+	float: right;
+	font-size: 24px;
+	margin-top: 90px;
+	color: #999999;
+	letter-spacing: 2px;
+}
+.mathBox_qty span{
+	font-size: 48px;
+}
+/*指导老师结束*/
+/*风采展示开始*/
+.elegantShowBox_qty{
+	width: 100%;
+	height: 550px;
+	margin: auto;
+	overflow: hidden;
+}
+.elegantShowSmallBox_qty{
+	width: 1200px;
+	height: 550px;
+	margin: auto;
+	overflow: hidden;
+}
+.elegantShowBottomBox_qty{
+	width: 1200px;
+	height: 300px;
+	margin: auto;
+	overflow: hidden;
+	margin-top: 60px;
+}
+.elegantLeft_qty{
+	width: 560px;
+	float: left;
+	font-size: 14px;
+	color: #999999;
+	line-height: 25px;
+	text-align: justify;
+	margin-top: 50px;
+}
+.elegantRight_qty{
+	width: 435px;
+	height: 280px;
+	float: left;
+	margin-left: 205px;
+}
+.elegantRight_qty ul{
+	width: 435px;
+	height: 280px;
+	float: left;
+}
+.elegantRight_qty ul li{
+	width: 135px;
+	height: 135px;
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	border-radius: 4px;
+	overflow: hidden;
+	cursor: pointer;
+}
+.elegantRight_qty ul li img{
+	width: 135px;
+	height: 135px;
+	float: left;
+	border-radius: 4px;
+}
+.elegantRight_qty ul li:hover img{
+	webkit-transform:scale(1.2);
+    -moz-transform:scale(1.2);
+    transform:scale(1.2);
+    transition: all 1s;
+}
+/*风采展示结束*/
+/*预约体验开始*/
+.bookExperienceBox_qty{
+	width: 100%;
+	
+	margin: auto;
+	overflow: hidden;
+	background: #FFFFFF;
+}
+.bookExperienceSmallBox_qty{
+	width: 1200px;
+	
+	margin: auto;
+	overflow: hidden;
+}
+.experienceBox_qty{
+	width: 1200px;
+	margin: auto;
+	overflow: hidden;
+	margin-top: 55px;
+}
+.experienceBox_qty ul{
+	width: 1200px;
+	float: left;
+}
+.experienceBox_qty ul li{
+	width: 238px;
+	height: 310px;
+	float: left;
+	border: 1px solid #EEEEEE;
+	margin-bottom: 10px
+}
+.experImgBox_qty{
+	width: 165px;
+	margin: auto;
+	overflow: hidden;
+}
+.bookImg_qty{
+	width: 165px;
+	height: 165px;
+	float: left;
+	background: #E8E8E8;
+	margin-top: 15px;
+}
+.bookImg_qty img{
+	width: 165px;
+	height: 165px;
+	float: left;
+}
+.priceBox_qty{
+	width: 165px;
+	float: left;
+	margin-top: 5px;
+}
+.smallBox_qty{
+	width: 30px;
+	height: 30px;
+	float: left;
+	border: 1px solid #E8E8E8;
+	margin-right: 5px;
+	cursor: pointer;
+}
+.smallBox_qty img{
+	width: 28px;
+	height: 28px;
+	float: left;
+}
+.descriptionBox_qty{
+	width: 100%;
+	float: left;
+	font-size: 14px;
+	color: #333333;
+	margin-top: 5px;
+}
+.colorPriceBox_qty{
+	width: 100%;
+	float: left;
+	margin-top: 5px;
+}
+.priceColor_qty{
+	float: left;
+	font-size: 18px;
+	color: #d93600;
+}
+.sale_qty{
+	float: right;
+	color: #666666;
+	font-size: 14px;
+	margin-top: 3px;
+}
+.moreBox_qty{
+	width: 106px;
+	height: 30px;
+	background: #E8E8E8;
+	border-radius: 20px;
+	margin: auto;
+	overflow: hidden;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.moreBox_qty a{
+	width: 106px;
+	height: 30px;
+	float: left;
+	text-align: center;
+	line-height: 30px;
+	color: #999999;
+	font-size: 14px;
+}
+/*预约体验结束*/
+/*问题咨询开始*/
+.problemBox_qty{
+	width: 100%;
+	height: 516px;
+	margin: auto;
+	overflow: hidden;
+}
+.problemSmallBox_qty{
+	width: 1200px;
+	height: 516px;
+	margin: auto;
+	overflow: hidden;
+}
+.problemBottomBox_qty{
+	width: 100%;
+	margin: auto;
+	overflow: hidden;
+	margin-top: 50px;
+}
+.problemLeft_qty{
+	width: 500px;
+	height: 270px;
+	float: left;
+	background: #FFFFFF;
+}
+.problemLeftSmall_qty{
+	width: 460px;
+	height: 100%;
+	margin: auto;
+	overflow: hidden;
+}
+.question_qty{
+	width: 100%;
+	float: left;
+	margin-top: 30px;
+	color: #C1C1C1;
+	font-size: 18px;
+}
+.problemLeftSmall_qty textarea{
+	width: 458px;
+	height: 95px;
+	float: left;
+	margin-top: 20px;
+	outline: none;
+	resize: none;
+	border: 1px solid #E8E8E8;
+	font-size: 18px;
+	padding: 5px 20px;
+	text-indent: 20px;
+	box-sizing: border-box;
+}
+.tiwenBox_qty{
+	width: 92px;
+	height: 30px;
+	float: left;
+	background: #F69C1C;
+	margin-left: 184px;
+	border-radius: 20px;
+	margin-top: 30px;
+	box-shadow: -3px 5px 5px #F0D0C0;
+}
+.tiwenBox_qty_submit{
+	width: 92px;
+	height: 30px;
+	float: left;
+	line-height: 30px;
+	text-align: center;
+	font-size: 14px;
+	color: #FFFFFF;
+	font-size: 14px;
+	cursor: pointer;
+}
+.problemRight_qty{
+	width: 600px;
+	float: left;
+	margin-left: 100px;
+	position: relative;
+}
+.problemRight_qty:before{
+	content: "";
+	width: 1px;
+	height: 240px;
+	background: #CCCCCC;
+	position: absolute;
+	left: -30px;
+	top: 30px;
+}
+.whatBpx_qty{
+	width: 100%;
+	float: left;
+	font-size: 18px;
+	color: #999999;
+}
+.whatBpx_qty span{
+	width: 8px;
+	height: 8px;
+	float: left;
+	background: #F69C1C;
+	border-radius: 50%;
+	margin-top: 8px;
+	margin-right: 10px;
+}
+.fengwhatBpx_qty{
+	width: 100%;
+	float: left;
+	font-size: 18px;
+	color: #F69C1C;
+	margin-top: 20px;
+}
+.fengwhatBpx_qty span,.answer_qty span{
+	width: 8px;
+	height: 8px;
+	float: left;
+	background: #CCCCCC;
+	border-radius: 50%;
+	margin-top: 8px;
+	margin-right: 10px;
+}
+.answer_qty{
+	width: 100%;
+	float: left;
+	font-size: 16px;
+	color: #929292;
+	margin-top: 5px;
+}
+.num_qty{
+	width: 100%;
+	float: left;
+	font-size: 14px;
+	color: #929292;
+	margin-top: 5px;
+	line-height: 22px;
+	text-align: justify;
+}
+.seeSmallBox_qty{
+	width: 92px;
+	height: 30px;
+	float: left;
+	background: #F69C1C;
+	margin-left: 184px;
+	border-radius: 20px;
+	margin-top: 30px;
+	box-shadow: -3px 5px 5px #F0D0C0;
+}
+.seeSmallBox_qty a{
+	width: 92px;
+	height: 30px;
+	float: left;
+	line-height: 30px;
+	text-align: center;
+	font-size: 14px;
+	color: #FFFFFF;
+	font-size: 14px;
+}
+/*问题咨询结束*/

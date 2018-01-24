@@ -1,0 +1,420 @@
+body, html {
+    background: #ecf7f9;
+    background-image: url("../img/newslist_sxy/news_listbg.png");
+    /*background-size: 100% auto;*/
+}
+/*字体图标*/
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/font_/iconfont.eot');
+    src: url('../font/font_/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../font/font_/iconfont.woff') format('woff'),
+    url('../font/font_/iconfont.ttf') format('truetype'),
+    url('../font/font_/iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+/*中间内容部分*/
+.content_sxy {
+    width: 1200px;
+    height: auto;
+    overflow: hidden;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+.content_sxy .top_content{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.top_content .left_content{
+    width: 820px;
+}
+.left_content .second_nav{
+    width: 100%;
+    height: 70px;
+    padding-top: 32px;
+    border-bottom: 1px dashed #d4e3e7;
+    font-size: 16px;
+    color: rgba(13, 65, 89, 0.65);
+}
+.second_nav i {
+    font-style: normal;
+    padding: 0 4px;
+}
+.second_nav a {
+    font-size: 14px;
+    color: rgba(13, 65, 89, 0.65);
+}
+.second_nav a.active {
+    font-size: 14px;
+    color: #0d4159;
+}
+/*精品视频推荐开始*/
+.video_title{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #20b0bd;
+}
+.video_title span{
+    width: 3px;
+    height: 20px;
+    background: #20b0bd;
+    display: block;
+    margin-right: 10px;
+}
+.video_title p{
+    font-size: 20px;
+    color: #0d4159;
+}
+/*精品视频推荐结束*/
+.video_list{
+    width: 820px;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 534px 24px 262px;
+    grid-template-rows: 149px 6px 149px;
+}
+.video_list li:first-child{
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+    background: #0086b3;
+}
+.video_list li{
+    position: relative;
+}
+.video_list li:nth-child(2){
+    grid-column: 3/ 4;
+    grid-row: 1 / 2;
+    background: #0086b3;
+}
+.video_list li:nth-child(3){
+     grid-column: 3/ 4;
+     grid-row: 3 / 4;
+     background: #0086b3;
+ }
+.video_list1{
+    margin-top: 20px;
+    width: 820px;
+    display: flex;
+    justify-content: space-between;
+}
+.video_list1 li{
+    width: 270px;
+    height: 154px;
+    background: #5ab3ba;
+    position: relative;
+}
+.video_list li .video_Title,.video_list1 li .video_Title{
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0,0,0,0.5);
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    line-height: 50px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+/*右边视频排行开始*/
+.right_rank{
+    width: 340px;
+    height: 521px;
+    background-image: url("../img/videolist_sxy/right_bg_03.png");
+    background-color: #0d4159;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 150px;
+}
+.rank_line{
+    width: 100%;
+    height: 6px;
+    background-color: #20b0bd;
+}
+.right_rank  .rank_box{
+    width: 100%;
+    padding: 0 24px;
+}
+.right_rank  .rank_box h1{
+    display: flex;
+    align-items: center;
+    margin-top: 24px;
+}
+.right_rank  .rank_box h1 span{
+    display: block;
+    width: 4px;
+    height: 18px;
+    background-color: #20b0bd;
+    border-radius: 2px;
+    margin-right: 8px;
+}
+.right_rank  .rank_box h1 i{
+    font-size: 18px;
+    color: #fff;
+}
+.rank_list{
+    width: 100%;
+
+}
+.rank_list li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px dashed #11597b;
+}
+.rank_list li:last-child{
+    border-bottom: none;
+}
+
+.rank_list li i{
+    font-size: 60px;
+    color: #2bb9c5;
+    display: block;
+    margin-left: -12px;
+}
+.rank_title{
+    width: 242px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.rank_title a{
+    font-size: 16px;
+    color: #fff;
+    overflow: hidden;
+}
+.rank_title .rank_author{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.rank_title .rank_author p{
+    font-size: 12px;
+    color: rgba(236,247,249,0.71);
+}
+.play_time{
+    display: flex;
+    align-items: baseline;
+}
+.play_time img{
+    width: 16px;
+    height: 16px;
+    display: block;
+    margin-right: 8px;
+}
+.play_time span{
+    font-size: 14px;
+    color: #ecf7f9;
+}
+.rank_after{
+    height: 63px;
+}
+.rank_after p{
+    width: 23px;
+    height: 23px;
+    background-color: #116991;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    line-height: 23px;
+}
+.rank_after a{
+    font-size: 16px;
+    color: #fff;
+    width: 220px;
+    overflow: hidden;
+    padding-left: 6px;
+}
+/*右边视频排行结束*/
+/*下半部分*/
+/*视频分类开始*/
+.bottom_content {
+    margin-top: 48px;
+}
+.category_title{
+    display: flex;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #20b0bd;
+    margin-bottom: 10px;
+}
+.category_title span{
+    display: block;
+    width: 3px;
+    height: 22px;
+    border-radius: 1.5px;
+    background-color: #20b0bd;
+    margin-right: 10px;
+}
+.category_title h1{
+    font-size: 20px;
+    color: #0d4159;
+}
+.category_title img{
+    margin-left: 8px;
+    margin-top: 5px;
+}
+.video_category{
+    display: flex;
+    margin-left: 36px;
+    margin-top: 10px;
+}
+.video_category li{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.video_category li p{
+    font-size: 16px;
+    color: #0d4159;
+    padding: 0 30px;
+    height: 30px;
+    line-height: 30px;
+}
+.video_category li i{
+    width: 1px;
+    height: 13px;
+    background-color: #90acb7;
+    display: block;
+}
+.video_category li:last-child i{
+    display: none;
+}
+.video_category li.active p{
+    color: #fff;
+    background-color: #20b0bd;
+    border-radius: 5px;
+}
+.video_category li.active i{
+    display: none;
+}
+.cate_list{
+    width: 1221px;
+    display: flex;
+    flex-wrap: wrap;
+    display: none;
+}
+.on{
+    display: flex;
+}
+.cate_list li{
+    width: 284px;
+    margin-top: 30px;
+    margin-right: 21px;
+}
+.cate_list li a{
+    width: 100%;
+    display: block;
+}
+.cate_list li a .video_img{
+    width: 284px;
+    height: 162px;
+    overflow: hidden;
+    background-color: #5ab3ba;
+}
+.cate_list li a .video_img img{
+    width: 100%;
+}
+.cate_list li a p{
+    width: 284px;
+    margin-top: 12px;
+    overflow: hidden;
+    font-size: 16px;
+    color: #0d4159;
+}
+.upload_info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+}
+.upload_info div{
+    display: flex;
+    align-items: flex-end;
+}
+.upload_info div p{
+    font-size: 14px;
+    color: #0d4159;
+    opacity: 0.6;
+    margin-left: 10px;
+    line-height: 1;
+}
+.upload_info h2{
+    font-size: 12px;
+    color: #0d4159;
+    opacity: 0.6;
+}
+.upload_info h2 span{
+    font-size: 12px;
+    color: #0d4159;
+    opacity: 0.7;
+    margin-left: 6px;
+}
+/*视频分类结束*/
+/*分页*/
+.pagination {
+    width: 690px;
+    margin: 0 auto;
+    margin-top: 70px;
+}
+
+.pagination ul {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pagination ul li.page_ {
+    width: 98px;
+    height: 40px;
+    background: #5ab3ba;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.pagination ul li.page {
+    margin-top: 2.5px;
+    color: #0d4159;
+    font-size: 18px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    font-family: 'Helvetica';
+    cursor: pointer;
+}
+
+.pagination ul li.active {
+    background: #0d4159;
+    color: #fff;
+    -moz-box-shadow: 0 3px 14px #91b2b6;
+    -webkit-box-shadow: 0 3px 14px #91b2b6;
+    box-shadow: 0 3px 14px #91b2b6;
+}
+
+.pagination ul li.page:hover {
+    background: #0d4159;
+    color: #fff;
+}
+
+.pagination ul li.page_:hover {
+    background: #0d4159;
+    color: #fff;
+}
+

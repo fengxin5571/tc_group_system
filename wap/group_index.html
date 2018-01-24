@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <title>集团首页</title>
+    <link rel="stylesheet" href="css/group/public_zn.css">
+    <link rel="stylesheet" href="css/group/dyw_mobile_index_zn.css">
+    <link rel="stylesheet" href="css/group/swiper.min.css">
+    <script src="js/group/jquery.min.js"></script>
+    <script src="js/group/rem.js"></script>
+</head>
+<body>
+<header id="head_zn">
+    <span><a href="tmpl/member/register.html">注册</a></span>
+    <span>|</span>
+    <span><a href="tmpl/member/login.html">登录</a></span>
+    <div class="nctouch-nav-layout">
+    <div class="nctouch-nav-menu" id="nav_index"> 
+   
+    </div>
+  </div>
+</header>
+
+<nav id="nav_zn">
+    <a href="" class="logo_zn"><img src="images/image_zn/dyw_logo_zn.png" alt=""></a>
+    <a href="javascript:void(0)"><i class="bread_zn"></i></a>
+    <i class="search_zn"></i>
+    
+</nav>
+<div class="input_box_zn">
+    <input type="text">
+    <i></i>
+</div>
+<div class="slider_box">
+    <div class="swiper-container" id="main-container1">
+        
+    </div>
+</div>
+<div class="listBox_qty">
+    <div class="list_qty" id="rec">
+       
+    </div>
+</div>
+<section id="section_zn">
+    <div class="news_zn" id="group_news">
+        
+    </div>
+    <p class="linear_zn"></p>
+    <div class="our_property_zn">
+        <div class="news_title_zn">
+            <i></i>
+            <span>我们的产业</span>
+        </div>
+        <ul class="property_box_zn">
+            <li class="property_list_zn">
+                <img src="https://mini.s-shot.ru/1920x1200/JPEG/1920/Z100/?www.sxtaichang.com" alt="">
+                <div class="property_detail_zn">
+                    <p class="property_title_zn">独一张</p>
+                    <p class="property_con_zn">传国医精粹，布健康功能</p>
+                    <a href="http://www.sxtaichang.com">
+                        了解更多
+                    </a>
+                </div>
+            </li>
+            <li class="property_list_zn">
+                <img src="https://mini.s-shot.ru/1920x1200/JPEG/1920/Z100/?www.shiweijian.com.cn" alt="">
+                <div class="property_detail_zn">
+                    <p class="property_title_zn">食维健</p>
+                    <p class="property_con_zn">5A健康管理体系</p>
+                    <a href="http://www.shiweijian.com.cn">
+                        了解更多
+                    </a>
+                </div>
+            </li>
+            <li class="property_list_zn">
+                <img src="https://mini.s-shot.ru/1920x1200/JPEG/1920/Z100/?www.duyiwang.cn" alt="">
+                <div class="property_detail_zn">
+                    <p class="property_title_zn">独易网</p>
+                    <p class="property_con_zn">健康咨询类专门门户网站</p>
+                    <a href="http://www.duyiwang.cn/wap">
+                        了解更多
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <p class="linear_zn"></p>
+    <div class="join_us_zn">
+        <div class="news_title_zn">
+            <i></i>
+            <span>加入我们</span>
+        </div>
+        <ul class="join_us_box_zn" id='join_us'>
+            
+            
+        </ul>
+    </div>
+    <p class="linear_zn"></p>
+</section>
+<footer id="foot_zn">
+    <p class="foot_con_zn">
+        晋ICP备16009724号-1
+    </p>
+    <p class="foot_con_zn">
+        Copyright 2017 独易网 All rights reserved.
+    </p>
+    <p class="san_foot_zn">
+        Call：400-8939893
+    </p>
+</footer>
+</body>
+<script type="text/html" id="adv_list">
+      <div class="swiper-wrapper">
+            <% for (var i in item) { %>
+            <div class="swiper-slide">
+                <a href="<%= item[i].url %>">
+                    <img src="<%= item[i].image %>" alt="">
+                </a>
+            </div>
+          <% }%>
+        </div>
+        <div class="swiper-pagination"></div>
+</script>
+<script type="text/html" id="nav_list">
+ <span class="arrow"></span>
+      <ul>
+        <% for(var i in nav) {%>
+         <%if(nav[i].nav_location ==4) {%>
+        <li><a href="<%=nav[i].nav_url %>"><i class="home"></i><%= nav[i].nav_title %></a></li>
+        <%}%>
+        <%}%>
+      </ul>
+        
+</script>
+<script type="text/html" id="article_list">
+<div class="news_title_zn">
+            <i></i>
+            <span>新闻</span>
+        </div>
+        <ul class="news_box_zn">
+         <% for(var i in article) {%>
+            <li class="news_list_zn">
+                <a href="tmpl/article_detail_wap.html?article_id=<%=article[i].article_id%>">
+                    <p><%=article[i].article_title%></p>
+                    <span class="news_time_zn"><%=article[i].article_time%></span>
+                </a>
+            </li>
+            <% }%>
+        </ul>
+         <p class="look_more_zn">
+       <a href="tmpl/article_list.html?ac_id=14" class="news_look_more">
+            更多&gt;
+       </a>
+ </p>
+</script>
+<script type="text/html" id="home1">
+<li class="join_us_list_zn">
+                <a href="<%= url %>">
+                    <img src="<%= image %>" alt="">
+                </a>
+                <a href="<%= url %>">
+                    <p class="join_us_title_zn"><%=title%></p>
+                </a>
+                <a href="<%= url %>">
+                    <p class="join_us_con_zn">
+                        <%if(title =="大渠道合作") {%>
+                        渠道合作，是指同一渠道的不同企业之间为了共同的利益的最大化而结成的联盟与合作关系。
+                       <%}else if (title =="门店加盟") {%>
+                       食维健+独一张，多种加盟项目展示
+                       <%}else if(title=="商城入驻") {%>
+                       独易网健康商城，天网中的重要环节
+                       <%}%>
+                    </p>
+                </a>
+            </li>
+</script>
+<script type="text/html" id='rec_list'>
+ <ul>
+            <%for(var i in rec){%>
+            <li>
+              <%==rec[i]%>
+           </li>
+            <%}%>
+          
+ </ul>
+</script>
+<script src="js/group/swiper.min.js"></script>
+<script type="text/javascript" src="js/config.js"></script> 
+<script type="text/javascript" src="js/zepto.min.js"></script> 
+<script type="text/javascript" src="js/template.js"></script> 
+<script type="text/javascript" src="js/common.js"></script> 
+<script type="text/javascript" src="js/group_index.js"></script>
+<script type="text/javascript">
+    $('.search_zn').click(function(){
+        if($('.input_box_zn').css('display')=='none'){
+            $('.input_box_zn').css('display','block');
+        }else{
+            $('.input_box_zn').css('display','none');
+        }
+    })
+    // 找寻各类
+    var swiper1 = new Swiper('.swiper-containerBox', {
+        slidesPerView: 3,
+        paginationClickable: true,
+        spaceBetween: 30
+    });
+    $(".bread_zn").click(function(){
+    	    if($('.nctouch-nav-layout').hasClass('show')){
+    	    	$('.nctouch-nav-layout').removeClass('show');
+    	    }else{
+    	    	$('.nctouch-nav-layout').addClass('show');
+    	    }
+    		
+    });
+</script>
+</html>

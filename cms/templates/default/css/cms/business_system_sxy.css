@@ -1,0 +1,470 @@
+body, html {
+    background: #ecf7f9;
+    background-image: url("../img/newslist_sxy/news_listbg.png");
+    /*background-size: cover;*/
+}
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/font_/iconfont.eot');
+    src: url('../font/font_/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../font/font_/iconfont.woff') format('woff'),
+    url('../font/font_/iconfont.ttf') format('truetype'),
+    url('../font/font_/iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:44px;font-style:normal;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.2;
+}
+/*banner图片开始*/
+.banner{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-top: 80px;
+}
+.banner img{
+    width: 100%;
+    display: block;
+}
+/*banner图片结束*/
+/*新零售门店开始*/
+.new_retail{
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 46px;
+}
+.big_title{
+    width: 100%;
+    text-align: center;
+}
+.store_list{
+    width: 1200px;
+    display: flex;
+    margin-top: 35px;
+}
+.store_list li{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.store_list li:nth-child(1) .store_title{
+    width: 189px;
+    height: 182px;
+    background-image: url("../img/business_system_sxy/system_store_03.png");
+}
+.store_list li:nth-child(2) .store_title{
+    width: 189px;
+    height: 182px;
+    background-image: url("../img/business_system_sxy/system_store_05.png");
+}
+.store_list li:nth-child(3) .store_title{
+    width: 189px;
+    height: 182px;
+    background-image: url("../img/business_system_sxy/system_store_07.png");
+}
+.store_list li:nth-child(4) .store_title{
+    width: 189px;
+    height: 182px;
+    background-image: url("../img/business_system_sxy/system_store_09.png");
+}
+.store_list li .store_title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.store_list li .store_title p{
+    font-size: 18px;
+    color: #fff;
+    line-height: 1;
+    margin-top: 6px;
+}
+.store_list li .store_title span{
+    font-size: 28px;
+    color: #fff;
+    line-height: 1;
+    margin-top: -12px;
+}
+.store_list li h1{
+    font-size: 18px;
+    color: #5ab3ba;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-top: 20px;
+}
+.store_list li .store_desc{
+    margin-top: 18px;
+    width: 300px;
+    font-size: 14px;
+    color: #0d4159;
+    font-weight: lighter;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 42px;
+    border-right: 1px solid #97d0d4;
+}
+.store_list li:nth-child(4) .store_desc{
+    border-right: none;
+}
+.cgyjc{
+    width: 100%;
+    text-align: center;
+}
+.cgyjc img{
+    display: inline-block!important;
+}
+.cross_line{
+    width: 115px;
+    height: 1px;
+    background-color: #d1e1e4;
+    position: absolute;
+    left: 242px;
+    top: 90px;
+}
+.store_list li:nth-child(4) .cross_line{
+    display: none;
+}
+/*新零售门店结束*/
+/*轮播图开始*/
+.system_lb{
+    width: 100%;
+    height: 876px;
+    margin-top: 30px;
+    background-image: url("../img/business_system_sxy/system_bg_02.png");
+    background-size: cover;
+    margin-bottom: 30px;
+}
+.system_lb img{
+    display: block;
+}
+.swiper-container{
+    width: 1200px;
+}
+.shuffing_box{
+    width: 1200px;
+    height: 876px;
+    align-content: space-around;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    border: 2px solid #fff;
+}
+.shuffing_left{
+    width: 889px;
+    height: 872px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.shuffing_left_top{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.shuffing_left_middle{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.shuffing_left_bottom{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.shuffing_rigth{
+    width: 306px;
+    height: 872px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.shuffing_text{
+    width: 545px;
+    height: 446px;
+    background-image: url("../img/business_system_sxy/system_lb_13.png");
+    background-size: 545px 446px;
+    padding: 0 38px;
+}
+.shuffing_text h1{
+    font-size: 24px;
+    font-weight: lighter;
+    color: #0d4159;
+    margin-top: 48px;
+    line-height: 1;
+}
+.shuffing_text h2{
+    font-size: 16px;
+    font-weight: normal;
+    color: #5ab3ba;
+    line-height: 1;
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-family: "GillSansMTpro-Light";
+}
+.shuffing_text img{
+    display: block;
+    width: 59px;
+    height: 5px;
+    margin-top: 6px;
+}
+.shuffing_text p{
+    font-size: 16px;
+    color: #0d4159;
+    line-height: 30px;
+    margin-top: 60px;
+    text-align: justify;
+    width: 470px;
+    height: 180px;
+    overflow: hidden;
+}
+.img_top1{
+    width: 532px;
+    height: 214px;
+    overflow: hidden;
+}
+.img_top1 img{
+    width: 532px;
+    height: 214px;
+    transform: scale(1);
+    transition: all 1.5s ease 0s;
+}
+.img_top1 img:hover{
+    transform: scale(1.2);
+    transition: all 1.5s ease 0s;
+}
+.img_top2{
+    width: 354px;
+    height: 214px;
+    overflow: hidden;
+}
+.img_top2 img{
+    width: 354px;
+    height: 214px;
+    transform: scale(1);
+    transition: all 1.5s ease 0s;
+}
+.img_top2 img:hover{
+    transform: scale(1.2);
+    transition: all 1.5s ease 0s;
+}
+.img_bottom1{
+    width: 341px;
+    height: 207px;
+}
+.img_bottom1{
+    width: 341px;
+    height: 207px;
+    overflow: hidden;
+}
+.img_bottom1 img{
+    width: 341px;
+    height: 207px;
+    transform: scale(1);
+    transition: all 1.5s ease 0s;
+}
+.img_bottom1 img:hover{;
+    transform: scale(1.2);
+    transition: all 1.5s ease 0s;
+}
+.img_bottom2{
+    width: 545px;
+    height: 207px;
+    overflow: hidden;
+}
+.img_bottom2 img{
+    width: 545px;
+    height: 207px;
+    transform: scale(1);
+    transition: all 1.5s ease 0s;
+}
+.img_bottom2 img:hover{
+    transform: scale(1.2);
+    transition: all 1.5s ease 0s;
+}
+.img_middle1{
+    width: 341px;
+    height: 446px;
+    overflow: hidden;
+}
+.img_middle1 img{
+    width: 341px;
+    height: 446px;
+    transform: scale(1);
+    transition: all 1.5s ease 0s;
+}
+.img_middle1 img:hover{
+    transform: scale(1.2);
+    transition: all 1.5s ease 0s;
+}
+.img_right1{
+    width: 306px;
+    height: 405px;
+    overflow: hidden;
+}
+.img_right1 img{
+    width: 306px;
+    height: 405px;
+    transform: scale(1);
+    transition: all 1.5s ease 0s;
+}
+.img_right1 img:hover{
+    transform: scale(1.2);
+    transition: all 1.5s ease 0s;
+}
+.img_right2{
+    width: 306px;
+    height: 463px;
+    overflow: hidden;
+}
+.img_right2 img{
+    width: 306px;
+    height: 463px;
+    transform: scale(1);
+    transition: all 1.5s ease 0s;
+}
+.img_right2 img:hover{
+    transform: scale(1.2);
+    transition: all 1.5s ease 0s;
+}
+.swiper-button-next, .swiper-button-prev{
+    width: 30px;
+    height: 30px;
+    background-color: #0d4159;
+    top: 72%;
+}
+.swiper-button-next{
+    right: auto;
+    left: 414px;
+    background-image: url("../img/business_system_sxy/arrow_04.png");
+    background-size: cover;
+}
+.swiper-button-prev{
+    right: auto;
+    left: 384px;
+    background-image: url("../img/business_system_sxy/arrow_03.png");
+    background-size: cover;
+}
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled{
+    opacity: 1;
+    background-color: #5ab3ba;
+}
+/*轮播图结束*/
+/*独易网开始*/
+.duyiwang{
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+.duyiwang_content{
+    width: 1200px;
+    height: 507px;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.duyiwang_desc{
+    width: 699px;
+    height: 507px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.duyiwang_title{
+    width: 273px;
+    padding-right: 16px;
+    text-align: right;
+}
+.duyiwang_title h1{
+    font-size: 28px;
+    color: #0d4159;
+    font-weight: lighter;
+    margin-top: 10px;
+}
+.duyiwang_title h2{
+    font-size: 20px;
+    color: #5ab3ba;
+    font-weight: lighter;
+    line-height: 1;
+}
+.duyiwang_title h3{
+    font-size: 20px;
+    color: #0d4159;
+    font-weight: normal;
+    line-height: 1;
+    margin-top: 10px;
+}
+.duyiwang_title span{
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: #0d4159;
+    margin-top: 10px;
+    margin-left: 230px;
+}
+.content_desc{
+    margin-top: 22px;
+    width: 699px;
+    height: 295px;
+    border: 2px solid #5ab3ba;
+    padding: 0 35px;
+    background-image: url("../img/business_system_sxy/text_bg_05.png");
+    background-size: cover;
+}
+.content_desc h1{
+    font-size: 20px;
+    color: #0d4159;
+    font-weight: normal;
+    margin-top: 32px;
+    line-height: 1;
+}
+.content_desc p{
+    font-size: 18px;
+    color: #0d4159;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    line-height: 30px;
+    text-align: justify;
+    width: 625px;
+    height: 150px;
+    overflow: hidden;
+    margin-top: 58px;
+}
+.jump_net{
+    width: 273px;
+    height: 79px;
+    background-image: url("../img/business_system_sxy/jump_bg_05.png");
+}
+.jump_net a{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    color: #fff;
+    padding-top: 30px;
+    padding-left: 120px;
+}
+.jump_net a img{
+    width: 26px;
+    height: 18px;
+    margin-left: 4px;
+}
+.duyiwang_img{
+    width: 925px;
+    height: 507px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.duyiwang_img img{
+    width: 925px;
+    height: 507px;
+}
+/*独易网结束*/

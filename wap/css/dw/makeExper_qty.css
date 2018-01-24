@@ -1,0 +1,264 @@
+html, body {
+    position: relative;
+    background: #F9F9F9;
+    padding-bottom: 0.8rem;
+}
+/*预约体验头部开始*/
+.healthSchoolHeader_qty{
+	width: 100%;
+	height: 0.9rem;
+	margin: auto;
+	overflow: hidden;
+}
+.healthHeader_qty{
+	width: 6rem;
+	height: 0.9rem;
+	margin: auto;
+	overflow: hidden;
+}
+.healthSchoolHeader_qty ul{
+	height: 0.9rem;
+	float: left;
+	line-height: 0.9rem;
+}
+.healthSchoolHeader_qty ul li{
+	float: left;
+	font-size: 0.28rem;
+	line-height: 0.88rem;
+	padding: 0rem 0.295rem;
+	position: relative;
+}
+.healthSchoolHeader_qty ul li:first-child{
+	padding: 0rem 0.295rem 0rem 0rem;
+}
+.healthSchoolHeader_qty ul li:first-child:after{
+	content: "";
+	width: 1px;
+	height: 0.3rem;
+	background: #ccc;
+	position: absolute;
+	top: 0.3rem;
+	right: 0rem;
+}
+.healthSchoolHeader_qty ul li:first-child a{
+	color: #333333;
+}
+.healthSchoolHeader_qty ul li a{
+	float: left;
+	color: #999999;
+}
+.color_qty a{
+	color: #F69C1C !important;
+	border-bottom: 2px solid #F69C1C;
+}
+/*预约体验头部结束*/
+/*四大块体验开始*/
+.fourExperBox_qty{
+	width: 100%;
+	margin: auto;
+	overflow: hidden;
+	margin-top: 0.02rem;
+}
+.fourExperBox_qty ul{
+	width: 6rem;
+	margin: auto;
+	overflow: hidden;
+}
+.fourExperBox_qty ul li{
+	width: 2.9rem;
+	height: 2.8rem;
+	float: left;
+	background: #fff;
+	margin-bottom: 0.2rem;
+}
+.fourExperBox_qty ul li a{
+	float: left;
+	display: block;
+	font-size: 0.24rem;
+	text-align: center;
+}
+.right_qty{
+	margin-left: 0.2rem;
+}
+.fourExperBox_qty ul li img{
+	width: 2.9rem;
+	height: 1.61rem;
+	float: left;
+}
+.experBox_qty{
+	width: 2.9rem;
+	height: 1.19rem;
+	float: left;
+	display: inline-block;
+}
+.vital_qty{
+	width: 2.9rem;
+	line-height: 0.6rem;
+	float: left;
+	font-size: 0.24rem;
+	color: #9cc813;
+	text-align: center;
+}
+.see_qty{
+	width: 1.38rem !important;
+	height: 0.36rem !important;
+	background: #9cc813;
+	float: left;
+	font-size: 0.24rem;
+	text-align: center;
+	color: #fff;
+	line-height: 0.36rem;
+	border-radius: 0.2rem;
+	margin-left: 0.76rem;
+	box-shadow: -0.05rem 0.05rem 0.1rem #ccc;
+}
+/*四大块体验结束*/
+/*预约体验块开始*/
+.makeExper_qty{
+	width: 6rem;
+	margin: auto;
+	overflow: hidden;
+	margin-top: 0.2rem;
+	background: #fff;
+}
+.makeSmallExper_qty{
+	width: 5.6rem;
+	margin: auto;
+	overflow: hidden;
+}
+.makeExperFont_qty{
+	width: 5.6rem;
+	font-size: 0.28rem;
+	color: #333333;
+	float: left;
+	padding-top: 0.2rem;
+	letter-spacing: 0.02rem;
+}
+.makeExperFont_qty a{
+	width: 5.6rem;
+	font-size: 0.28rem;
+	color: #333333;
+	float: left;
+}
+.makeSmallExper_qty p{
+	width: 5.6rem;
+	float: left;
+	padding-top: 0.1rem;
+	font-size: 0.24rem;
+	color: #999999;
+	line-height: 0.4rem;
+	text-indent: 0.5rem;
+	letter-spacing: 0.02rem;
+	text-align: justify;
+}
+.makeExperForm_qty{
+	width: 5.6rem;
+	float: left;
+	margin-top: 0.2rem;
+	border-top: 1px solid #ccc;
+}
+.makeExperForm_qty table{
+	width: 5.6rem;
+	float: left;
+	margin-top: 0.1rem;
+}
+.makeExperForm_qty table td{
+	width: 2.8rem;
+	font-size: 0.24rem;
+	padding: 0.12rem 0rem;
+	color: #333333;
+	text-align: left;
+}
+.makeExperForm_qty table td input{
+	width: 100%;
+	height: 0.6rem;
+	border: 1px solid #ccc;
+	border-radius: 0.08rem;
+	background: #F8F8F8;
+	outline: none;
+	text-indent: 0.2rem;
+	font-size: 0.24rem;
+}
+.makeExperForm_qty table td select{
+	width: 100%;
+	height: 0.6rem;
+	border: 1px solid #ccc;
+	border-radius: 0.08rem;
+	background: #F8F8F8;
+	outline: none;
+	font-size: 0.24rem;
+	padding: 0rem 0.2rem;
+}
+.makeExperForm_qty table td textarea{
+	width: 100%;
+	height: 1.06rem;
+	border: 1px solid #ccc;
+	border-radius: 0.08rem;
+	background: #F8F8F8;
+	outline: none;
+	text-indent: 0.2rem;
+	font-size: 0.24rem;
+	resize: none;
+	line-height: 0.4rem;
+}
+.btn_qty{
+	width: 1.5rem;
+	height: 0.5rem;
+	float: left;
+	margin-top: 0.2rem;
+	outline: none;
+	border: none;
+	font-size: 0.28rem;
+	color: #fff;
+	border-radius: 0.08rem;
+	background: #9cc813;
+	margin-bottom: 0.2rem;
+}
+/*预约体验块结束*/
+/*预约须知开始*/
+.makeNoteBox_qty{
+	width: 6rem;
+	margin: auto;
+	overflow: hidden;
+	margin-top: 0.2rem;
+}
+.makeNoteSmall_qty{
+	width: 5.6rem;
+	margin: auto;
+	overflow: hidden;
+}
+.makeNoteSmall_qty p{
+	float: left;
+	font-size: 0.24rem;
+	padding-top: 0.2rem;
+	line-height: 0.4rem;
+	letter-spacing: 0.01rem;
+	text-align: justify;
+	color: #999999;
+}
+.makeProcess_qty{
+	width: 5.6rem;
+	line-height: 0.4rem;
+	float: left;
+	margin-top: 0.2rem;
+}
+.makeMath_qty{
+	width: 0.44rem;
+	height: 0.28rem;
+	float: left;
+	background: #F69C1C;
+	color: #fff;
+	font-size: 0.24rem;
+	line-height: 0.28rem;
+	text-align: center;
+	border-radius: 0.15rem;
+	margin-top: 0.06rem;
+}
+.makeFont_qty{
+	font-size: 0.24rem;
+	color: #333333;
+	float: left;
+	margin-left: 0.1rem;
+	letter-spacing: 0.01rem;
+}
+/*预约须知结束*/

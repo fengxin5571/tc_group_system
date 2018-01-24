@@ -1,0 +1,100 @@
+.footerBox_qty{
+    width: 100%;
+    height: 306px;
+    box-sizing: border-box;
+    background: #393C40;
+	overflow: hidden;
+}
+.footersmall_qty{
+	width: 1200px;
+	height: 306px;
+	margin: auto;
+	overflow: hidden;
+}
+.footerSmallCenter_qty{
+	width: 1200px;
+	float: left;
+	margin-top: 50px;
+}
+.homeBox_qty{
+	width: 170px;
+	float: left;
+	text-align: left;
+}
+.contactBox_qty{
+	width: 346px;
+	float: left;
+	text-align: left;
+}
+.home_qty{
+	width: 100%;
+	float: left;
+	font-size: 18px;
+	color: #fff;
+	padding-bottom: 30px;
+}
+.healthFont_qty{
+	width: 100%;
+	float: left;
+	font-size: 14px;
+	padding-bottom: 20px;
+	color: #999999;
+}
+.healthFont_qty a{
+	color: #999999;
+}
+.erweimaBox_qty{
+	width: 92px;
+	float: left;
+	margin-left: 82px;
+}
+.erweimaBox_qty img{
+	width: 92px;
+	height: 92px;
+	float: left;
+}
+.saoma_qty{
+	width: 100%;
+	float: left;
+	font-size: 14px;
+	color: #999999;
+	text-align: center;
+	margin-top: 5px;
+}
+.beianBox_qty{
+	width: 100%;
+	
+	margin: auto;
+	overflow: hidden;
+	background: #232426;
+	
+	color: #999999;
+	text-align: center;
+	line-height: 30px;
+}
+.beian_qty{
+	width: 1200px;
+	margin: auto;
+	overflow: hidden;
+	color: #999999;
+	text-align: center;
+	
+}
+.beianSmall_qty{
+	width: 240px;
+	margin: auto;
+	overflow: hidden;
+}
+.beianSmall_qty div{
+	float: left;
+}
+.beianSmall_qty div a{
+	color:#fff
+}
+.beianSmall_qty span{
+	width: 18px;
+	height: 17px;
+	background: url(../image/cn_qty_07.png);
+	
+	
+}
