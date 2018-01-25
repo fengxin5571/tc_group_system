@@ -186,6 +186,7 @@ class articleControl extends CMSHomeControl{
         Tpl::output('detail_object_id', $article_id);
         Tpl::output('comment_all', 'all');
 
+
         //推荐文章
         $this->get_article_comment();
 
@@ -245,7 +246,6 @@ class articleControl extends CMSHomeControl{
         $cms_tag_list = $model_tag->getList(TRUE, null, 'tag_sort asc', '', 10);
         $cms_tag_list = array_under_reset($cms_tag_list, 'tag_id');
         Tpl::output('cms_tag_list', $cms_tag_list);
-
         //推荐文章(图文)
         $condition = array();
         $condition['article_commend_image_flag'] = 1;

@@ -133,7 +133,7 @@ class navigationControl extends SystemControl{
 				    $obj_validate->setValidate(array("input"=>$_POST["video_class_id"], "require"=>"true", "message"=>$lang['navigation_add_video_class_null']));
 				    break;
 			}
-
+			
 			$error = $obj_validate->validate();
 			if ($error != ''){
 				showMessage($error);

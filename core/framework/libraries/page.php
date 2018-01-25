@@ -487,7 +487,7 @@ class Page{
 		}
 		return $result;
 	}
-	
+
 	/**
 	 * 设置单个页码周围html代码
 	 *
