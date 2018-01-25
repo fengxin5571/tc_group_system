@@ -10,7 +10,18 @@ class articleControl extends CMSHomeControl{
 
     public function __construct() {
         parent::__construct();
+        $cms_article=Model('cms_article_class');
+        $condition1=array("class_code"=>"admin");
+        $wx_article_class=$cms_article->getTreeClassList(1,$condition1);
+        $model_article = Model('cms_article');
+        $wx_article_list = $model_article->getList(array("article_class_id"=>$wx_article_class[0]['class_id']), null, 'article_sort asc, article_id desc');
+        foreach($wx_article_list as &$v){
+            $v['article_publish_time']=date("m/d",$v['article_publish_time']);
+            $v['article_image']=unserialize($v['article_image']);
+            $v['article_image_all']=unserialize($v['article_image_all']);
+        }
         Tpl::setLayout('jky_layout');
+        Tpl::output('wx_article_list', $wx_article_list);
         Tpl::output('index_sign', 'article');
     }
 
@@ -21,6 +32,20 @@ class articleControl extends CMSHomeControl{
      * 公司信息首页
      */
     public function article_indexOp(){
+        $model_article = Model('cms_article');
+        $condition=array("article_commend_flag"=>1);
+        $article_left_list = $model_article->getList($condition, 6, 'article_sort asc, article_id desc');//左面资讯
+        foreach ($article_left_list as &$value){
+            $value['day']=$this->_format_time($value['article_publish_time'], "d");
+            $value['month']=$this->_format_time($value['article_publish_time'], "m");
+        }
+        $condition=array("article_commend_image_flag"=>1);
+        $article_right_list = $model_article->getList($condition, 8, 'article_sort asc, article_id desc');//右面资讯
+        foreach ($article_right_list as &$value){
+            $value['article_publish_time']=$this->_format_time($value['article_publish_time'], "Y/m/d");
+        }
+        Tpl::output("article_left_list",$article_left_list);
+        Tpl::output("article_right_list",$article_right_list);
         Tpl::showpage("article_index");
     }
     /**
@@ -31,8 +56,7 @@ class articleControl extends CMSHomeControl{
         $cms_article=Model('cms_article_class');
         $condition=array("class_code"=>"");
         $article_class=$cms_article->getTreeClassList(1,$condition);
-        $condition1=array("class_code"=>"admin");
-        $wx_article_class=$cms_article->getTreeClassList(1,$condition1);
+        
         //获取文章列表
         /**
 		 * 分页
@@ -48,23 +72,16 @@ class articleControl extends CMSHomeControl{
         $condition['article_state'] = self::ARTICLE_STATE_PUBLISHED;
         $model_article = Model('cms_article');
         $article_list = $model_article->getList($condition, $page_number, 'article_sort asc, article_id desc');
-        $wx_article_list = $model_article->getList(array("article_class_id"=>$wx_article_class[0]['class_id']), null, 'article_sort asc, article_id desc');
         foreach($article_list as &$v){
             $v['article_publish_time']=date("Y/m/d",$v['article_publish_time']);
             $v['article_image']=unserialize($v['article_image']);
             $v['article_image_all']=unserialize($v['article_image_all']);
         }
-        foreach($wx_article_list as &$v){
-            $v['article_publish_time']=date("m/d",$v['article_publish_time']);
-            $v['article_image']=unserialize($v['article_image']);
-            $v['article_image_all']=unserialize($v['article_image_all']);
-        }
         Tpl::output('show_page', $model_article->showpage(7));
         Tpl::output('article_list', $article_list);
-        Tpl::output('wx_article_list', $wx_article_list);
+        
         Tpl::output('article_class', $article_class);
         Tpl::output('class_id', $_GET['class_id']);
-       // $this->get_article_sidebar();
         Tpl::showpage('article_list');
     }
 
@@ -79,10 +96,11 @@ class articleControl extends CMSHomeControl{
 
         $model_article = Model('cms_article');
         $article_detail = $model_article->getOne(array('article_id'=>$article_id));
+        
         if(empty($article_detail)) {
             showMessage(Language::get('article_not_exist'), CMS_SITE_URL, '', 'error');
         }
-
+        $article_detail['article_publish_time']=$this->_format_time($article_detail['article_publish_time'],"Y/m/d");
         if(intval($article_detail['article_state']) !== self::ARTICLE_STATE_PUBLISHED) {
             if($this->publisher_type !== self::ARTICLE_TYPE_ADMIN) {
                 if(empty($_SESSION['member_id']) || $_SESSION['member_id'] != $this->publisher_id) {
@@ -97,17 +115,12 @@ class articleControl extends CMSHomeControl{
         $next_article   =  $model_article->getOne(array('article_id'=>($article_id+1)));
         Tpl::output('pre_article', $pre_article);
         Tpl::output('next_article', $next_article);
-
         //相关文章
         $article_link_list = $this->get_article_link_list($article_detail['article_link']);
         foreach($article_link_list as &$link_list){
             $link_list['article_image']=unserialize($link_list['article_image']);
         }
         Tpl::output('article_link_list', $article_link_list);
-
-        //相关商品
-        $article_goods_list = unserialize($article_detail['article_goods']);
-        Tpl::output('article_goods_list', $article_goods_list);
        //作者发布文章数
        $author_article_list=$model_article->getList(array('article_publisher_id'=>$article_detail['article_publisher_id']), null, 'article_sort asc, article_id desc');
         Tpl::output("author_article_list",$author_article_list);
@@ -131,7 +144,7 @@ class articleControl extends CMSHomeControl{
         $article_attitude_list[5] = Language::get('attitude5');
         $article_attitude_list[6] = Language::get('attitude6');
         Tpl::output('article_attitude_list', $article_attitude_list);
-
+       
         //分享
         $this->get_share_app_list();
         Tpl::output('article_detail', $article_detail);
@@ -251,5 +264,11 @@ class articleControl extends CMSHomeControl{
         $article_type=$article_type?$article_type:1;
         Tpl::output("article_type",$article_type);
         Tpl::showpage('static_article');
+    }
+    /*
+     * 时间格式
+     */
+    private function _format_time($time,$style){
+        return date($style,$time);
     }
 }

@@ -317,10 +317,17 @@ class CMSHomeControl extends CMSControl{
         $article_class_list = $model_article_class->getList(TRUE, null, 'class_sort asc');
         $article_class_list = array_under_reset($article_class_list, 'class_id');
         Tpl::output('article_class_list', $article_class_list);
-
         $special_model=Model("special");
-
+        $model_article = Model('cms_article');
+        $footer_article_class=array_under_reset($model_article_class->getChildClass(4),"class_id");
+        Tpl::output('footer_article_class', $footer_article_class);
+        foreach (array_keys($footer_article_class) as $value){
+            $condition['article_class_id'].=$value.",";
+        }
+        $condition['article_class_id']=array("in",rtrim( $condition['article_class_id'],","));
+        $footer_article_list=$model_article->getListWithClassName($condition);
         
+        Tpl::output('footer_article_list', $footer_article_list);
         $model_picture_class = Model('cms_picture_class');
         $picture_class_list = $model_picture_class->getList(TRUE, null, 'class_sort asc');
         $picture_class_list = array_under_reset($picture_class_list, 'class_id');

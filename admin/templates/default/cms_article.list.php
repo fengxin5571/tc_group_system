@@ -102,6 +102,17 @@ function submit_callback(id){
               <?php } ?>
             </select></td>
           <?php } ?>
+           <th><label for="article_class">文章分类</label></th>
+           <?php if($_GET['op'] == 'cms_article_list') { ?>
+          <td><select name="article_class">
+              <option value="0"><?php echo $lang['nc_please_choose'];?></option>
+              <?php if(!empty($output['article_class']) && is_array($output['article_class'])) {?>
+              <?php foreach($output['article_class'] as $key=>$value) {?>
+              <option value="<?php echo $value['class_id'];?>" <?php if($value['class_id']==$_GET['article_class']) { echo 'selected'; } ?> ><?php echo $value['class_name'];?></option>
+              <?php } ?>
+              <?php } ?>
+            </select></td>
+          <?php } ?>
           <td><a href="javascript:document.formSearch.submit();" class="btn-search " title="<?php echo $lang['nc_query'];?>">&nbsp;</a></td>
         </tr>
       </tbody>

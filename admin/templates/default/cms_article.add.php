@@ -176,7 +176,7 @@
           </div></td>
         </tr>
          <tr>
-          <td colspan="2" class="required">封面: 尺寸w:202*h:126
+          <td colspan="2" class="required">封面: 尺寸w:207*h:136
         </tr>
         <tr class="noborder">
           <td class="vatop rowform" id="article_img">

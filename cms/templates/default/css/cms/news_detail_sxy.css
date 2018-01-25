@@ -1,27 +1,15 @@
 body, html {
     background: #ecf7f9;
     line-height: 1;
-    background-image: url("../img/newslist_sxy/news_listbg.png");
+    background-image: url("../../img/newslist_sxy/news_listbg.png");
     /*background-size: cover;*/
 }
-.big_nav li .title p{
-    line-height: 1.5;
-}
-.big_nav li .title h5{
-    line-height: 1.5;
-}
-.footer_nav{
-    line-height: 1.5;
-}
-.foot_partling_zn{
-    line-height: 1.5;
-}
+
 .content_sxy {
     width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    margin-top: 80px;
 }
 
 @font-face {
@@ -148,7 +136,7 @@ body, html {
     margin-top: 30px;
     flex-direction: column;
     justify-content: space-between;
-    background-image: url("../img/news_detail_sxy/artlcle_bg_03.png");
+    background-image: url("../../img/news_detail_sxy/artlcle_bg_03.png");
     background-size: cover;
 }
 
@@ -382,7 +370,7 @@ body, html {
     background-color: #0d4159;
     border-radius: 5px;
     overflow: hidden;
-    background-image: url("../img/newslist_sxy/right_03.png");
+    background-image: url("../../img/newslist_sxy/right_03.png");
 }
 
 .weixin_orange {
@@ -438,7 +426,7 @@ body, html {
 }
 
 .weixin_list .list_top .list_text {
-    width: 212px;
+    width: 290px;
     height: 60px;
     display: flex;
     flex-direction: column;
@@ -448,7 +436,7 @@ body, html {
 .weixin_list .list_top .list_text a {
     font-size: 14px;
     color: #fff;
-    width: 200px;
+    width: 290px;
     overflow: hidden;
     word-break: keep-all;
     white-space: nowrap;
@@ -457,7 +445,7 @@ body, html {
 }
 
 .weixin_list .list_top .list_text p {
-    width: 208px;
+    width: 290px;
     height: 36px;
     /*display: -webkit-box;*/
     /*-webkit-box-orient: vertical;*/

@@ -38,6 +38,9 @@ class cms_articleControl extends SystemControl{
         if(!empty($_GET['article_state'])) {
             $condition['article_state'] = $_GET['article_state'];
         }
+        if(!empty($_GET['article_class'])){
+            $condition['article_class_id'] = $_GET['article_class'];
+        }
         $this->get_cms_article_list($condition, 'list');
     }
 
@@ -66,7 +69,9 @@ class cms_articleControl extends SystemControl{
         if(!empty($_GET['article_publisher_name'])) {
             $condition['article_publisher_name'] = array('like', '%'.$_GET['article_publisher_name'].'%');
         }
-
+        if(!empty($_GET['article_class_id'])) {
+            $condition['article_class_id'] = array("article_class_id"=>$_GET['article_class_id']);
+        }
         $model_article = Model('cms_article');
         $article_list = $model_article->getList($condition, 10, 'article_id desc');
        
@@ -79,8 +84,19 @@ class cms_articleControl extends SystemControl{
                 $article_list[$i]['callback_able'] = true;
             }
         }
+        /*
+         * 文章分类
+         */
+        $cms_article_class_model=Model("cms_article_class");
+        $cms_article_class_list=$cms_article_class_model->getTreeClassList(2);
+        if(is_array($cms_article_class_list)){
+            foreach ($cms_article_class_list as $k=>$v){
+                $cms_article_class_list[$k]["class_name"]=str_repeat("&nbsp;", $v['deep']*2).$v['class_name'];
+            }
+        }
         $this->show_menu($menu_key);
         Tpl::output('show_page',$model_article->showpage(2));
+        Tpl::output("article_class",$cms_article_class_list);
         Tpl::output('list',$article_list);
         Tpl::output('article_state_list', $this->get_article_state_list());
         Tpl::showpage("cms_article.list");

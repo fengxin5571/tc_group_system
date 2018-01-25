@@ -91,7 +91,7 @@ function submit_delete(id){
           <td class="name"><span nc_type="class_name" column_id="<?php echo $val['class_id'];?>" title="<?php echo $lang['nc_editable'];?>" class="editable "><?php echo $val['class_name'];?></span>
           <a class='btn-add-nofloat marginleft' href="index.php?act=cms_article_class&op=cms_article_class_add&parent_id=<?php echo $val['class_id'];?>"><span><?php echo $lang['nc_add_sub_class'];?></span></a>
           </td>
-          <td class="w72 align-center"><a href="javascript:submit_delete(<?php echo $val['class_id'];?>)"><?php echo $lang['nc_del'];?></a></td>
+          <td class="w72 align-center"><?php if(empty(trim($val['class_code']))) { ?><a href="javascript:submit_delete(<?php echo $val['class_id'];?>)"><?php echo $lang['nc_del'];?></a><?php }?></td>
         </tr>
         <?php } ?>
         <?php }else { ?>

@@ -1,6 +1,6 @@
 body, html {
     background: #ecf7f9;
-    background-image: url("../img/newslist_sxy/news_listbg.png");
+    background-image: url("../../img/newslist_sxy/news_listbg.png");
     /*background-size: cover;*/
 }
 /*banner图片开始*/
@@ -8,7 +8,6 @@ body, html {
     width: 100%;
     height: auto;
     overflow: hidden;
-    margin-top: 80px;
 }
 .banner img{
     width: 100%;
@@ -107,7 +106,7 @@ body, html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url("../img/company_info_sxy/left_bottom_04.png");
+    background-image: url("../../img/company_info_sxy/left_bottom_04.png");
 }
 .left_bottom_right a{
     display: flex;
@@ -120,7 +119,7 @@ body, html {
     display: block;
     width: 15px;
     height: 17px;
-    background-image: url("../img/company_info_sxy/left_more_03.png");
+    background-image: url("../../img/company_info_sxy/left_more_03.png");
 }
 .left_bottom_right h2{
     font-size: 12px;
@@ -138,7 +137,7 @@ body, html {
     padding: 0 36px;
     width: 100%;
     height: 55px;
-    background-image: url("../img/company_info_sxy/news_bg_06.png");
+    background-image: url("../../img/company_info_sxy/news_bg_06.png");
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -147,7 +146,7 @@ body, html {
 }
 .left_news_list li.on{
     height: 130px;
-    background-image: url("../img/company_info_sxy/news_bg_03.png");
+    background-image: url("../../img/company_info_sxy/news_bg_03.png");
 }
 .left_news_list li .news_time{
     display: flex;
@@ -233,7 +232,7 @@ body, html {
 .right_news .right_top{
     width: 540px;
     height: 119px;
-    background-image: url("../img/company_info_sxy/news_right_03.png");
+    background-image: url("../../img/company_info_sxy/news_right_03.png");
     background-size: 540px 119px;
     padding-right: 28px;
     padding-top: 18px;
@@ -243,7 +242,7 @@ body, html {
     width: 14px;
     height: 6px;
     content: '';
-    background-image: url("../img/company_info_sxy/news_right_06.png");
+    background-image: url("../../img/company_info_sxy/news_right_06.png");
     background-size: 14px 6px;
     position: absolute;
     left: 50%;
@@ -277,7 +276,7 @@ body, html {
 .right_news .news_hot{
     width: 100%;
     height: 397px;
-    background-image: url("../img/company_info_sxy/news_right_04.png");
+    background-image: url("../../img/company_info_sxy/news_right_04.png");
 }
 .right_news .news_hot .news_hot_title{
     width: 100%;
@@ -333,7 +332,7 @@ body, html {
     width: 36px;
     height: 36px;
     background-color: #093346;
-    background-image: url("../img/company_info_sxy/n_05.png");
+    background-image: url("../../img/company_info_sxy/n_05.png");
     background-size: 36px 36px;
     right: 0;
 }
@@ -341,7 +340,7 @@ body, html {
     width: 36px;
     height: 36px;
     background-color: #093346;
-    background-image: url("../img/company_info_sxy/n_03.png");
+    background-image: url("../../img/company_info_sxy/n_03.png");
     background-size: 36px 36px;
     left: 0;
 }
@@ -591,7 +590,7 @@ body, html {
 .people_info_box{
     width: 100%;
     height: 528px;
-    background-image: url("../img/company_info_sxy/people_info_bg_03.png");
+    background-image: url("../../img/company_info_sxy/people_info_bg_03.png");
 }
 .manage_detail{
     width: 1200px;
@@ -755,7 +754,7 @@ body, html {
 .team_img li .people_mask{
     width: 170px;
     height: 155px;
-    background-image: url("../img/company_info_sxy/people_mask_03.png");
+    background-image: url("../../img/company_info_sxy/people_mask_03.png");
     position: absolute;
     left: 0;
     top: 0;
@@ -771,7 +770,7 @@ body, html {
 .team_img li:nth-child(3) .people_mask{
     width: 224px;
     height: 204px;
-    background-image: url("../img/company_info_sxy/people_middle_03.png");
+    background-image: url("../../img/company_info_sxy/people_middle_03.png");
     position: absolute;
     left: 0;
     top: 0;
@@ -802,7 +801,7 @@ body, html {
 .social li:nth-child(1){
      width: 302px;
      height: 346px;
-     background-image: url("../img/company_info_sxy/social_03.png");
+     background-image: url("../../img/company_info_sxy/social_03.png");
      display: flex;
      flex-direction: column;
      align-items: center;
