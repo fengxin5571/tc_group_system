@@ -71,6 +71,11 @@ class articleControl extends CMSHomeControl{
         }
         $condition['article_state'] = self::ARTICLE_STATE_PUBLISHED;
         $model_article = Model('cms_article');
+        $footer_article_class=array_under_reset($cms_article->getChildClass(4),"class_id");
+        foreach (array_keys($footer_article_class) as $value){
+            $condition['article_class_id'].=$value.",";
+        }
+        $condition['article_class_id']=array(" not in",rtrim( $condition['article_class_id'],","));
         $article_list = $model_article->getList($condition, $page_number, 'article_sort asc, article_id desc');
         foreach($article_list as &$v){
             $v['article_publish_time']=date("Y/m/d",$v['article_publish_time']);
