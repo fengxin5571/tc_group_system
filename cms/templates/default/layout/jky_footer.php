@@ -10,17 +10,18 @@
             <li>
                 <p class="foot_title_zn">了解更多</p>
             </li>
-            <li>
-                <p class="foot_title_zn">关注我们</p>
-                <a href="">微信</a>
-                <a href="">新浪微博</a>
-            </li>
-            <li>
-                <p class="foot_title_zn">联系我们</p>
-                <a href="">联系方式</a>
-                <a href="">客服服务</a>
-                <a href="">合作洽谈</a>
-            </li>
+            <?php foreach ($output['footer_article_class'] as$key=> $article_class) {?>
+                 <?php if($article_class['parent_id']==4) {?>
+                    <li>
+                        <p class="foot_title_zn"><?php echo $article_class['class_name']?></p>
+                        <?php  foreach ($output['footer_article_list']as $article) {?>
+                            <?php if($article['article_class_id']==$key) {?>
+                                <a href="<?php echo urlCMS("article","article_detail",array("article_id"=>$article['article_id']))?>"><?php echo $article['article_title']?></a>
+                            <?php }?>
+                        <?php }?>
+                    </li>
+                <?php }?>
+            <?php }?>
         </ul>
         <p class="foot_partling_zn"><?php echo $output['setting_config']['icp_number']; ?></p>
         <p class="foot_partling_zn mar"><?php echo html_entity_decode($output['setting_config']['statistics_code'],ENT_QUOTES); ?></p>
@@ -43,24 +44,6 @@
     <a id="gotop" href="JavaScript:void(0);" title="<?php echo $lang['cms_go_top'];?>" style="display:none;">&nbsp;</a> </div>
 <?php } ?>
 <!-- 代码结束 -->
-<!--   
-<div id="footer">
-  <p><a href="<?php echo SHOP_SITE_URL;?>"><?php echo $lang['nc_index'];?></a>
-    <?php if(!empty($output['nav_list']) && is_array($output['nav_list'])){?>
-    <?php foreach($output['nav_list'] as $nav){?>
-    <?php if($nav['nav_location'] == '2'){?>
-    | <a  <?php if($nav['nav_new_open']){?>target="_blank" <?php }?>href="<?php switch($nav['nav_type']){
-    	case '0':echo $nav['nav_url'];break;
-    	case '1':echo urlShop('search', 'index', array('cate_id'=>$nav['item_id']));break;
-    	case '2':echo urlShop('article', 'article',array('ac_id'=>$nav['item_id']));break;
-    	case '3':echo urlShop('activity', 'index',array('activity_id'=>$nav['item_id']));break;
-    }?>"><?php echo $nav['nav_title'];?></a>
-    <?php }?>
-    <?php }?>
-    <?php }?>
-  </p>
-  <?php echo $output['setting_config']['icp_number']; ?><br />
-  <?php echo html_entity_decode($output['setting_config']['statistics_code'],ENT_QUOTES); ?> </div> -->
 <?php if (C('debug') == 1){?>
 <div id="think_page_trace" class="trace">
   <fieldset id="querybox">
@@ -69,28 +52,6 @@
   </fieldset>
 </div>
 <?php }?>
-<!--  
-<?php if($_GET['op'] != 'special_detail'){?>
-<script language="javascript">
-//返回顶部
-backTop=function (btnId){
-	var btn=document.getElementById(btnId);
-	var d=document.documentElement;
-	window.onscroll=set;
-	btn.onclick=function (){
-		btn.style.display="none";
-		window.onscroll=null;
-		this.timer=setInterval(function(){
-			d.scrollTop-=Math.ceil(d.scrollTop*0.1);
-			if(d.scrollTop==0) clearInterval(btn.timer,window.onscroll=set);
-		},10);
-	};
-	function set(){btn.style.display=d.scrollTop?'block':"none"}
-};
-backTop('gotop');
-</script>
-<?php } ?>
-
 </body></html>
--->
+
 

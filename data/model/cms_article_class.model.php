@@ -77,7 +77,7 @@ class cms_article_classModel extends Model{
 	 */
 	public function getChildClass($parent_id){
 	    $condition	= array();
-	    $all_class = $this->getList($condition);
+	    $all_class = $this->getList($condition,null,"class_sort asc");
 	    if (is_array($all_class)){
 	        if (!is_array($parent_id)){
 	            $parent_id = array($parent_id);
