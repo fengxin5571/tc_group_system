@@ -292,6 +292,7 @@ focus_adv_append += '<option value="'+ap_id+'">'+adv_info['ap_name']+'</option>'
         <span class="web-save-succ" style="display:none;"><?php echo $lang['nc_common_save_succ'];?></span>
         </div>
     </form>
+    <!-- 业务体系四图联动start -->
     <form id="upload_focus_form" class="tab-content" name="upload_screen_form" enctype="multipart/form-data" method="post" action="index.php?act=web_api&op=focus_pic" target="upload_pic" style="display:none;">
       <input type="hidden" name="form_submit" value="ok" />
       <input type="hidden" name="web_id" value="<?php echo $output['code_focus_list']['web_id'];?>">
@@ -386,6 +387,7 @@ focus_adv_append += '<option value="'+ap_id+'">'+adv_info['ap_name']+'</option>'
       <a href="index.php?act=web_api&op=html_update&web_id=<?php echo $output['code_screen_list']['web_id'];?>" class="btn"><span><?php echo $lang['web_config_web_html'];?></span></a>
       <span class="web-save-succ" style="display:none;"><?php echo $lang['nc_common_save_succ'];?></span>
     </form>
+    <!-- 业务体系四图联动end -->
   </div>
 </div>
 <iframe style="display:none;" src="" name="upload_pic"></iframe>

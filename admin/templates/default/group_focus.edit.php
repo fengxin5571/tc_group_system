@@ -79,11 +79,7 @@ focus_adv_append += '<option value="'+ap_id+'">'+adv_info['ap_name']+'</option>'
     <ul class="tab-menu">
       <li class="current" form="upload_screen_form"><?php echo '首页全屏(背景)焦点大图';?></li>
       <li form="upload_join_form"><?php echo '加入我们展示';?></li>
-      <li form="upload_focus_form"><?php echo '底部展示四张联动组图';?></li>
-<<<<<<< HEAD
-      <li form="upload_enterprise_form"><?php echo '首页企业文化图片';?></li>
-=======
->>>>>>> e952056bbed5fda5a855c30d809e4e11941c6b99
+      <li form="upload_focus_form"><?php echo '业务体系四图联动';?></li>
     </ul>
     <form id="upload_screen_form" class="tab-content" name="upload_screen_form" enctype="multipart/form-data" method="post" action="index.php?act=web_api&op=screen_pic" target="upload_pic">
       <input type="hidden" name="form_submit" value="ok" />
@@ -296,7 +292,7 @@ focus_adv_append += '<option value="'+ap_id+'">'+adv_info['ap_name']+'</option>'
         </div>
     </form>
     <!-- 加入我们展示 end -->
-    <form id="upload_focus_form" class="tab-content" name="upload_screen_form" enctype="multipart/form-data" method="post" action="index.php?act=web_api&op=focus_pic" target="upload_pic" style="display:none;">
+     <form id="upload_focus_form" class="tab-content" name="upload_screen_form" enctype="multipart/form-data" method="post" action="index.php?act=web_api&op=focus_pic" target="upload_pic" style="display:none;">
       <input type="hidden" name="form_submit" value="ok" />
       <input type="hidden" name="web_id" value="<?php echo $output['code_focus_list']['web_id'];?>">
       <input type="hidden" name="code_id" value="<?php echo $output['code_focus_list']['code_id'];?>">
@@ -304,14 +300,14 @@ focus_adv_append += '<option value="'+ap_id+'">'+adv_info['ap_name']+'</option>'
       <div class="focus-trigeminy">
         <?php if (is_array($output['code_focus_list']['code_info']) && !empty($output['code_focus_list']['code_info'])) { ?>
         <?php foreach ($output['code_focus_list']['code_info'] as $key => $val) { ?>
-        <div focus_id="<?php echo $key;?>" class="focus-trigeminy-group" title="<?php echo '可上下拖拽更改图片组显示顺序';?>" style="width:580px">
+        <div focus_id="<?php echo $key;?>" class="focus-trigeminy-group" title="<?php echo '可上下拖拽更改图片组显示顺序';?>">
             <?php if (is_array($val['pic_list']) && $val['pic_list'][1]['ap_id'] > 0) { ?>
             广告调用
             <a class="del" href="JavaScript:del_focus(<?php echo $key;?>);" title="<?php echo $lang['nc_del'];?>">X</a>
           <ul>
             <?php foreach($val['pic_list'] as $k => $v) { ?>
             <li list="adv" pic_id="<?php echo $k;?>" onclick="select_focus(<?php echo $key;?>,this);" title="<?php echo '可左右拖拽更改图片排列顺序';?>">
-                <div class="focus-thumb" ><img title="<?php echo $v['pic_name'];?>" src="<?php echo UPLOAD_SITE_URL.'/'.$v['pic_img'];?>" /></div>
+                <div class="focus-thumb"><img title="<?php echo $v['pic_name'];?>" src="<?php echo UPLOAD_SITE_URL.'/'.$v['pic_img'];?>"/></div>
               <input name="focus_list[<?php echo $key;?>][pic_list][<?php echo $v['pic_id'];?>][pic_id]" value="<?php echo $v['pic_id'];?>" type="hidden">
               <input name="focus_list[<?php echo $key;?>][pic_list][<?php echo $v['pic_id'];?>][pic_name]" value="<?php echo $v['pic_name'];?>" type="hidden">
               <input name="focus_list[<?php echo $key;?>][pic_list][<?php echo $v['pic_id'];?>][ap_id]" value="<?php echo $v['ap_id'];?>" type="hidden">
@@ -322,30 +318,26 @@ focus_adv_append += '<option value="'+ap_id+'">'+adv_info['ap_name']+'</option>'
             <?php }else { ?>
             图片调用
             <a class="del" href="JavaScript:del_focus(<?php echo $key;?>);" title="<?php echo $lang['nc_del'];?>">X</a>
-          <ul style="height:160px">
+          <ul>
             <?php foreach($val['pic_list'] as $k => $v) { ?>
-            <li style="width:206px;height:149px"list="pic" pic_id="<?php echo $k;?>" onclick="select_focus(<?php echo $key;?>,this);" title="<?php echo '可左右拖拽更改图片排列顺序';?>">
-                <div class="focus-thumb" style="width:206px;height:149px"><img title="<?php echo $v['pic_name'];?>" <?php if ($v['pic_img']) {?> src="<?php echo UPLOAD_SITE_URL.'/'.$v['pic_img'];?>" <?php }else{?>src="<?php echo UPLOAD_SITE_URL.'/shop/common/loading.gif';?>" <?php }?> width="206" height="149" style="max-width: 206px;max-height: 149px;"/></div>
+            <li list="pic" pic_id="<?php echo $k;?>" onclick="select_focus(<?php echo $key;?>,this);" title="<?php echo '可左右拖拽更改图片排列顺序';?>">
+                <div class="focus-thumb"><img title="<?php echo $v['pic_name'];?>" src="<?php echo UPLOAD_SITE_URL.'/'.$v['pic_img'];?>"/></div>
               <input name="focus_list[<?php echo $key;?>][pic_list][<?php echo $v['pic_id'];?>][pic_id]" value="<?php echo $v['pic_id'];?>" type="hidden">
               <input name="focus_list[<?php echo $key;?>][pic_list][<?php echo $v['pic_id'];?>][pic_name]" value="<?php echo $v['pic_name'];?>" type="hidden">
               <input name="focus_list[<?php echo $key;?>][pic_list][<?php echo $v['pic_id'];?>][pic_url]" value="<?php echo $v['pic_url'];?>" type="hidden">
               <input name="focus_list[<?php echo $key;?>][pic_list][<?php echo $v['pic_id'];?>][pic_img]" value="<?php echo $v['pic_img'];?>" type="hidden">
             </li>
             <?php } ?>
-    
-            <span class="bottom_show"><?php if($key==1||$key==2){echo "门店加盟";}elseif($key==3){echo "大渠道展示";}elseif($key==4||$key==5||$key==6){echo "招商加盟入驻";}?></span>
-            
           </ul>
             <?php } ?>
         </div>
         <?php } ?>
         <?php } ?>
-        <div class="add-tab" id="btn_add_list"> <a class="btn-add-nofloat" href="JavaScript:add_group_focus('pic');"><?php echo '图片组';?></a>
+        <div class="add-tab" id="btn_add_list"> <a class="btn-add-nofloat" href="JavaScript:add_focus('pic');"><?php echo '图片组';?></a>
             <?php if(!empty($output['focus_adv_list']) && is_array($output['focus_adv_list'])){ ?>
             <a class="btn-add-nofloat" href="JavaScript:add_focus('adv');"><?php echo '广告组';?></a>
             <?php } ?>
-            <span class="s-tips"><i></i>小提示：可添加每组1张，最多6组联动广告图，单击图片为单张编辑，拖动排序，保存生效。</span></div>
-
+            <span class="s-tips"><i></i>小提示：可添加每组3张，最多5组联动广告图，单击图片为单张编辑，拖动排序，保存生效。</span></div>
       </div>
       <table id="ap_focus" class="table tb-type2" style="display:none;">
         <tbody>
@@ -371,6 +363,14 @@ focus_adv_append += '<option value="'+ap_id+'">'+adv_info['ap_name']+'</option>'
             <td class="vatop tips">图片标题文字将作为图片Alt形式显示。</td>
           </tr>
           <tr>
+            <td colspan="2" class="required"><?php echo '文字内容'.$lang['nc_colon'];?></td>
+          </tr>
+          <tr class="noborder">
+            <td class="vatop rowform">
+            <textarea  class="txt" name="focus_pic[pic_content]" style="width: 700px;height: 85px;" value=""></textarea>
+            <td class="vatop tips">图片内容以文字形式显示在首页业务体系左侧。</td>
+          </tr>
+          <tr>
             <td colspan="2" class="required"><label><?php echo $lang['web_config_upload_url'].$lang['nc_colon'];?></label></td>
           </tr>
           <tr class="noborder">
@@ -386,7 +386,7 @@ focus_adv_append += '<option value="'+ap_id+'">'+adv_info['ap_name']+'</option>'
               <input type='button' name='button' id='button1' value='' class='type-file-button' />
               <input name="pic" id="pic" type="file" class="type-file-file" size="30">
               </span></td>
-            <td class="vatop tips">为确保显示效果正确，请选择W:490px H:354px的清晰图片作为联动广告图组单图。</td>
+            <td class="vatop tips">为确保显示效果正确，请选择W:169px H:229px的清晰图片作为联动广告图组单图。</td>
           </tr>
         </tbody>
       </table>
@@ -394,6 +394,7 @@ focus_adv_append += '<option value="'+ap_id+'">'+adv_info['ap_name']+'</option>'
       <a href="index.php?act=web_api&op=html_update&web_id=<?php echo $output['code_screen_list']['web_id'];?>" class="btn"><span><?php echo $lang['web_config_web_html'];?></span></a>
       <span class="web-save-succ" style="display:none;"><?php echo $lang['nc_common_save_succ'];?></span>
     </form>
+    <!--  -->
   </div>
 </div>
 <iframe style="display:none;" src="" name="upload_pic"></iframe>
