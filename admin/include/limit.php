@@ -99,6 +99,7 @@ if (C('cms_isuse') !== NULL){
 		array('name'=>$lang['nc_cms_tag_manage'], 'op'=>null, 'act'=>'cms_tag'),
 		array('name'=>$lang['nc_cms_comment_manage'], 'op'=>null, 'act'=>'cms_comment'),
 	    array('name'=>"首页图片", 'op'=>null, 'act'=>'group_api'),
+	    array('name'=>"子页面图片", 'op'=>null, 'act'=>'subpage_api'),
 		));
 }
 

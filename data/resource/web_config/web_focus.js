@@ -1,4 +1,4 @@
-  var screen_max = 5;//大图数
+  var screen_max = 6;//大图数
   var focus_max = 5;//小图组数
   var pic_max = 4;//组内小图数
   var screen_obj = {};

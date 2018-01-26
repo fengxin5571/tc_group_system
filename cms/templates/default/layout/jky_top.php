@@ -61,7 +61,7 @@ a :hover{
         <ul class="big_nav">
             <?php if(!empty($output['navigation_list']) && is_array($output['navigation_list'])) {?>
             <?php foreach($output['navigation_list'] as $value) {?>
-            <li >
+            <li flag="<?php echo substr(strstr($value['navigation_link'], "op="), 3) ?>">
                 <div class="line "></div>
                 <a href="<?php echo $value['navigation_link']?>" class="title" <?php if($value['navigation_open_type']==1){echo "target='_blank'";}?>>
                     <p><?php echo $value['navigation_title']?></p>
@@ -79,7 +79,22 @@ a :hover{
     </div>
 </div>
 <!--头部nav结束-->
-
-
+<script>
+<?php if ($output['page_sign']=="article_index"){?>
+$("li[flag='article_index']").addClass("active");
+$("li[flag='article_index'] .line ").addClass("line_show")
+$("title").html($("li[flag='article_index'] .title p ").html()+"-<?php echo C('cms_seo_title');?>");
+<?php } else if($output['page_sign']=="business"){?>
+$("li[flag='business_system']").addClass("active");
+$("li[flag='business_system'] .line ").addClass("line_show")
+$("title").html($("li[flag='business_system'] .title p ").html()+"-<?php echo C('cms_seo_title');?>");
+<?php }else if($output['page_sign']=="enterprise_culture") {?>
+$("li[flag='enterprise_culture']").addClass("active");
+$("li[flag='enterprise_culture'] .line ").addClass("line_show")
+$("title").html($("li[flag='enterprise_culture'] .title p ").html()+"-<?php echo C('cms_seo_title');?>");
+<?php }else if($output['page_sign']=="tc_introduce") {?>
+$("title").html("太常简介"+"-<?php echo C('cms_seo_title');?>");
+<?php }?>
+</script>
 
 

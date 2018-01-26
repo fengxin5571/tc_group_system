@@ -123,4 +123,5 @@ class indexControl extends CMSHomeControl{
 	    Tpl::output("chuchu_hot_article",$chuchu_hot_article);
 	    Tpl::showpage('index');
 	}
+	
 }

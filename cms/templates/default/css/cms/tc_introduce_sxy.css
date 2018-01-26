@@ -1,6 +1,6 @@
 body, html {
     background: #ecf7f9;
-    background-image: url("../img/newslist_sxy/news_listbg.png");
+    background-image: url("../../img/newslist_sxy/news_listbg.png");
     /*background-size: 100% auto;*/
     min-width: 1200px;
 }
@@ -10,7 +10,6 @@ body, html {
     height: auto;
     overflow: hidden;
     margin: 0 auto;
-    margin-top: 80px;
 }
 /*二级导航开始*/
 .second_nav {
@@ -48,7 +47,7 @@ body, html {
 .tc_instrduce{
     width: 1200px;
     height: 396px;
-    background-image: url("../img/tc_introduce_sxy/tc_instruce_01.png");
+    background-image: url("../../img/tc_introduce_sxy/tc_instruce_01.png");
     background-size: cover;
     margin-top: 40px;
     display: flex;
@@ -122,6 +121,9 @@ body, html {
 .tc_instrduce .text_instruce p{
     margin-bottom: 20px;
 }
+.tc_instrduce .text_instruce p a{
+   color: #04373b;
+}
 .cgyjc{
     width: 100%;
     text-align: center;
@@ -142,7 +144,7 @@ body, html {
     width: 100%;
     height: 390px;
     margin-top: 42px;
-    background-image: url("../img/tc_introduce_sxy/tc_02.png");
+    background-image: url("../../img/tc_introduce_sxy/tc_02.png");
     background-size: cover;
 }
 .honor_list{
@@ -178,7 +180,7 @@ body, html {
     display: block;
     background-color: #5ab3ba;
 }
-.honor_list li .honor_text p{
+.honor_list li .honor_text p,.honor_list li .honor_text p a{
     width: 212px;
     height: 60px;
     font-size: 16px;
@@ -208,19 +210,19 @@ body, html {
     float: left;
 }
 .honor_list li:nth-child(1) .honor_text{
-    background-image: url("../img/tc_introduce_sxy/honor_bg_02.png");
+    background-image: url("../../img/tc_introduce_sxy/honor_bg_02.png");
     background-size: cover;
 }
 .honor_list li:nth-child(2) .honor_text{
-    background-image: url("../img/tc_introduce_sxy/honor_bg_01.png");
+    background-image: url("../../img/tc_introduce_sxy/honor_bg_01.png");
     background-size: cover;
 }
 .honor_list li:nth-child(3) .honor_text{
-    background-image: url("../img/tc_introduce_sxy/honor_bg_03.png");
+    background-image: url("../../img/tc_introduce_sxy/honor_bg_03.png");
     background-size: cover;
 }
 .honor_list li:nth-child(4) .honor_text{
-    background-image: url("../img/tc_introduce_sxy/honor_bg_04.png");
+    background-image: url("../../img/tc_introduce_sxy/honor_bg_04.png");
     background-size: cover;
 }
 .honor_circle{
