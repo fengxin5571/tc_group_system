@@ -22,16 +22,16 @@
             </div>
             <ul class="video_list">
                 <li>
-                    <a href=""><img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_list_03.png" alt=""></a>
-                   <p class="video_Title">示例标题展示</p>
+                    <a href="<?php echo $output['code_screen_list']['code_info']['1']['pic_url']?>"><img src="<?php echo UPLOAD_SITE_URL.'/'.$output['code_screen_list']['code_info']['1']['pic_img'];?>" alt=""></a>
+                   <p class="video_Title"><?php echo str_cut($output['code_screen_list']['code_info']['1']['pic_name'], 12)?></p>
                 </li>
                 <li>
-                    <a href=""><img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_list_05.png" alt=""></a>
-                    <p class="video_Title">示例标题展示</p>
+                    <a href="<?php echo $output['code_screen_list']['code_info']['2']['pic_url']?>"><img src="<?php echo UPLOAD_SITE_URL.'/'.$output['code_screen_list']['code_info']['2']['pic_img'];?>" alt=""></a>
+                    <p class="video_Title"><?php echo str_cut($output['code_screen_list']['code_info']['2']['pic_name'], 12)?></p>
                 </li>
                 <li>
-                    <a href=""><img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_list_09.png" alt=""></a>
-                    <p class="video_Title">示例标题展示</p>
+                    <a href="<?php echo $output['code_screen_list']['code_info']['3']['pic_url']?>"><img src="<?php echo UPLOAD_SITE_URL.'/'.$output['code_screen_list']['code_info']['3']['pic_img'];?>" alt=""></a>
+                    <p class="video_Title"><?php echo str_cut($output['code_screen_list']['code_info']['3']['pic_name'], 12)?></p>
                 </li>
             </ul>
             <ul class="video_list1">

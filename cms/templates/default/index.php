@@ -78,59 +78,6 @@ if(is_file($index_file)) {
 </div>
 <!--初识太常结束-->
 <!--企业文化开始-->
-<div class="company_culture">
-    <div class="tc_title_img">
-        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/tc_index/tc_index_title_11.png" alt="">
-    </div>
-    <ul class="culture_box">
-        <li>
-            <div class="culture_text">
-                <p><?php echo loadadv(44);?></p>
-            </div>
-            <div class="culture_img">
-               <?php echo loadadv(43);?>
-            </div>
-        </li>
-        <li>
-            <div class="culture_text">
-                <p><?php echo loadadv(48);?></p>
-            </div>
-            <div class="culture_img">
-                <?php echo loadadv(47);?>
-            </div>
-        </li>
-        <li>
-            <div class="culture_text">
-                <p><?php echo loadadv(51);?></p>
-            </div>
-            <div class="culture_img">
-                <?php echo loadadv(49);?>
-            </div>
-        </li>
-        <li>
-            <div class="culture_text">
-                <p><?php echo loadadv(45);?></p>
-            </div>
-            <div class="culture_img">
-               <?php echo loadadv(46);?>
-            </div>
-        </li>
-        <li>
-            <div class="culture_text">
-                <p><?php echo loadadv(52);?></p>
-            </div>
-            <div class="culture_img">
-                <?php echo loadadv(50);?>
-            </div>
-        </li>
-    </ul>
-    <div class="view_more">
-        <a href="<?php echo urlCMS("article","enterprise_culture")?>"><img src="<?php echo CMS_TEMPLATES_URL;?>/img/tc_index/more_03.png" alt=""></a>
-    </div>
-    <div class="cgyjc" style="margin-top: 16px">
-        	<img src="<?php echo CMS_TEMPLATES_URL;?>/img/tc_index/tc_index_title_07.png" alt="">
-    </div>
-</div>
 <!--企业文化结束-->
 
 <!--业务体系开始-->  

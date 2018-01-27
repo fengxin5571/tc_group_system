@@ -177,7 +177,7 @@ function del_group_screen(pic_id) {//删除图片
 }
 //焦点区切换大图上传
 function add_video_screen(add_type) {//增加图片
-	for (var i = 1; i <= 2; i++) {//防止数组下标重复
+	for (var i = 1; i <= 3; i++) {//防止数组下标重复
 		if (screen_obj.find("li[screen_id='"+i+"']").size()==0) {//编号不存在时添加
     	    var text_input = '';
     	    var text_type = '图片调用';
@@ -294,6 +294,47 @@ function select_screen(pic_id) {//选中图片
         upload_obj.show();
         upload_obj.find('.evo-pointer').css("background-color",color);
     }
+}
+function select_screen1(pic_id) {//选中图片
+	var obj = screen_obj.find("li[screen_id='"+pic_id+"']");
+	var ap = obj.attr("ap");
+	screen_obj.find("li").removeClass("selected");
+	screen_obj.find("input[name='key']").val(pic_id);
+	obj.addClass("selected");
+	if(ap == '1') {
+		upload_obj.hide();
+		screen_obj.find("input[name='ap_pic_id']").val(pic_id);
+		var a_id = obj.find("input[name='screen_list["+pic_id+"][ap_id]']").val();
+		if(a_id == '') {//未选择广告位时用默认的
+			$("#ap_id_screen").trigger("onchange");
+		} else {
+			var color = obj.find("input[name='screen_list["+pic_id+"][color]']").val();
+			$("#ap_id_screen").val(a_id);
+			$("#ap_color").val(color);
+			ap_obj.find('.evo-pointer').css("background-color",color);
+		}
+		ap_obj.show();
+	} else {
+		ap_obj.hide();
+		var pic_name = obj.find("input[name='screen_list["+pic_id+"][pic_name]']").val();
+		var pic_url = obj.find("input[name='screen_list["+pic_id+"][pic_url]']").val();
+		var color = obj.find("input[name='screen_list["+pic_id+"][color]']").val();
+		$("input[name='screen_id']").val(pic_id);
+		$("input[name='screen_pic[pic_name]']").val(pic_name);
+		$("input[name='screen_pic[pic_url]']").val(pic_url);
+		$("input[name='screen_pic[color]']").val(color);
+		upload_obj.find(".type-file-file").val('');
+		upload_obj.find(".type-file-text").val('');
+		upload_obj.show();
+		if(pic_id==1){
+			upload_obj.find(".prompt").html("为确保显示效果正确，请选择W:534px H:304px的清晰图片作为联动广告图组单图。");
+        }else if(pic_id==2){
+        	upload_obj.find(".prompt").html("为确保显示效果正确，请选择W:262px H:149px的清晰图片作为联动广告图组单图。");
+        }else if(pic_id==3){
+        	upload_obj.find(".prompt").html("为确保显示效果正确，请选择W:262px H:149px的清晰图片作为联动广告图组单图。");
+        }
+		upload_obj.find('.evo-pointer').css("background-color",color);
+	}
 }
 
 function select_index_screen(pic_id) {//选中图片

@@ -94,7 +94,7 @@ focus_adv_append += '<option value="'+ap_id+'">'+adv_info['ap_name']+'</option>'
           <li ap="0" screen_id="<?php echo $val['pic_id'];?>" title="可上下拖拽更改显示顺序">
             图片调用
                 <a class="del" href="JavaScript:del_screen(<?php echo $val['pic_id'];?>);" title="<?php echo $lang['nc_del'];?>">X</a>
-            <div class="focus-thumb" onclick="select_screen(<?php echo $val['pic_id'];?>);" style="background-color:<?php echo $val['color'];?>;" title="点击编辑选中区域内容">
+            <div class="focus-thumb" onclick="select_screen1(<?php echo $val['pic_id'];?>);" style="background-color:<?php echo $val['color'];?>;" title="点击编辑选中区域内容">
                 <img title="<?php echo $val['pic_name'];?>" src="<?php echo UPLOAD_SITE_URL.'/'.$val['pic_img'];?>"/></div>
             <input name="screen_list[<?php echo $val['pic_id'];?>][pic_id]" value="<?php echo $val['pic_id'];?>" type="hidden">
             <input name="screen_list[<?php echo $val['pic_id'];?>][pic_name]" value="<?php echo $val['pic_name'];?>" type="hidden">
@@ -157,7 +157,7 @@ focus_adv_append += '<option value="'+ap_id+'">'+adv_info['ap_name']+'</option>'
               <input type='button' name='button' id='button1' value='' class='type-file-button' />
               <input name="pic" id="pic" type="file" class="type-file-file" size="30">
               </span></td>
-            <td class="vatop tips">为确保显示效果正确，请选择W:440px H:319px的清晰图片作为焦点图。</td>
+            <td class="vatop tips prompt">为确保显示效果正确，请选择W:440px H:319px的清晰图片作为焦点图。</td>
           </tr>
           <tr>
             <td colspan="2" class="required"><label><?php echo '背景颜色'.$lang['nc_colon'];?></label></td>
