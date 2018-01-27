@@ -33,8 +33,8 @@
             </div>
             <h1>no.2</h1>
             <pre class="store_desc">将企业部分优势资源杂糅到
-营销渠道中，组成新的渠道体系，达到
-渠道完全一体化。</pre>
+营销渠道中，商品+会员+专属服务+
+推广+交易+...。</pre>
             <div class="cross_line"></div>
         </li>
         <li>
@@ -44,9 +44,9 @@
                 <span>...</span>
             </div>
             <h1>no.3</h1>
-            <pre class="store_desc">将企业部分优势资源杂糅到
-营销渠道中，组成新的渠道体系，达到
-渠道完全一体化。</pre>
+            <pre class="store_desc">智能触屏（电子咨询）+
+Wifi+(电子货架+价格)+可穿戴设备等。
+</pre>
             <div class="cross_line"></div>
         </li>
         <li>
@@ -56,9 +56,8 @@
                 <span>...</span>
             </div>
             <h1>no.4</h1>
-            <pre class="store_desc">将企业部分优势资源杂糅到
-营销渠道中，组成新的渠道体系，达到
-渠道完全一体化。</pre>
+            <pre class="store_desc">建立商品共享体系，友商货
+上架门店，预售货加多样化展示。</pre>
             <div class="cross_line"></div>
         </li>
     </ul>
@@ -71,127 +70,67 @@
 <div class="system_lb">
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide shuffing_box">
-                <div class="shuffing_left">
-                    <div class="shuffing_left_top">
-                        <div  class="img_top1">
-                            <img src="<?php echo CMS_TEMPLATES_URL;?>/img/business_system_sxy/system_lb_03.png" alt="">
+            <?php if($output['code_focus_list']&&is_array($output['code_focus_list'])) {?>
+            <?php foreach ($output['code_focus_list']['code_info'] as$key=> $value) {?>
+                <div class="swiper-slide shuffing_box">
+                    <div class="shuffing_left">
+                        <div class="shuffing_left_top">
+                            <div  class="img_top1">
+                                <a href="<?php echo $value['pic_list'][1]['pic_url']?>" title="<?php echo $value['pic_list'][1]['pic_name']?>">
+                                	<img src="<?php echo UPLOAD_SITE_URL.DS.$value['pic_list'][1]['pic_img']?>" alt="">
+                                </a>
+                            </div>
+                            <div  class="img_top2">
+                                <a href="<?php echo $value['pic_list'][2]['pic_url']?>" title="<?php echo $value['pic_list'][2]['pic_name']?>">
+                                	<img src="<?php echo UPLOAD_SITE_URL.DS.$value['pic_list'][2]['pic_img']?>" alt="">
+                                </a>
+                            </div>
                         </div>
-                        <div  class="img_top2">
-                            <img src="<?php echo CMS_TEMPLATES_URL;?>/img/business_system_sxy/system_lb_05.png" alt="">
+                        <div class="shuffing_left_middle">
+                            <div class="img_middle1">
+                                <a href="<?php echo $value['pic_list'][4]['pic_url']?>" title="<?php echo $value['pic_list'][4]['pic_name']?>">
+                                	<img src="<?php echo UPLOAD_SITE_URL.DS.$value['pic_list'][4]['pic_img']?>" alt="">
+                                </a>
+                            </div>
+                            <div class="shuffing_text">
+                                <h1><?php if($key==1){echo "独一张门店";}elseif($key==2){echo "独易网";}elseif($key==3){echo "食维健门店";}?></h1>
+                                <h2>The store display</h2>
+                                <img src="<?php echo CMS_TEMPLATES_URL;?>/img/business_system_sxy/system_line.png" alt="">
+                                <p><?php echo $value['pic_list'][4]['pic_txt'] ?></p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="shuffing_left_middle">
-                        <div class="img_middle1">
-                            <img src="<?php echo CMS_TEMPLATES_URL;?>/img/business_system_sxy/system_lb_11.png" alt="">
-                        </div>
-                        <div class="shuffing_text">
-                            <h1>独一张门店</h1>
-                            <h2>The store display</h2>
-                            <img src="<?php echo CMS_TEMPLATES_URL;?>/img/business_system_sxy/system_line.png" alt="">
-                            <p>为适应市场细分的竞争需要，市场营销从“渠道为王”走向“决胜终端”、“品牌制胜”的时代，终端得到强化却有意无意把渠道建设给淡忘了，当营销从粗放走向集约化的道路上时，原来适应粗放经营的渠道模式的管理理念，有点不适应新的营销环境了以致渠道部分成了整个营销体系的“短板”，为了整个营销系统升级，回归渠道成为了寻求营销竞争力的新途径。</p>
-                        </div>
-                    </div>
-                    <div class="shuffing_left_bottom">
-                        <div class="img_bottom1">
-                            <img src="<?php echo CMS_TEMPLATES_URL;?>/img/business_system_sxy/system_lb_19.png" alt="">
-                        </div>
-                        <div class="img_bottom2">
-                            <img src="<?php echo CMS_TEMPLATES_URL;?>/img/business_system_sxy/system_lb_18.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="shuffing_rigth">
-                    <div class="img_right1">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/business_system_sxy/system_lb_07.png" alt="">
-                    </div>
-                    <div class="img_right2">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/business_system_sxy/system_lb_15.png" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide shuffing_box">
-                <div class="shuffing_left">
-                    <div class="shuffing_left_top">
-                        <div  class="img_top1">
-                            <img src="<?php echo CMS_TEMPLATES_URL;?>/img/business_system_sxy/system_lb_03.png" alt="">
-                        </div>
-                        <div  class="img_top2">
-                            <img src="<?php echo CMS_TEMPLATES_URL;?>/img/business_system_sxy/system_lb_05.png" alt="">
+                        <div class="shuffing_left_bottom">
+                            <div class="img_bottom1">
+                                <a href="<?php echo $value['pic_list'][5]['pic_url']?>" title="<?php echo $value['pic_list'][5]['pic_name']?>">
+                                	<img src="<?php echo UPLOAD_SITE_URL.DS.$value['pic_list'][5]['pic_img']?>" alt="">
+                                </a>
+                            </div>
+                            <div class="img_bottom2">
+                                <a href="<?php echo $value['pic_list'][6]['pic_url']?>" title="<?php echo $value['pic_list'][6]['pic_name']?>">
+                                	<img src="<?php echo UPLOAD_SITE_URL.DS.$value['pic_list'][6]['pic_img']?>" alt="">
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="shuffing_left_middle">
-                        <div class="img_middle1">
-                            <img src="<?php echo CMS_TEMPLATES_URL;?>/img/business_system_sxy/system_lb_11.png" alt="">
+                    <div class="shuffing_rigth">
+                        <div class="img_right1">
+                            <a href="<?php echo $value['pic_list'][3]['pic_url']?>" title="<?php echo $value['pic_list'][3]['pic_name']?>">
+                            	<img src="<?php echo UPLOAD_SITE_URL.DS.$value['pic_list'][3]['pic_img']?>" alt="">
+                            </a>
                         </div>
-                        <div class="shuffing_text">
-                            <h1>食维健门店</h1>
-                            <h2>The store display</h2>
-                            <img src="<?php echo CMS_TEMPLATES_URL;?>/img/business_system_sxy/system_line.png" alt="">
-                            <p>为适应市场细分的竞争需要，市场营销从“渠道为王”走向“决胜终端”、“品牌制胜”的时代，终端得到强化却有意无意把渠道建设给淡忘了，当营销从粗放走向集约化的道路上时，原来适应粗放经营的渠道模式的管理理念，有点不适应新的营销环境了以致渠道部分成了整个营销体系的“短板”，为了整个营销系统升级，回归渠道成为了寻求营销竞争力的新途径。</p>
-                        </div>
-                    </div>
-                    <div class="shuffing_left_bottom">
-                        <div class="img_bottom1">
-                            <img src="<?php echo CMS_TEMPLATES_URL;?>/img/business_system_sxy/system_lb_19.png" alt="">
-                        </div>
-                        <div class="img_bottom2">
-                            <img src="<?php echo CMS_TEMPLATES_URL;?>/img/business_system_sxy/system_lb_18.png" alt="">
+                        <div class="img_right2">
+                            <a href="<?php echo $value['pic_list'][7]['pic_url']?>" title="<?php echo $value['pic_list'][7]['pic_name']?>">
+                            	<img src="<?php echo UPLOAD_SITE_URL.DS.$value['pic_list'][7]['pic_img']?>" alt="">
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="shuffing_rigth">
-                    <div class="img_right1">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/business_system_sxy/system_lb_07.png" alt="">
-                    </div>
-                    <div class="img_right2">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/business_system_sxy/system_lb_15.png" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="swiper-slide shuffing_box">
-                <div class="shuffing_left">
-                    <div class="shuffing_left_top">
-                        <div  class="img_top1">
-                            <img src="<?php echo CMS_TEMPLATES_URL;?>/img/business_system_sxy/system_lb_03.png" alt="">
-                        </div>
-                        <div  class="img_top2">
-                            <img src="<?php echo CMS_TEMPLATES_URL;?>/img/business_system_sxy/system_lb_05.png" alt="">
-                        </div>
-                    </div>
-                    <div class="shuffing_left_middle">
-                        <div class="img_middle1">
-                            <img src="<?php echo CMS_TEMPLATES_URL;?>/img/business_system_sxy/system_lb_11.png" alt="">
-                        </div>
-                        <div class="shuffing_text">
-                            <h1>独易网</h1>
-                            <h2>The store display</h2>
-                            <img src="<?php echo CMS_TEMPLATES_URL;?>/img/business_system_sxy/system_line.png" alt="">
-                            <p>为适应市场细分的竞争需要，市场营销从“渠道为王”走向“决胜终端”、“品牌制胜”的时代，终端得到强化却有意无意把渠道建设给淡忘了，当营销从粗放走向集约化的道路上时，原来适应粗放经营的渠道模式的管理理念，有点不适应新的营销环境了以致渠道部分成了整个营销体系的“短板”，为了整个营销系统升级，回归渠道成为了寻求营销竞争力的新途径。</p>
-                        </div>
-                    </div>
-                    <div class="shuffing_left_bottom">
-                        <div class="img_bottom1">
-                            <img src="<?php echo CMS_TEMPLATES_URL;?>/img/business_system_sxy/system_lb_19.png" alt="">
-                        </div>
-                        <div class="img_bottom2">
-                            <img src="<?php echo CMS_TEMPLATES_URL;?>/img/business_system_sxy/system_lb_18.png" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="shuffing_rigth">
-                    <div class="img_right1">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/business_system_sxy/system_lb_07.png" alt="">
-                    </div>
-                    <div class="img_right2">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/business_system_sxy/system_lb_15.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
+            <?php }?>
+           </div>
         <!-- Add Arrows -->
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
+        <?php }?>
     </div>
 </div>
 <div class="cgyjc">

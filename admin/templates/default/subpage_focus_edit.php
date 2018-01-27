@@ -69,7 +69,7 @@ focus_adv_append += '<option value="'+ap_id+'">'+adv_info['ap_name']+'</option>'
     <ul class="tab-menu">
       <li class="current" form="upload_screen_form_index"><?php echo '管理理念';?></li>
       <li form="upload_screen_form"><?php echo '员工风采';?></li>
-      <li form="upload_focus_form"><?php echo '正在开发勿用';?></li>
+      <li form="upload_focus_form"><?php echo '业务体系轮播图';?></li>
     </ul>
     
     <!-- 管理理念-->
@@ -300,6 +300,7 @@ focus_adv_append += '<option value="'+ap_id+'">'+adv_info['ap_name']+'</option>'
       <div class="focus-trigeminy">
         <?php if (is_array($output['code_focus_list']['code_info']) && !empty($output['code_focus_list']['code_info'])) { ?>
         <?php foreach ($output['code_focus_list']['code_info'] as $key => $val) { ?>
+        
         <div focus_id="<?php echo $key;?>" class="focus-trigeminy-group" title="<?php echo '可上下拖拽更改图片组显示顺序';?>">
             <?php if (is_array($val['pic_list']) && $val['pic_list'][1]['ap_id'] > 0) { ?>
             广告调用
@@ -316,16 +317,17 @@ focus_adv_append += '<option value="'+ap_id+'">'+adv_info['ap_name']+'</option>'
             <?php } ?>
           </ul>
             <?php }else { ?>
-            图片调用
+            <?php if($key ==1){echo "独一张门店";}elseif($key==2){echo "独易网";}elseif($key==3){echo "食维健门店";}?>
             <a class="del" href="JavaScript:del_focus(<?php echo $key;?>);" title="<?php echo $lang['nc_del'];?>">X</a>
           <ul>
             <?php foreach($val['pic_list'] as $k => $v) { ?>
-            <li list="pic" pic_id="<?php echo $k;?>" onclick="select_focus(<?php echo $key;?>,this);" title="<?php echo '可左右拖拽更改图片排列顺序';?>">
+            <li list="pic" pic_id="<?php echo $k;?>" onclick="select_focus1(<?php echo $key;?>,this);" title="<?php echo '可左右拖拽更改图片排列顺序';?>">
                 <div class="focus-thumb"><img title="<?php echo $v['pic_name'];?>" src="<?php echo UPLOAD_SITE_URL.'/'.$v['pic_img'];?>"/></div>
               <input name="focus_list[<?php echo $key;?>][pic_list][<?php echo $v['pic_id'];?>][pic_id]" value="<?php echo $v['pic_id'];?>" type="hidden">
               <input name="focus_list[<?php echo $key;?>][pic_list][<?php echo $v['pic_id'];?>][pic_name]" value="<?php echo $v['pic_name'];?>" type="hidden">
               <input name="focus_list[<?php echo $key;?>][pic_list][<?php echo $v['pic_id'];?>][pic_url]" value="<?php echo $v['pic_url'];?>" type="hidden">
               <input name="focus_list[<?php echo $key;?>][pic_list][<?php echo $v['pic_id'];?>][pic_img]" value="<?php echo $v['pic_img'];?>" type="hidden">
+               <input name="focus_list[<?php echo $key;?>][pic_list][<?php echo $v['pic_id'];?>][pic_txt]" value="<?php echo $v['pic_txt'];?>" type="hidden">
             </li>
             <?php } ?>
           </ul>
@@ -333,11 +335,11 @@ focus_adv_append += '<option value="'+ap_id+'">'+adv_info['ap_name']+'</option>'
         </div>
         <?php } ?>
         <?php } ?>
-        <div class="add-tab" id="btn_add_list"> <a class="btn-add-nofloat" href="JavaScript:add_focus('pic');"><?php echo '图片组';?></a>
+        <div class="add-tab" id="btn_add_list"> <a class="btn-add-nofloat" href="JavaScript:add_focus1('pic');"><?php echo '图片组';?></a>
             <?php if(!empty($output['focus_adv_list']) && is_array($output['focus_adv_list'])){ ?>
             <a class="btn-add-nofloat" href="JavaScript:add_focus('adv');"><?php echo '广告组';?></a>
             <?php } ?>
-            <span class="s-tips"><i></i>小提示：可添加每组3张，最多5组联动广告图，单击图片为单张编辑，拖动排序，保存生效。</span></div>
+            <span class="s-tips"><i></i>小提示：可添加每组7张，最多3组联动广告图，单击图片为单张编辑，保存生效。</span></div>
       </div>
       <table id="ap_focus" class="table tb-type2" style="display:none;">
         <tbody>
@@ -362,6 +364,16 @@ focus_adv_append += '<option value="'+ap_id+'">'+adv_info['ap_name']+'</option>'
               <input class="txt" type="text" name="focus_pic[pic_name]" value=""></td>
             <td class="vatop tips">图片标题文字将作为图片Alt形式显示。</td>
           </tr>
+          <tr style="display:none;" id="middle1">
+            <td colspan="2" class="required"><?php echo '中间文字'.$lang['nc_colon'];?></td>
+          </tr>
+          <tr class="noborder" style="display:none;" id="middle2">
+            <td class="vatop rowform">
+              <textarea class="txt" name="focus_pic[pic_txt]" style="width: 700px;height: 85px;" value=""></textarea>
+              
+            <td class="vatop tips">最多162个字。</td>
+          </tr>
+          <tr>
           <tr>
             <td colspan="2" class="required"><label><?php echo $lang['web_config_upload_url'].$lang['nc_colon'];?></label></td>
           </tr>
@@ -378,7 +390,7 @@ focus_adv_append += '<option value="'+ap_id+'">'+adv_info['ap_name']+'</option>'
               <input type='button' name='button' id='button1' value='' class='type-file-button' />
               <input name="pic" id="pic" type="file" class="type-file-file" size="30">
               </span></td>
-            <td class="vatop tips">为确保显示效果正确，请选择W:259px H:180px的清晰图片作为联动广告图组单图。</td>
+            <td class="vatop tips prompt">为确保显示效果正确，请选择W:259px H:180px的清晰图片作为联动广告图组单图。</td>
           </tr>
         </tbody>
       </table>

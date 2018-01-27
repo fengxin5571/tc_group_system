@@ -35,17 +35,17 @@ if(is_file($index_file)) {
         <div class="left_meet">
             <ul class="tc_instro_img">
                 <li>
-                    <img src="<?php echo CMS_TEMPLATES_URL;?>/img/tc_index/taichang1.png" alt="">
+                    <?php echo loadadv(39);?>
                 </li>
                 <li>
                     <p class="left_title">太常简介</p>
                 </li>
                 <li>
-                    <img src="<?php echo CMS_TEMPLATES_URL;?>/img/tc_index/taichang2.png" alt="">
+                    <?php echo loadadv(40);?>
                 </li>
                 <li>
-                    <img src="<?php echo CMS_TEMPLATES_URL;?>/img/tc_index/taichang3.png" alt="">
-                    <a href="<?php echo urlCMS("article","tc_introduce")?>">+</a>
+                    <?php echo loadadv(41);?>
+                    <a href="<?php echo urlCMS("article","tc_introduce")?>" class="tc_introduce">+</a>
                 </li>
             </ul>
             <h2>太常生物科技有限公司</h2>
@@ -86,55 +86,50 @@ if(is_file($index_file)) {
     <ul class="culture_box">
         <li>
             <div class="culture_text">
-                <h1>示例标题</h1>
-                <p>示例文字示例文字示例文字示例文字示例文字示例文</p>
+                <p><?php echo loadadv(44);?></p>
             </div>
             <div class="culture_img">
-                <img src="<?php echo CMS_TEMPLATES_URL;?>/img/tc_index/qy1.png" alt="">
+               <?php echo loadadv(43);?>
             </div>
         </li>
         <li>
             <div class="culture_text">
-                <h1>示例标题</h1>
-                <p>示例文字示例文字示例文字示例文字示例文字示例文示例文字示例文字示例文字示例文字示例文字示例文示例文字示例文字示例文字示例文字示例文字示例文</p>
+                <p><?php echo loadadv(48);?></p>
             </div>
             <div class="culture_img">
-                <img src="<?php echo CMS_TEMPLATES_URL;?>/img/tc_index/index_03.png" alt="">
+                <?php echo loadadv(47);?>
             </div>
         </li>
         <li>
             <div class="culture_text">
-                <h1>示例标题</h1>
-                <p>示例文字示例文字示例文字示例文字示例文字示例文</p>
+                <p><?php echo loadadv(51);?></p>
             </div>
             <div class="culture_img">
-                <img src="<?php echo CMS_TEMPLATES_URL;?>/img/tc_index/qy4.png" alt="">
+                <?php echo loadadv(49);?>
             </div>
         </li>
         <li>
             <div class="culture_text">
-                <h1>示例标题</h1>
-                <p>示例文字示例文字示例文字示例文字示例文字示例文</p>
+                <p><?php echo loadadv(45);?></p>
             </div>
             <div class="culture_img">
-                <img src="<?php echo CMS_TEMPLATES_URL;?>/img/tc_index/qy2.png" alt="">
+               <?php echo loadadv(46);?>
             </div>
         </li>
         <li>
             <div class="culture_text">
-                <h1>示例标题</h1>
-                <p>示例文字示例文字示例文字示例文字示例文字示例文示例文字示例文字示例文字示例文字示例文字示例文</p>
+                <p><?php echo loadadv(52);?></p>
             </div>
             <div class="culture_img">
-                <img src="<?php echo CMS_TEMPLATES_URL;?>/img/tc_index/qy5.png" alt="">
+                <?php echo loadadv(50);?>
             </div>
         </li>
     </ul>
     <div class="view_more">
-        <a href="enterprise_culture_sxy.html"><img src="<?php echo CMS_TEMPLATES_URL;?>/img/tc_index/more_03.png" alt=""></a>
+        <a href="<?php echo urlCMS("article","enterprise_culture")?>"><img src="<?php echo CMS_TEMPLATES_URL;?>/img/tc_index/more_03.png" alt=""></a>
     </div>
     <div class="cgyjc" style="margin-top: 16px">
-        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/tc_index/tc_index_title_07.png" alt="">
+        	<img src="<?php echo CMS_TEMPLATES_URL;?>/img/tc_index/tc_index_title_07.png" alt="">
     </div>
 </div>
 <!--企业文化结束-->
