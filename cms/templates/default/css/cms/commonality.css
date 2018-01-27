@@ -13,7 +13,7 @@ table { border-collapse:collapse; border-spacing:0; }
 h1, h2, h3, h4, h5, h6, th { font-size: 100%; font-weight: normal; }
 button,input,select,textarea{font-size:100%;}
 fieldset,img{border:0;}
-a { text-decoration: none; color: #666; background: none }
+a { text-decoration: none; color: #fff; background: none }
 ul, ol { list-style: none; }
 :focus{ outline:none;}
 .clearfix{ clear: both; content: ""; display: block; overflow: hidden }

@@ -1,13 +1,12 @@
 body, html {
     background: #ecf7f9;
-    background-image: url("../img/newslist_sxy/news_listbg.png");
+    background-image: url("../../img/newslist_sxy/news_listbg.png");
     /*background-size: 100% auto;*/
 }
 /*二级导航开始*/
 .nav{
     width: 1200px;
     margin: 0 auto;
-    margin-top: 80px;
 }
 .second_nav{
     width: 822px;
@@ -67,7 +66,7 @@ body, html {
     width: 299px;
     height: 513px;
     overflow: hidden;
-    background-image: url("../img/video_detail_sxy/video_bg_03.png");
+    background-image: url("../../img/video_detail_sxy/video_bg_03.png");
 }
 .video_play_title{
     width: 100%;

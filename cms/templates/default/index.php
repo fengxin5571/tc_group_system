@@ -58,7 +58,7 @@ if(is_file($index_file)) {
                     <div class="news_text">
                         <h3>0<?php echo $key+1;?></h3>
                         <div class="news_cont">
-                            <a href=""><?php echo str_cut($article['article_title'],25)?></a>
+                            <a href="<?php echo urlCMS("article","article_detail",array("article_id"=>$article['article_id']))?>"><?php echo str_cut($article['article_title'],25)?></a>
                             <p><?php echo str_cut($article['article_abstract'],64)?></p>
                         </div>
                     </div>
@@ -132,7 +132,8 @@ if(is_file($index_file)) {
     </div>
 </div>
 <!--企业文化结束-->
-<!--业务体系开始-->
+
+<!--业务体系开始-->  
 <div class="business_system">
     <div class="tc_title_img">
         <img src="<?php echo CMS_TEMPLATES_URL;?>/img/tc_index/tc_index_title_14.png" alt="">
@@ -189,62 +190,7 @@ if(is_file($index_file)) {
     </div>
 </div>
 <!--业务体系结束-->
-<!--待定开始-->
-<div class="tc_shuffling">
-    <div class="tc_title_img">
-        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/tc_index/tc_index_title_14.png" alt="">
-    </div>
-    <div class="shuffling_box">
-        <ul class="shuffling_lb">
-            <li>
-                <img src="<?php echo CMS_TEMPLATES_URL;?>/img/tc_index/shuffling_03.png" alt="">
-                <input type="hidden" class="shuffling_text_title" value="示例-文字1">
-                <input type="hidden" class="shuffling_text_cont" value="新零售，就是更高效率的零售。我们要从线上回到线下但不是原路返回，而是要用互联网的工具和方法，提升传统零售的效率，实现融合。新零售，就是更高效率的零售。我们要从线上回到线下，但不是原路返回，而是要用互联网...">
-                <input type="hidden" class="shuffling_text_url" value="1111">
-            <li>
-                <img src="<?php echo CMS_TEMPLATES_URL;?>/img/tc_index/shuffling_01.png" alt="">
-                <input type="hidden" class="shuffling_text_title" value="示例-文字2">
-                <input type="hidden" class="shuffling_text_cont" value="新零售，就是更高效率的零售。我们要从线上回到线下但不是原路返回，而是要用互联网的工具和方法，提升传统零售的效率，实现融合。新零售，就是更高效率的零售。我们要从线上回到线下，但不是原路返回，而是要用互联网...">
-                <input type="hidden" class="shuffling_text_url" value="2222">
-            </li>
-            <li>
-                <img src="<?php echo CMS_TEMPLATES_URL;?>/img/tc_index/shuffling_02.png" alt="">
-                <input type="hidden" class="shuffling_text_title" value="示例-文字3">
-                <input type="hidden" class="shuffling_text_cont" value="新零售，就是更高效率的零售。我们要从线上回到线下但不是原路返回，而是要用互联网的工具和方法，提升传统零售的效率，实现融合。新零售，就是更高效率的零售。我们要从线上回到线下，但不是原路返回，而是要用互联网...">
-                <input type="hidden" class="shuffling_text_url" value="3333">
-            </li>
-            <li>
-                <img src="<?php echo CMS_TEMPLATES_URL;?>/img/tc_index/qy2.png" alt="">
-                <input type="hidden" class="shuffling_text_title" value="示例-文字4">
-                <input type="hidden" class="shuffling_text_cont" value="新零售，就是更高效率的零售。我们要从线上回到线下但不是原路返回，而是要用互联网的工具和方法，提升传统零售的效率，实现融合。新零售，就是更高效率的零售。我们要从线上回到线下，但不是原路返回，而是要用互联网...">
-                <input type="hidden" class="shuffling_text_url" value="4444">
-            </li>
-        </ul>
-        <ul class="shuffling_arrow">
-            <li class="arrow_left">
-                <img src="<?php echo CMS_TEMPLATES_URL;?>/img/tc_index/arrow_lb_03.png" alt="" class="active">
-                <img src="<?php echo CMS_TEMPLATES_URL;?>/img/tc_index/arrow_03.png" alt="" class="unactive">
-            </li>
-            <li class="arrow_right">
-                <img src="<?php echo CMS_TEMPLATES_URL;?>/img/tc_index/arrow_lb_04.png" alt="" class="active">
-                <img src="<?php echo CMS_TEMPLATES_URL;?>/img/tc_index/arrow_04.png" alt="" class="unactive">
-            </li>
-        </ul>
-        <div class="shuffling_text">
-            <h1>示例-文字</h1>
-            <i></i>
-            <p>新零售，就是更高效率的零售。我们要从线上回到线下但不是原路返回，而是要用互联网的工具和方法，提升传统零售的效率，实现融合。新零售，就是更高效率的零售。我们要从线上回到线下，但不是原路返回，而是要用互联网...</p>
-            <a href="javascript:;">查看</a>
-        </div>
-    </div>
-    <div class="view_more">
-        <a href=""><img src="<?php echo CMS_TEMPLATES_URL;?>/img/tc_index/more_03.png" alt=""></a>
-    </div>
-    <div class="cgyjc" style="margin-top: 16px">
-        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/tc_index/tc_index_title_07.png" alt="">
-    </div>
-</div>
-<!--待定结束-->
+
 <!--健康讲堂开始-->
 <div class="health_class">
     <div class="tc_title_img">
@@ -252,23 +198,23 @@ if(is_file($index_file)) {
     </div>
     <ul class="health_class_list">
         <li class="video_play">
-            <img src="<?php echo CMS_TEMPLATES_URL;?>/img/tc_index/health_list_03.png" alt="" class="health_class_img">
-            <div class="health_mask">
+            <?php echo loadadv(53);?>
+<!--             <div class="health_mask"> -->
                 <a href="video_play.html?url=http://www.duyiwang.cn/data/upload/video/第一讲.mp4"><img src="<?php echo CMS_TEMPLATES_URL;?>/img/tc_index/play_button_03.png" alt=""></a>
-            </div>
+<!--             </div> -->
             <input type="hidden" class="health_video_url">
         </li>
         <li class="video_play">
-            <img src="<?php echo CMS_TEMPLATES_URL;?>/img/tc_index/health_list_07.png" alt="" class="health_class_img">
-            <div class="health_mask">
-                <a href="video_play.html?url=http://www.duyiwang.cn/data/upload/video/炙骨宁.mp4"><img src="<?php echo CMS_TEMPLATES_URL;?>/img/tc_index/play_button_03.png" alt=""></a>
-            </div>
+            <?php echo loadadv(54);?>
+<!--             <div class="health_mask"> -->
+              
+<!--             </div> -->
             <input type="hidden" class="health_video_url">
         </li>
         <li>
             <span></span>
             <div class="health_text">
-                <h1>示例文字</h1>
+                <h1><?php echo loadadv(57);?></h1>
                 <h2>Sample text</h2>
                 <img src="<?php echo CMS_TEMPLATES_URL;?>/img/tc_index/health_arrow_03.png" alt="">
             </div>
@@ -277,24 +223,24 @@ if(is_file($index_file)) {
         <li>
             <span></span>
             <div class="health_text">
-                <h1>示例文字</h1>
+                <h1><?php echo loadadv(58);?></h1>
                 <h2>Sample text</h2>
                 <img src="<?php echo CMS_TEMPLATES_URL;?>/img/tc_index/health_arrow_07.png" alt="">
             </div>
             <span></span>
         </li>
         <li class="video_play">
-            <img src="<?php echo CMS_TEMPLATES_URL;?>/img/tc_index/health_list_11.png" alt="" class="health_class_img">
-            <div class="health_mask">
-                <a href="video_play.html?url=http://www.duyiwang.cn/data/upload/video/第三讲.mp4"><img src="<?php echo CMS_TEMPLATES_URL;?>/img/tc_index/play_button_03.png" alt=""></a>
-            </div>
+            <?php echo loadadv(55);?>
+<!--             <div class="health_mask"> -->
+                
+<!--             </div> -->
             <input type="hidden" class="health_video_url">
         </li>
         <li class="video_play">
-            <img src="<?php echo CMS_TEMPLATES_URL;?>/img/tc_index/health_list_10.png" alt="" class="health_class_img">
-            <div class="health_mask">
-                <a href="video_play.html?url=http://www.duyiwang.cn/data/upload/video/老膏药3分钟.mp4"><img src="<?php echo CMS_TEMPLATES_URL;?>/img/tc_index/play_button_03.png" alt=""></a>
-            </div>
+            <?php echo loadadv(56);?>
+<!--             <div class="health_mask"> -->
+                
+<!--             </div> -->
             <input type="hidden" class="health_video_url">
         </li>
     </ul>

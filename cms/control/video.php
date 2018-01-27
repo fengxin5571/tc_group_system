@@ -90,5 +90,31 @@ class videoControl extends CMSHomeControl{
         Tpl::output('video_list',$video_list);
         Tpl::showpage('video_list');
     }
-
+    /*
+     * 视频详情页
+     */
+    function video_detailOp(){
+        $video_model=Model('video');
+        $video=$video_model->getOneArticle1($_GET['video_id']);
+        if($video){//相关视频
+            if($video[0]['video_link']){
+                $condition=array(
+                    'video_show'=>1,
+                    'video_ids'=>$video[0]['video_link'],
+                    
+                );
+                $video_related=$video_model->getJoinList($condition);
+            }
+        }
+        //推荐视频
+        $condition=array(
+           'video_recommend'=>1,
+            'video_show'=>1,
+        );
+        $video_recommend=$video_model->getJoinList($condition);
+        Tpl::output("video_recommend",$video_recommend);
+        Tpl::output("video_related",$video_related);
+        Tpl::output("video",$video[0]);
+        Tpl::showpage('video_detail');
+    }
 }

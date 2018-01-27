@@ -64,7 +64,7 @@
                         <li class="rank_after">
                             <div class="rank_num"><p>0<?php echo ($key+1)?></p></div>
                             <div class="rank_title">
-                                <a href="<?php echo urlCMS("video","video_detail" ,array("video_id"=>$video_ranking['video_id']))?>"><?php echo $video_ranking['video_title']?></a>
+                                <a href="<?php echo urlCMS("video","video_detail" ,array("video_id"=>$video_ranking['video_id']))?>"><?php echo str_cut($video_ranking['video_title'], 20)?></a>
                                 <div class="rank_author">
                                     <p>作者：<span><?php echo $video_ranking['video_author']?></span></p>
                                     <div class="play_time">
@@ -77,7 +77,7 @@
                     <?php }else{?>
                      	<li class="rank_after">
                             <p>0<?php echo ($key+1)?></p>
-                            <a href="<?php echo urlCMS("video","video_detail" ,array("video_id"=>$video_ranking['video_id']))?>"><?php echo $video_ranking['video_title']?></a>
+                            <a href="<?php echo urlCMS("video","video_detail" ,array("video_id"=>$video_ranking['video_id']))?>"><?php echo str_cut($video_ranking['video_title'], 20)?></a>
                             <div class="play_time">
                                 <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_06.png" alt="">
                                 <span><?php echo $video_ranking['video_count']?></span>
@@ -122,7 +122,7 @@
                     <div class="video_img">
                         <img src="<?php echo $video_all['file_name']?>" alt="">
                     </div>
-                    <p><?php echo $video_all['video_title']?></p>
+                    <p><?php echo str_cut($video_all['video_title'], 20)?></p>
                 </a>
                 <div class="upload_info">
                     <div>
@@ -145,7 +145,7 @@
                     <div class="video_img">
                         <img src="<?php echo $list['file_name']?>" alt="">
                     </div>
-                    <p><?php echo $list['video_title']?></p>
+                    <p><?php echo str_cut($list['video_title'], 20)?></p>
                 </a>
                 <div class="upload_info">
                     <div>

@@ -362,6 +362,9 @@ body, html {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4;
 }
+.culture_box li:nth-child(5) .culture_text p a {
+	color: #fff;
+}
 .culture_box li:nth-child(3) .culture_text h1,
 .culture_box li:nth-child(4) .culture_text h1,
 .culture_box li:nth-child(2) .culture_text h1{
@@ -827,7 +830,7 @@ body, html {
     text-align: center;
 }
 .health_class_list li:nth-child(3) h1,
-.health_class_list li:nth-child(4) h1{
+.health_class_list li:nth-child(4) h1,.health_class_list li:nth-child(4) h1 a{
     font-size: 22px;
     color: #fff;
     font-weight: normal;
