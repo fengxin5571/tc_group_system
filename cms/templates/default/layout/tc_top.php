@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>首页</title>
+    <title><?php echo C('cms_seo_title');?></title>
     <link rel="stylesheet" href="<?php echo CMS_TEMPLATES_URL;?>/css/cms/commonality.css">
     <link rel="stylesheet" href="<?php echo CMS_TEMPLATES_URL;?>/css/cms/tc_index_header.css">
     <link rel="stylesheet" href="<?php echo CMS_TEMPLATES_URL;?>/css/cms/swiper.min.css">

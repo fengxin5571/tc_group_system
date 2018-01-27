@@ -275,6 +275,17 @@ class articleControl extends CMSHomeControl{
      * 业务体系
      */
     function business_systemOp(){
+        $model_web_config = Model('web_config');
+        $code_list = $model_web_config->getCodeList(array('web_id'=>101));
+        if(is_array($code_list) && !empty($code_list)) {
+            foreach ($code_list as $key => $val) {//将变量输出到页面
+                $var_name = $val['var_name'];
+                $code_info = $val['code_info'];
+                $code_type = $val['code_type'];
+                $val['code_info'] = $model_web_config->get_array($code_info,$code_type);
+                Tpl::output('code_'.$var_name,$val);
+            }
+        }
         Tpl::output('page_sign','business');
         Tpl::showpage("business_system");
     }

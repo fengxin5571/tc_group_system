@@ -1854,10 +1854,10 @@ function nc_class($classname = null){
  * @param  $ap_id 广告位ID
  * @param $type 广告返回类型 html,js
  */
-function loadadv($ap_id = null, $type = 'html'){
+function loadadv($ap_id = null, $type = 'html',$flag=0){
 	if (!is_numeric($ap_id)) return false;
 	if (!function_exists('advshow')) import('function.adv');
-	return advshow($ap_id,$type);
+	return advshow($ap_id,$type,$flag);
 }
 
 /**

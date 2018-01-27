@@ -7,10 +7,9 @@ defined('InShopNC') or exit('Access Invalid!');
  * @param unknown_type $ap_id
  * @param unknown_type $type html,js,array
  */
-function advshow($ap_id, $type = 'js'){
+function advshow($ap_id, $type = 'js',$flag){
 	if($ap_id < 1)return;
 	$time    = time();
-
     $ap_info = Model('adv')->getApById($ap_id);
     if (!$ap_info)
         return;
@@ -30,9 +29,9 @@ function advshow($ap_id, $type = 'js'){
 
     if(empty($adv_list)){
         if($ap_class == '1'){//文字广告
-			$content .= "<a href=''>";
-	        $content .= $default_content;
-	        $content .= "</a>";
+                $content .= "<a href=''>";
+                $content .= $default_content;
+                $content .= "</a>";
         }else{
 			$width   = $ap_width;
 	        $height  = $ap_height;
