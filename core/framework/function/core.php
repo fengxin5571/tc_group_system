@@ -1024,6 +1024,18 @@ function getCMSArticleUrl($article_id) {
 }
 
 /**
+ * 获取视频URL
+ */
+function getCMSVideoUrl($video_id) {
+    if(URL_MODEL) {
+        // 开启伪静态
+        return CMS_SITE_URL.DS.'article-'.$video_id.'.html';
+    } else {
+        return CMS_SITE_URL.DS.'index.php?act=video&op=video_detail&video_id='.$video_id;
+    }
+}
+
+/**
  * 获取画报URL
  */
 function getCMSPictureUrl($picture_id) {

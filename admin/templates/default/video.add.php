@@ -1,5 +1,6 @@
 <?php defined('InShopNC') or exit('Access Invalid!');?>
 <link href="<?php echo ADMIN_TEMPLATES_URL;?>/css/up6/up6.css" type="text/css" rel="Stylesheet"/>
+<link  href="<?php echo ADMIN_TEMPLATES_URL;?>/css/public.css" rel="stylesheet" type="text/css"/>
 <script>
 var base_site_url='<?php echo BASE_SITE_URL;?>';
 </script>
@@ -100,15 +101,7 @@ var base_site_url='<?php echo BASE_SITE_URL;?>';
             <input id="" name="video_recommend" checked="checked" value="0" type="radio">
             <label>不推荐</label>
             <input id="" name="video_recommend" value="1" type="radio">
-            <label>集团推荐</label>
-            <input id="" name="video_recommend" value="2" type="radio">
-            <label>健康云</label>
-            <?php if($output['special_list']&&is_array($output['special_list'])){?>
-            <?php foreach ($output['special_list'] as $special) {?>
-             <input id="" name="video_recommend" value="<?php echo $special['special_id']?>" type="radio">
-             <label><?php echo $special['special_title']?></label>
-            <?php }?>
-            <?php }?>
+            <label>视频详情页推荐</label>          
             </td>
           <td class="vatop tips"></td>
         </tr>
@@ -117,6 +110,32 @@ var base_site_url='<?php echo BASE_SITE_URL;?>';
         </tr>
         <tr class="noborder">
           <td colspan="2" class="vatop rowform"><?php showEditor('video_content');?></td>
+        </tr>
+        <tr>
+          <td colspan="2" ><label class="validation">作者:</label></td>
+        </tr>
+        <tr class="noborder">
+          <td colspan="2" class="vatop rowform"><input id="video_author" class="text w100 valid" name="video_author" type="text" value="<?php echo $output['admin_info']['name']?>"></td>
+        </tr>
+         <tr>
+          <td colspan="2" ><label class="validation">相关文章:</label></td>
+        </tr>
+        <tr class="noborder">
+          <td colspan="2" class="vatop rowform">
+          <input id="video_link" name="video_link" type="hidden" value="">
+          <ul id="article_link_list" class="article-link-list">
+          </ul>
+         <p>
+              <input id="video_search_type_id" name="video_search_type" type="radio" value="video_id" checked="">
+              <label for="article_search_type_id">视频编号</label>
+              <input id="video_search_type_title" name="video_search_type" value="video_keyword" type="radio">
+              <label for="article_search_type_title">视频标题</label>
+            </p>
+            <input id="video_search_keyword" class="text w380" name="video_search_keyword" type="text"  style="width:380px">
+            <input id="btn_article_search" class="btn-type-s" type="button" value="搜索">
+            <div id="div_article_select"> </div>
+            <div class="hint">直接搜索视频名称或输入视频编号进行关联；视频编号指文章网址的ID号，例：video_detail&amp;video_id=1 则文章编号为“1”。</div></div>
+          </td>
         </tr>
         <tr>
           <td colspan="2" class="required" id="video_pic_upload">视频封面:</td>
@@ -317,6 +336,36 @@ function del_file_upload(file_id)
         }
     });
 }
+
+//文章搜索
+$("#btn_article_search").click(function(){
+    var search_type = $("[name='video_search_type']:checked").val();
+    var search_keyword = $("#video_search_keyword").val();
+    if(search_keyword != "") {
+        $("#div_article_select").load("index.php?act=video&op=video_list&search_type="+search_type+"&search_keyword="+search_keyword);
+    }
+});
+
+//文章添加
+$("#article_search_list [nctype='btn_article_select']").live("click",function(){
+    var temp = $("<div />").append($(this).clone()).html();
+    $("#article_link_list").append(temp);
+    $("#article_link_list").last("li").find("i").text("选择删除相关视频");
+    refresh_article_link();
+});
+
+//文章删除
+$("#article_link_list [nctype='btn_article_select']").live("click",function(){
+    $(this).remove();
+    refresh_article_link();
+});
+function refresh_article_link() {
+    var cms_article_selected = '';
+    $("#article_link_list [nctype='btn_article_select']").each(function(){
+        cms_article_selected += $(this).attr("video_id") + ",";
+    });
+    $("#video_link").val(cms_article_selected.substring(0, cms_article_selected.length-1));
+} 
 
 
 </script>

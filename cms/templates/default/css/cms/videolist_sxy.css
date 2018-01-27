@@ -25,7 +25,6 @@ body, html {
     height: auto;
     overflow: hidden;
     margin: 0 auto;
-    margin-top: 80px;
 }
 .content_sxy .top_content{
     width: 100%;
@@ -308,6 +307,7 @@ body, html {
 .on{
     display: flex;
 }
+
 .cate_list li{
     width: 284px;
     margin-top: 30px;

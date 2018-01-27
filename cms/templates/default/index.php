@@ -1,5 +1,4 @@
 <?php defined('InShopNC') or exit('Access Invalid!');?>
-<link rel="stylesheet" href="<?php echo CMS_TEMPLATES_URL;?>/css/cms/health_cloud_sxy.css">
 <!--  <div class="cms-content">
 <?php 
 $index_file = BASE_UPLOAD_PATH.DS.ATTACH_CMS.DS.'index_html'.DS.'index.html';
@@ -162,10 +161,10 @@ if(is_file($index_file)) {
                             <li>
                                 <img src="<?php echo UPLOAD_SITE_URL.'/'.$v['pic_img'];?>" alt="" class="system_list_img">
                                 <div class="system_mask">
-                                    <p class="system_list_title"><?php echo $v['pic_name']?></p>
+                                    <p class="system_list_title"><?php echo str_cut($v['pic_name'],8)?></p>
                                     <span></span>
                                 </div>
-                                <input type="hidden" class="system_list_text" value="<?php echo $v['pic_content']?>">
+                                <input type="hidden" class="system_list_text" value="<?php echo str_cut($v['pic_content'],340)?>">
                             </li>
                             <?php }?>
                         </ul>
@@ -359,6 +358,14 @@ if(is_file($index_file)) {
             prevEl: '.swiper-button-prev',
         },
     });
+
+    //业务体系左侧默认显示
+    let system_list_title=$('.system_list li:first-child').find('.system_list_title').html();
+    let system_list_text=$('.system_list li:first-child').find('.system_list_text').val();
+    let system_list_img=$('.system_list li:first-child').find('.system_list_img').attr('src');
+    $('.system_text h1 span').html(system_list_title);
+    $('.system_text p').html(system_list_text);
+    $('.system_big_img img').attr('src',system_list_img);
 
     //业务体系点击切换文字效果
     $('.system_list li').click(function () {

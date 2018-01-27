@@ -567,11 +567,13 @@ function select_focus(focus_id,pic) {//选中图片
         focus_ap_obj.hide();
         var pic_name = obj.find("input[name*='[pic_name]']").val();
         var pic_url = obj.find("input[name*='[pic_url]']").val();
-
+        var pic_content = obj.find("textarea[name*='[pic_content]']").val();
+        
         focus_obj.find("input[name='slide_id']").val(focus_id);
         focus_obj.find("input[name='pic_id']").val(pic_id);
         focus_obj.find("input[name='focus_pic[pic_name]']").val(pic_name);
         focus_obj.find("input[name='focus_pic[pic_url]']").val(pic_url);
+        focus_obj.find("textarea[name='focus_pic[pic_content]']").val(pic_content);
         focus_obj.find(".type-file-file").val('');
         focus_obj.find(".type-file-text").val('');
         focus_upload_obj.show();
@@ -632,14 +634,14 @@ function focus_pic(pic_id,pic_img) {//更新图片
 	    var focus_id = focus_obj.find("input[name='slide_id']").val();
 	    var pic_name = focus_obj.find("input[name='focus_pic[pic_name]']").val();
 	    var pic_url = focus_obj.find("input[name='focus_pic[pic_url]']").val();
-	    var pic_content = focus_obj.find("input[name='focus_pic[pic_content]']").val();
+	    var pic_content = focus_obj.find("textarea[name='focus_pic[pic_content]']").val();
 	    var obj = focus_obj.find("div[focus_id='"+focus_id+"'] li[pic_id='"+pic_id+"']");
 	    obj.find("img").attr("src",UPLOAD_SITE_URL+'/'+pic_img);
 	    obj.find("img").attr("title",pic_name);
         obj.find("input[name*='[pic_name]']").val(pic_name);
         obj.find("input[name*='[pic_url]']").val(pic_url);
         obj.find("input[name*='[pic_img]']").val(pic_img);
-        obj.find("input[name*='[pic_content]']").val(pic_content);
+        obj.find("textarea[name*='[pic_content]']").val(pic_content);
     }
 	focus_obj.find('.web-save-succ').show();
 	setTimeout("focus_obj.find('.web-save-succ').hide()",2000);
