@@ -308,6 +308,7 @@ body, html {
 .on{
     display: flex;
 }
+
 .cate_list li{
     width: 284px;
     margin-top: 30px;

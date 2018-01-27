@@ -201,8 +201,8 @@ focus_adv_append += '<option value="'+ap_id+'">'+adv_info['ap_name']+'</option>'
             <a class="del" href="JavaScript:del_focus(<?php echo $key;?>);" title="<?php echo $lang['nc_del'];?>">X</a>
           <ul style="height:160px">
             <?php foreach($val['pic_list'] as $k => $v) { ?>
-            <li style="width:206px;height:149px"list="pic" pic_id="<?php echo $k;?>" onclick="select_focus(<?php echo $key;?>,this);" title="<?php echo '可左右拖拽更改图片排列顺序';?>">
-                <div class="focus-thumb" style="width:206px;height:149px"><img title="<?php echo $v['pic_name'];?>" <?php if ($v['pic_img']) {?> src="<?php echo UPLOAD_SITE_URL.'/'.$v['pic_img'];?>" <?php }else{?>src="<?php echo UPLOAD_SITE_URL.'/shop/common/loading.gif';?>" <?php }?> width="206" height="149" style="max-width: 206px;max-height: 149px;"/></div>
+            <li style="width:270px;height:154px"list="pic" pic_id="<?php echo $k;?>" onclick="select_focus(<?php echo $key;?>,this);" title="<?php echo '可左右拖拽更改图片排列顺序';?>">
+                <div class="focus-thumb" style="width:270px;height:154px"><img title="<?php echo $v['pic_name'];?>" <?php if ($v['pic_img']) {?> src="<?php echo UPLOAD_SITE_URL.'/'.$v['pic_img'];?>" <?php }else{?>src="<?php echo UPLOAD_SITE_URL.'/shop/common/loading.gif';?>" <?php }?> width="270" height="154" style="max-width: 270px;max-height: 154px;"/></div>
               <input name="focus_list[<?php echo $key;?>][pic_list][<?php echo $v['pic_id'];?>][pic_id]" value="<?php echo $v['pic_id'];?>" type="hidden">
               <input name="focus_list[<?php echo $key;?>][pic_list][<?php echo $v['pic_id'];?>][pic_name]" value="<?php echo $v['pic_name'];?>" type="hidden">
               <input name="focus_list[<?php echo $key;?>][pic_list][<?php echo $v['pic_id'];?>][pic_url]" value="<?php echo $v['pic_url'];?>" type="hidden">
@@ -259,7 +259,7 @@ focus_adv_append += '<option value="'+ap_id+'">'+adv_info['ap_name']+'</option>'
               <input type='button' name='button' id='button1' value='' class='type-file-button' />
               <input name="pic" id="pic" type="file" class="type-file-file" size="30">
               </span></td>
-            <td class="vatop tips">为确保显示效果正确，请选择W:206px H:149px的清晰图片作为联动广告图组单图。</td>
+            <td class="vatop tips">为确保显示效果正确，请选择W:270px H:154px的清晰图片作为联动广告图组单图。</td>
           </tr>
         </tbody>
       </table>

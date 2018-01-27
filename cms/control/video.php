@@ -23,40 +23,77 @@ class videoControl extends CMSHomeControl{
      */
     public function video_listOp() {
         //推荐视频
+        $model_web_config = Model('web_config');
+        $web_id = '102';
+        $code_list = $model_web_config->getCodeList(array('web_id'=> $web_id));
+        
+        if(is_array($code_list) && !empty($code_list)) {
+            foreach ($code_list as $key => $val) {//将变量输出到页面
+                $var_name = $val['var_name'];
+                $code_info = $val['code_info'];
+                $code_type = $val['code_type'];
+                $val['code_info'] = $model_web_config->get_array($code_info,$code_type);
+              
+                Tpl::output('code_'.$var_name,$val);
+            }
+        }
         
         //视频排名
         $video_model=Model('video');
         $condition['order']='video_count desc';
         $condition['limit']=6;
         $video_ranking=$video_model->getVideoList($condition);
-
+        Tpl::output('video_ranking',$video_ranking);
+        
+        /**
+         * 分页
+         * */
+        $page	= new Page();
+        $page->setEachNum(12);
+        $page->setStyle(7);
+        
         //获取视频分类
         $video_class_model	= Model('video_class');
-        $condition	= array();       
+        $condition	= array();   
         $video_class=$video_class_model->getClassList($condition);
-        if(empty($_GET['type'])) {
-            $page_number = 12;
-            $template_name = 'video_list';
-        }
-        $condition = array();
-        if(!empty($_GET['vd_id'])) {
-            $condition['vd_id'] = intval($_GET['vd_id']);
-        }
-        //$video_model=Model('video');
-        $video_list=$video_model->getVideoList($condition,$page_number);
-        if($video_list){
-            foreach($video_list as &$v){
-                $upload=Model('upload');
-                $condition['item_id']=$v['video_id'];
-                $file_name=$upload->getUploadList($condition,'file_name');
-                foreach ($file_name as $file){
-                    $v['file_name']=$file['file_name'];
+  
+        foreach($video_class as $class){
+            $condition['vd_id']=$class['vd_id'];
+            $video_list["$class[vd_id]"]=$video_model->getVideoList($condition,$page);
+            if($video_list["$class[vd_id]"]){
+                foreach($video_list["$class[vd_id]"] as &$v){
+                    $v['video_time']=date("Y/m/d",$v['video_time']);
+                    $upload=Model('upload');
+                    $condition['item_id']=$v['video_id'];
+                    $file_name=$upload->getUploadList($condition,'file_name');
+                    foreach ($file_name as $file){
+                        $v['file_name']=UPLOAD_SITE_URL.'/'.ATTACH_ARTICLE.'/'.$file['file_name'];
+                    }
                 }
+            }else{
+                $video_list["$class[vd_id]"]=array();
             }
         }
-        $model_article = Model('cms_article');
-        Tpl::output('show_page', $model_article->showpage(7));
+        //查询全部视频
+        $condition	= array();
+        $video_all=$video_model->getVideoList($condition,$page);
+        
+        foreach($video_all as &$all){
+            $all['video_time']=date("Y/m/d",$all['video_time']);
+            $upload=Model('upload');
+            $condition['item_id']=$all['video_id'];
+            $file_name=$upload->getUploadList($condition,'file_name');
+            foreach ($file_name as $file){
+                $all['file_name']=UPLOAD_SITE_URL.'/'.ATTACH_ARTICLE.'/'.$file['file_name'];
+            }
+        }
+        
+        Tpl::output('show_page',$page->show());
+        
+        Tpl::output('video_all',$video_all);
+        
         Tpl::output('video_class',$video_class);
+        Tpl::output('vd_id',$_GET['vd_id']);
         Tpl::output('video_list',$video_list);
         Tpl::showpage('video_list');
     }

@@ -12,7 +12,7 @@
                 <i>|</i>
                 <a href="<?php echo urlCMS("index","index" )?>">首页</a>
                 <img src="<?php echo CMS_TEMPLATES_URL;?>/img/newslist_sxy/arrow_03.png" alt="">
-                <a href="<?php echo urlCMS("article","article_list" ,array("class_id"=>0))?>" class="active">视频列表</a>
+                <a href="<?php echo urlCMS("video","video_list" ,array("class_id"=>0))?>" class="active">视频列表</a>
             </div>
             <!--二级导航结束-->
             <!--精品视频推荐开始-->
@@ -35,18 +35,17 @@
                 </li>
             </ul>
             <ul class="video_list1">
+             	<?php if (is_array($output['code_focus_list']['code_info']) && !empty($output['code_focus_list']['code_info'])) { ?>
+        		<?php foreach ($output['code_focus_list']['code_info'] as $key => $val) { ?>
+                <?php foreach($val['pic_list'] as $k => $v) { ?>
                 <li>
-                    <a href=""><img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_list_13.png" alt=""></a>
-                    <p class="video_Title">示例标题展示</p>
+                    <a href="<?php echo $v['pic_url']?>"><img src="<?php echo UPLOAD_SITE_URL.'/'.$val['pic_img'];?>" alt=""></a>
+                    <p class="video_Title"><?php echo $v['pic_name']?></p>
                 </li>
-                <li>
-                    <a href=""><img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_list_15.png" alt=""></a>
-                    <p class="video_Title">示例标题展示</p>
-                </li>
-                <li>
-                    <a href=""><img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_list_17.png" alt=""></a>
-                    <p class="video_Title">示例标题展示</p>
-                </li>
+                <?php }?>
+                <?php }?>
+                <?php }?>
+               
             </ul>
             <!--精品视频推荐结束-->
         </div>
@@ -59,69 +58,34 @@
                     <i>视频排行</i>
                 </h1>
                 <ul class="rank_list">
-                    <li>
-                        <i class="iconfont">&#xe635;</i>
-                        <div class="rank_title">
-                            <a href="">坚持午睡竟有这么多好处!!!</a>
-                            <div class="rank_author">
-                                <p>作者：<span>示例</span></p>
-                                <div class="play_time">
-                                    <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                                    <span>600</span>
+                 <?php if($output['video_ranking']&&is_array($output['video_ranking'])){?>
+                  <?php foreach ($output['video_ranking'] as $key=>$video_ranking) {?>
+                      <?php if(($key+1)<4){?>
+                        <li class="rank_after">
+                            <div class="rank_num"><p>0<?php echo ($key+1)?></p></div>
+                            <div class="rank_title">
+                                <a href="<?php echo urlCMS("video","video_detail" ,array("video_id"=>$video_ranking['video_id']))?>"><?php echo $video_ranking['video_title']?></a>
+                                <div class="rank_author">
+                                    <p>作者：<span>示例</span></p>
+                                    <div class="play_time">
+                                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
+                                        <span><?php echo $video_ranking['video_count']?></span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </li>
-                    <li>
-                        <i class="iconfont">&#xe636;</i>
-                        <div class="rank_title">
-                            <a href="">坚持午睡竟有这么多好处!!!</a>
-                            <div class="rank_author">
-                                <p>作者：<span>示例</span></p>
-                                <div class="play_time">
-                                    <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                                    <span>600</span>
-                                </div>
+                        </li>
+                    <?php }else{?>
+                     	<li class="rank_after">
+                            <p>0<?php echo ($key+1)?></p>
+                            <a href="<?php echo urlCMS("video","video_detail" ,array("video_id"=>$video_ranking['video_id']))?>"><?php echo $video_ranking['video_title']?></a>
+                            <div class="play_time">
+                                <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_06.png" alt="">
+                                <span><?php echo $video_ranking['video_count']?></span>
                             </div>
-                        </div>
-                    </li>
-                    <li>
-                        <i class="iconfont">&#xe637;</i>
-                        <div class="rank_title">
-                            <a href="">坚持午睡竟有这么多好处!!!</a>
-                            <div class="rank_author">
-                                <p>作者：<span>示例</span></p>
-                                <div class="play_time">
-                                    <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                                    <span>600</span>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="rank_after">
-                        <p>04</p>
-                        <a href="">坚持午睡竟有这么多好处!!!</a>
-                        <div class="play_time">
-                            <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_06.png" alt="">
-                            <span>600</span>
-                        </div>
-                    </li>
-                    <li class="rank_after">
-                        <p>05</p>
-                        <a href="">坚持午睡竟有这么多好处!!!</a>
-                        <div class="play_time">
-                            <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_06.png" alt="">
-                            <span>600</span>
-                        </div>
-                    </li>
-                    <li class="rank_after">
-                        <p>06</p>
-                        <a href="">坚持午睡竟有这么多好处!!!</a>
-                        <div class="play_time">
-                            <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_06.png" alt="">
-                            <span>600</span>
-                        </div>
-                    </li>
+                        </li>
+                    <?php }?>
+                    <?php }?>
+                    <?php }?>
                 </ul>
             </div>
         </div>
@@ -134,734 +98,88 @@
             <h1>视频分类</h1>
             <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/arrow_03.png" alt="">
             <ul class="video_category">
-                <li class="active">
+            
+             	<li class="active" id="class_0">
                     <p>全部</p>
                     <i></i>
                 </li>
-                <li>
-                    <p>示例1</p>
-                    <i></i>
-                </li>
-                <li>
-                    <p>示例2</p>
-                    <i></i>
-                </li>
-                <li>
-                    <p>示例3</p>
-                    <i></i>
-                </li>
-                <li>
-                    <p>示例4</p>
-                    <i></i>
-                </li>
-                <li>
-                    <p>示例5</p>
-                    <i></i>
-                </li>
+                <?php if($output['video_class']&&is_array($output['video_class'])){?>
+                <?php foreach ($output['video_class'] as $video_class) {?>
+                    <li id="class_<?php $video_class['vd_id']?>">
+                        <p><?php echo $video_class['vd_name']?></p>
+                        <i></i>
+                    </li>
+                <?php }?>
+                <?php }?>
             </ul>
         </div>
-        <ul class="cate_list on">
+         
+         <ul class="cate_list on">
+         <?php if($output['video_all']&&is_array($output['video_all'])){?>
+        <?php foreach ($output['video_all'] as $video_all) {?>
             <li>
-            <a href="">
-                <div class="video_img">
-                    <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_03.png" alt="">
-                </div>
-                <p>坚持午睡竟有这么多好处！</p>
-            </a>
-            <div class="upload_info">
-                <div>
-                    <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                    <p>200</p>
-                </div>
-                <h2>上传于<span>3小时前</span> </h2>
-            </div>
-        </li>
-            <li>
-                <a href="">
+                <a href="<?php echo urlCMS("video","video_detail" ,array("video_id"=>$video_all['video_id']))?>">
                     <div class="video_img">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_05.png" alt="">
+                        <img src="<?php echo $video_all['file_name']?>" alt="">
                     </div>
-                    <p>坚持午睡竟有这么多好处！</p>
+                    <p><?php echo $video_all['video_title']?></p>
                 </a>
                 <div class="upload_info">
                     <div>
                         <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                        <p>200</p>
+                        <p><?php echo $video_all['video_count']?></p>
                     </div>
-                    <h2>上传于<span>3小时前</span> </h2>
+                    <h2>上传于<span><?php echo $video_all['video_time']?></span> </h2>
                 </div>
             </li>
-            <li>
-                <a href="">
-                    <div class="video_img">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_07.png" alt="">
-                    </div>
-                    <p>坚持午睡竟有这么多好处！</p>
-                </a>
-                <div class="upload_info">
-                    <div>
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                        <p>200</p>
-                    </div>
-                    <h2>上传于<span>3小时前</span> </h2>
-                </div>
-            </li>
-            <li>
-                <a href="">
-                    <div class="video_img">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_09.png" alt="">
-                    </div>
-                    <p>坚持午睡竟有这么多好处！</p>
-                </a>
-                <div class="upload_info">
-                    <div>
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                        <p>200</p>
-                    </div>
-                    <h2>上传于<span>3小时前</span> </h2>
-                </div>
-            </li>
-            <li>
-                <a href="">
-                    <div class="video_img">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_03.png" alt="">
-                    </div>
-                    <p>坚持午睡竟有这么多好处！</p>
-                </a>
-                <div class="upload_info">
-                    <div>
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                        <p>200</p>
-                    </div>
-                    <h2>上传于<span>3小时前</span> </h2>
-                </div>
-            </li>
-            <li>
-                <a href="">
-                    <div class="video_img">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_05.png" alt="">
-                    </div>
-                    <p>坚持午睡竟有这么多好处！</p>
-                </a>
-                <div class="upload_info">
-                    <div>
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                        <p>200</p>
-                    </div>
-                    <h2>上传于<span>3小时前</span> </h2>
-                </div>
-            </li>
-            <li>
-                <a href="">
-                    <div class="video_img">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_07.png" alt="">
-                    </div>
-                    <p>坚持午睡竟有这么多好处！</p>
-                </a>
-                <div class="upload_info">
-                    <div>
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                        <p>200</p>
-                    </div>
-                    <h2>上传于<span>3小时前</span> </h2>
-                </div>
-            </li>
-            <li>
-                <a href="">
-                    <div class="video_img">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_09.png" alt="">
-                    </div>
-                    <p>坚持午睡竟有这么多好处！</p>
-                </a>
-                <div class="upload_info">
-                    <div>
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                        <p>200</p>
-                    </div>
-                    <h2>上传于<span>3小时前</span> </h2>
-                </div>
-            </li>
-            <li>
-                <a href="">
-                    <div class="video_img">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_03.png" alt="">
-                    </div>
-                    <p>坚持午睡竟有这么多好处！</p>
-                </a>
-                <div class="upload_info">
-                    <div>
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                        <p>200</p>
-                    </div>
-                    <h2>上传于<span>3小时前</span> </h2>
-                </div>
-            </li>
-            <li>
-                <a href="">
-                    <div class="video_img">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_05.png" alt="">
-                    </div>
-                    <p>坚持午睡竟有这么多好处！</p>
-                </a>
-                <div class="upload_info">
-                    <div>
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                        <p>200</p>
-                    </div>
-                    <h2>上传于<span>3小时前</span> </h2>
-                </div>
-            </li>
-            <li>
-                <a href="">
-                    <div class="video_img">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_07.png" alt="">
-                    </div>
-                    <p>坚持午睡竟有这么多好处！</p>
-                </a>
-                <div class="upload_info">
-                    <div>
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                        <p>200</p>
-                    </div>
-                    <h2>上传于<span>3小时前</span> </h2>
-                </div>
-            </li>
-            <li>
-                <a href="">
-                    <div class="video_img">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_09.png" alt="">
-                    </div>
-                    <p>坚持午睡竟有这么多好处！</p>
-                </a>
-                <div class="upload_info">
-                    <div>
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                        <p>200</p>
-                    </div>
-                    <h2>上传于<span>3小时前</span> </h2>
-                </div>
-            </li>
+                    <?php }?>
+        <?php }?>
         </ul>
-        <ul class="cate_list">
-            <li>
-                <a href="">
+
+        <?php if($output['video_list']&&is_array($output['video_list'])){?>
+        <?php foreach ($output['video_list'] as $video_list) {?>
+        <ul class="cate_list" >
+            <?php foreach ($video_list as $list) {?>
+                <li>
+                <a href="<?php echo urlCMS("video","video_detail" ,array("video_id"=>$list['video_id']))?>">
                     <div class="video_img">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_03.png" alt="">
+                        <img src="<?php echo $list['file_name']?>" alt="">
                     </div>
-                    <p>坚持午睡竟有这么多好处！</p>
+                    <p><?php echo $list['video_title']?></p>
                 </a>
                 <div class="upload_info">
                     <div>
                         <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                        <p>200</p>
+                        <p><?php echo $list['video_count']?></p>
                     </div>
-                    <h2>上传于<span>3小时前</span> </h2>
+                    <h2>上传于<span><?php echo $list['video_time']?></span> </h2>
                 </div>
-            </li>
-            <li>
-                <a href="">
-                    <div class="video_img">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_05.png" alt="">
-                    </div>
-                    <p>坚持午睡竟有这么多好处！</p>
-                </a>
-                <div class="upload_info">
-                    <div>
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                        <p>200</p>
-                    </div>
-                    <h2>上传于<span>3小时前</span> </h2>
-                </div>
-            </li>
-            <li>
-                <a href="">
-                    <div class="video_img">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_03.png" alt="">
-                    </div>
-                    <p>坚持午睡竟有这么多好处！</p>
-                </a>
-                <div class="upload_info">
-                    <div>
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                        <p>200</p>
-                    </div>
-                    <h2>上传于<span>3小时前</span> </h2>
-                </div>
-            </li>
-            <li>
-                <a href="">
-                    <div class="video_img">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_05.png" alt="">
-                    </div>
-                    <p>坚持午睡竟有这么多好处！</p>
-                </a>
-                <div class="upload_info">
-                    <div>
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                        <p>200</p>
-                    </div>
-                    <h2>上传于<span>3小时前</span> </h2>
-                </div>
-            </li>
-            <li>
-                <a href="">
-                    <div class="video_img">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_07.png" alt="">
-                    </div>
-                    <p>坚持午睡竟有这么多好处！</p>
-                </a>
-                <div class="upload_info">
-                    <div>
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                        <p>200</p>
-                    </div>
-                    <h2>上传于<span>3小时前</span> </h2>
-                </div>
-            </li>
-            <li>
-                <a href="">
-                    <div class="video_img">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_09.png" alt="">
-                    </div>
-                    <p>坚持午睡竟有这么多好处！</p>
-                </a>
-                <div class="upload_info">
-                    <div>
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                        <p>200</p>
-                    </div>
-                    <h2>上传于<span>3小时前</span> </h2>
-                </div>
-            </li>
+            </li>     
+            <?php }?>      
         </ul>
-        <ul class="cate_list">
-            <li>
-                <a href="">
-                    <div class="video_img">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_03.png" alt="">
-                    </div>
-                    <p>坚持午睡竟有这么多好处！</p>
-                </a>
-                <div class="upload_info">
-                    <div>
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                        <p>200</p>
-                    </div>
-                    <h2>上传于<span>3小时前</span> </h2>
-                </div>
-            </li>
-            <li>
-                <a href="">
-                    <div class="video_img">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_05.png" alt="">
-                    </div>
-                    <p>坚持午睡竟有这么多好处！</p>
-                </a>
-                <div class="upload_info">
-                    <div>
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                        <p>200</p>
-                    </div>
-                    <h2>上传于<span>3小时前</span> </h2>
-                </div>
-            </li>
-            <li>
-                <a href="">
-                    <div class="video_img">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_07.png" alt="">
-                    </div>
-                    <p>坚持午睡竟有这么多好处！</p>
-                </a>
-                <div class="upload_info">
-                    <div>
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                        <p>200</p>
-                    </div>
-                    <h2>上传于<span>3小时前</span> </h2>
-                </div>
-            </li>
-            <li>
-                <a href="">
-                    <div class="video_img">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_09.png" alt="">
-                    </div>
-                    <p>坚持午睡竟有这么多好处！</p>
-                </a>
-                <div class="upload_info">
-                    <div>
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                        <p>200</p>
-                    </div>
-                    <h2>上传于<span>3小时前</span> </h2>
-                </div>
-            </li>
-            <li>
-                <a href="">
-                    <div class="video_img">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_07.png" alt="">
-                    </div>
-                    <p>坚持午睡竟有这么多好处！</p>
-                </a>
-                <div class="upload_info">
-                    <div>
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                        <p>200</p>
-                    </div>
-                    <h2>上传于<span>3小时前</span> </h2>
-                </div>
-            </li>
-            <li>
-                <a href="">
-                    <div class="video_img">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_09.png" alt="">
-                    </div>
-                    <p>坚持午睡竟有这么多好处！</p>
-                </a>
-                <div class="upload_info">
-                    <div>
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                        <p>200</p>
-                    </div>
-                    <h2>上传于<span>3小时前</span> </h2>
-                </div>
-            </li>
-            <li>
-                <a href="">
-                    <div class="video_img">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_03.png" alt="">
-                    </div>
-                    <p>坚持午睡竟有这么多好处！</p>
-                </a>
-                <div class="upload_info">
-                    <div>
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                        <p>200</p>
-                    </div>
-                    <h2>上传于<span>3小时前</span> </h2>
-                </div>
-            </li>
-            <li>
-                <a href="">
-                    <div class="video_img">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_05.png" alt="">
-                    </div>
-                    <p>坚持午睡竟有这么多好处！</p>
-                </a>
-                <div class="upload_info">
-                    <div>
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                        <p>200</p>
-                    </div>
-                    <h2>上传于<span>3小时前</span> </h2>
-                </div>
-            </li>
-            <li>
-                <a href="">
-                    <div class="video_img">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_07.png" alt="">
-                    </div>
-                    <p>坚持午睡竟有这么多好处！</p>
-                </a>
-                <div class="upload_info">
-                    <div>
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                        <p>200</p>
-                    </div>
-                    <h2>上传于<span>3小时前</span> </h2>
-                </div>
-            </li>
-            <li>
-                <a href="">
-                    <div class="video_img">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_09.png" alt="">
-                    </div>
-                    <p>坚持午睡竟有这么多好处！</p>
-                </a>
-                <div class="upload_info">
-                    <div>
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                        <p>200</p>
-                    </div>
-                    <h2>上传于<span>3小时前</span> </h2>
-                </div>
-            </li>
-        </ul>
-        <ul class="cate_list">
-            <li>
-                <a href="">
-                    <div class="video_img">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_03.png" alt="">
-                    </div>
-                    <p>坚持午睡竟有这么多好处！</p>
-                </a>
-                <div class="upload_info">
-                    <div>
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                        <p>200</p>
-                    </div>
-                    <h2>上传于<span>3小时前</span> </h2>
-                </div>
-            </li>
-            <li>
-                <a href="">
-                    <div class="video_img">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_05.png" alt="">
-                    </div>
-                    <p>坚持午睡竟有这么多好处！</p>
-                </a>
-                <div class="upload_info">
-                    <div>
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                        <p>200</p>
-                    </div>
-                    <h2>上传于<span>3小时前</span> </h2>
-                </div>
-            </li>
-            <li>
-                <a href="">
-                    <div class="video_img">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_07.png" alt="">
-                    </div>
-                    <p>坚持午睡竟有这么多好处！</p>
-                </a>
-                <div class="upload_info">
-                    <div>
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                        <p>200</p>
-                    </div>
-                    <h2>上传于<span>3小时前</span> </h2>
-                </div>
-            </li>
-            <li>
-                <a href="">
-                    <div class="video_img">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_07.png" alt="">
-                    </div>
-                    <p>坚持午睡竟有这么多好处！</p>
-                </a>
-                <div class="upload_info">
-                    <div>
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                        <p>200</p>
-                    </div>
-                    <h2>上传于<span>3小时前</span> </h2>
-                </div>
-            </li>
-            <li>
-                <a href="">
-                    <div class="video_img">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_09.png" alt="">
-                    </div>
-                    <p>坚持午睡竟有这么多好处！</p>
-                </a>
-                <div class="upload_info">
-                    <div>
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                        <p>200</p>
-                    </div>
-                    <h2>上传于<span>3小时前</span> </h2>
-                </div>
-            </li>
-            <li>
-                <a href="">
-                    <div class="video_img">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_03.png" alt="">
-                    </div>
-                    <p>坚持午睡竟有这么多好处！</p>
-                </a>
-                <div class="upload_info">
-                    <div>
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                        <p>200</p>
-                    </div>
-                    <h2>上传于<span>3小时前</span> </h2>
-                </div>
-            </li>
-            <li>
-                <a href="">
-                    <div class="video_img">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_05.png" alt="">
-                    </div>
-                    <p>坚持午睡竟有这么多好处！</p>
-                </a>
-                <div class="upload_info">
-                    <div>
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                        <p>200</p>
-                    </div>
-                    <h2>上传于<span>3小时前</span> </h2>
-                </div>
-            </li>
-        </ul>
-        <ul class="cate_list">
-            <li>
-                <a href="">
-                    <div class="video_img">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_03.png" alt="">
-                    </div>
-                    <p>坚持午睡竟有这么多好处！</p>
-                </a>
-                <div class="upload_info">
-                    <div>
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                        <p>200</p>
-                    </div>
-                    <h2>上传于<span>3小时前</span> </h2>
-                </div>
-            </li>
-            <li>
-                <a href="">
-                    <div class="video_img">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_03.png" alt="">
-                    </div>
-                    <p>坚持午睡竟有这么多好处！</p>
-                </a>
-                <div class="upload_info">
-                    <div>
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                        <p>200</p>
-                    </div>
-                    <h2>上传于<span>3小时前</span> </h2>
-                </div>
-            </li>
-            <li>
-                <a href="">
-                    <div class="video_img">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_05.png" alt="">
-                    </div>
-                    <p>坚持午睡竟有这么多好处！</p>
-                </a>
-                <div class="upload_info">
-                    <div>
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                        <p>200</p>
-                    </div>
-                    <h2>上传于<span>3小时前</span> </h2>
-                </div>
-            </li>
-            <li>
-                <a href="">
-                    <div class="video_img">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_07.png" alt="">
-                    </div>
-                    <p>坚持午睡竟有这么多好处！</p>
-                </a>
-                <div class="upload_info">
-                    <div>
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                        <p>200</p>
-                    </div>
-                    <h2>上传于<span>3小时前</span> </h2>
-                </div>
-            </li>
-            <li>
-                <a href="">
-                    <div class="video_img">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_09.png" alt="">
-                    </div>
-                    <p>坚持午睡竟有这么多好处！</p>
-                </a>
-                <div class="upload_info">
-                    <div>
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                        <p>200</p>
-                    </div>
-                    <h2>上传于<span>3小时前</span> </h2>
-                </div>
-            </li>
-        </ul>
-        <ul class="cate_list">
-            <li>
-                <a href="">
-                    <div class="video_img">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_07.png" alt="">
-                    </div>
-                    <p>坚持午睡竟有这么多好处！</p>
-                </a>
-                <div class="upload_info">
-                    <div>
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                        <p>200</p>
-                    </div>
-                    <h2>上传于<span>3小时前</span> </h2>
-                </div>
-            </li>
-            <li>
-                <a href="">
-                    <div class="video_img">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_09.png" alt="">
-                    </div>
-                    <p>坚持午睡竟有这么多好处！</p>
-                </a>
-                <div class="upload_info">
-                    <div>
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                        <p>200</p>
-                    </div>
-                    <h2>上传于<span>3小时前</span> </h2>
-                </div>
-            </li>
-            <li>
-                <a href="">
-                    <div class="video_img">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_03.png" alt="">
-                    </div>
-                    <p>坚持午睡竟有这么多好处！</p>
-                </a>
-                <div class="upload_info">
-                    <div>
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                        <p>200</p>
-                    </div>
-                    <h2>上传于<span>3小时前</span> </h2>
-                </div>
-            </li>
-            <li>
-                <a href="">
-                    <div class="video_img">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_05.png" alt="">
-                    </div>
-                    <p>坚持午睡竟有这么多好处！</p>
-                </a>
-                <div class="upload_info">
-                    <div>
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                        <p>200</p>
-                    </div>
-                    <h2>上传于<span>3小时前</span> </h2>
-                </div>
-            </li>
-            <li>
-                <a href="">
-                    <div class="video_img">
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/video_liat_07.png" alt="">
-                    </div>
-                    <p>坚持午睡竟有这么多好处！</p>
-                </a>
-                <div class="upload_info">
-                    <div>
-                        <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
-                        <p>200</p>
-                    </div>
-                    <h2>上传于<span>3小时前</span> </h2>
-                </div>
-            </li>
-        </ul>
+       	<?php }?>
+       	<?php }?>
+       
     </section>
     <!--分页-->
      <!--分页-->
-    <div class="pagination">
-        <ul>
-            <li class="page_"><span>上一页</span></li>
-            <li class="page active"><span>1</span></li>
-            <li class="page"><span>2</span></li>
-            <li class="page"><span>3</span></li>
-            <li class="page"><span>4</span></li>
-            <li class="page"><span>5</span></li>
-            <li><span>……</span></li>
-            <li class="page"><span>12</span></li>
-            <li class="page"><span>13</span></li>
-            <li class="page_"><span>下一页</span></li>
-        </ul>
-    </div>
+    	<div class="pagination">
+            <?php echo $output['show_page'];?>
+        </div>
 </section>
+
+<script>
+    //选项卡
+    $('.video_category li').click(function () {
+        $(".video_category li").removeClass('active');
+        $(".video_category li").eq($(this).index()).addClass("active");
+        $(".cate_list").removeClass('on').eq($(this).index()).addClass('on');
+    });
+    //右边视频排行
+    $('.rank_list li:nth-child(1)').removeClass('rank_after');
+    $('.rank_list li:nth-child(2)').removeClass('rank_after');
+    $('.rank_list li:nth-child(3)').removeClass('rank_after');
+    $('.rank_list li:nth-child(1)').find('.rank_num').html('<i class="iconfont">&#xe635;</i>');
+    $('.rank_list li:nth-child(2)').find('.rank_num').html('<i class="iconfont">&#xe636;</i>');
+    $('.rank_list li:nth-child(3)').find('.rank_num').html('<i class="iconfont">&#xe637;</i>');
+</script>
