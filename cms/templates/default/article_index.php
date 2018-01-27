@@ -126,7 +126,7 @@
                         <p></p>
                     </div>
                     <div class="history_content">
-                        <p>示例文字示例文字示例文文字示例文文字示例文字示例文文文字示例文字示例文文字示例文字示例文字示例字示例文字字示例文字示例文字示例文字示例字示例文字示例文字示例文字示例</p>
+                        <p>1、5月9日全国第一家独一张骨康复连锁机构—山西太原旗舰店开业。<br/>2、直至年底，独一张骨康复连锁机构在全国已有80家门店。</p>
                         <div class="history_img">
                             <img src="<?php echo CMS_TEMPLATES_URL;?>/img/company_info_sxy/history_img_03.png" alt="">
                         </div>
@@ -140,9 +140,9 @@
                         <p></p>
                     </div>
                     <div class="history_content">
-                        <p>示例示例文文字示例文字示例文文文字示例示例文文字示例文字示例文文文字示例文字示例文文字示例示例文文字示例示例文文字示例文字示例文文文字示例文字示例文文字示例文字示例文文文字示例文字示例文文字示例文字示例文文字示例文字示例文字示例字示例文字字示例文字示例文字示例文字示例字示例文字示例文字示例文字示例</p>
+                        <p>1、2月，公司正式更名为太常生物科技有限公司。<br/>2、直至年底，【太常·独一张】骨康复连锁机构在全国已有1000家门店。</p>
                     </div>
-                    <div class="history_time">2015年</div>
+                    <div class="history_time">2016年</div>
                 </li>
                 <li>
                     <div class="coordinates">
@@ -154,9 +154,9 @@
                         <div class="history_img">
                             <img src="<?php echo CMS_TEMPLATES_URL;?>/img/company_info_sxy/history_img_06.png" alt="">
                         </div>
-                        <p>示例文字示例文字示例文文字示例文文字示例文字示例文文文字示例文字示例文文字示例文字示例文字示例字示例文字字示例文字示例文字示例文字示例字示例文字示例文字示例文字示例</p>
+                        <p>1、打造50家旗舰店+30家样板店、打造50名优秀店长,校企深度合作，助力学子圆梦。<br/>2、公司广告陆续登录各大卫视,食维健项目启动。<br/>3、独易网挂牌上市。</p>
                     </div>
-                    <div class="history_time">2015年</div>
+                    <div class="history_time">2017年</div>
                 </li>
                 <li>
                     <div class="coordinates">

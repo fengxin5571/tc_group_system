@@ -44,7 +44,7 @@ if(is_file($index_file)) {
                 </li>
                 <li>
                     <img src="<?php echo CMS_TEMPLATES_URL;?>/img/tc_index/taichang3.png" alt="">
-                    <a href="tc_introduce_sxy.html">+</a>
+                    <a href="<?php echo urlCMS("article","tc_introduce")?>">+</a>
                 </li>
             </ul>
             <h2>太常生物科技有限公司</h2>

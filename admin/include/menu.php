@@ -176,6 +176,7 @@ if(C('cms_isuse') !== null){
                    11=> array('args'=>'cms_tag_list,cms_tag,cms','text'=>$lang['nc_cms_tag_manage']),
                    12=> array('args'=>'comment_manage,cms_comment,cms','text'=>$lang['nc_cms_comment_manage']),
 				   13=> array('args'=>'focus_edit,group_api,cms',			'text'=>"首页图片"),
+				   14=> array('args'=>'focus_edit,subpage_api,cms',			'text'=>"子页面图片"),
 				)
 			);
 }

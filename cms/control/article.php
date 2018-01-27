@@ -46,6 +46,7 @@ class articleControl extends CMSHomeControl{
         }
         Tpl::output("article_left_list",$article_left_list);
         Tpl::output("article_right_list",$article_right_list);
+        Tpl::output('page_sign','article_index');
         Tpl::showpage("article_index");
     }
     /**
@@ -75,7 +76,7 @@ class articleControl extends CMSHomeControl{
         foreach (array_keys($footer_article_class) as $value){
             $condition['article_class_id'].=$value.",";
         }
-        $condition['article_class_id']=array(" not in",rtrim( $condition['article_class_id'],","));
+        $condition['article_class_id']=array(" not in",rtrim( $condition['article_class_id'].",3",","));
         $article_list = $model_article->getList($condition, $page_number, 'article_sort asc, article_id desc');
         foreach($article_list as &$v){
             $v['article_publish_time']=date("Y/m/d",$v['article_publish_time']);
@@ -269,6 +270,40 @@ class articleControl extends CMSHomeControl{
         $article_type=$article_type?$article_type:1;
         Tpl::output("article_type",$article_type);
         Tpl::showpage('static_article');
+    }
+    /*
+     * 业务体系
+     */
+    function business_systemOp(){
+        Tpl::output('page_sign','business');
+        Tpl::showpage("business_system");
+    }
+    /*
+     * 企业文化
+     */
+    function enterprise_cultureOp(){
+        //管理理念,员工风采
+        $model_web_config = Model('web_config');
+        $condition['web_id']=array("in",array(150,101));
+        $code_list = $model_web_config->getCodeList($condition);
+        if(is_array($code_list) && !empty($code_list)) {
+            foreach ($code_list as $key => $val) {//将变量输出到页面
+                $var_name = $val['var_name'];
+                $code_info = $val['code_info'];
+                $code_type = $val['code_type'];
+                $val['code_info'] = $model_web_config->get_array($code_info,$code_type);
+                Tpl::output('code_'.$var_name,$val);
+            }
+        }
+        Tpl::output('page_sign','enterprise_culture');
+        Tpl::showpage("enterprise_culture");
+    }
+    /*
+     * 太常简介
+     */
+    function tc_introduceOp(){
+        Tpl::output('page_sign','tc_introduce');
+        Tpl::showpage("tc_introduce");
     }
     /*
      * 时间格式

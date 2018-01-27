@@ -1,6 +1,6 @@
 body, html {
     background: #ecf7f9;
-    background-image: url("../img/newslist_sxy/news_listbg.png");
+    background-image: url("../../img/newslist_sxy/news_listbg.png");
     /*background-size: cover;*/
 }
 /*banner图片开始*/
@@ -8,7 +8,6 @@ body, html {
     width: 100%;
     height: auto;
     overflow: hidden;
-    margin-top: 80px;
 }
 .banner img{
     width: 100%;
@@ -27,7 +26,7 @@ body, html {
 .company_vision{
     width: 100%;
     height: 762px;
-    background-image: url("../img/enterprise_culture_sxy/vision_bg_02.png");
+    background-image: url("../../img/enterprise_culture_sxy/vision_bg_02.png");
     background-size: cover;
 }
 .company_vision .vision_box{
@@ -50,7 +49,7 @@ body, html {
     margin-left: -103px;
     margin-top: 40px;
     padding: 60px 40px 70px 40px;
-    background-image: url("../img/enterprise_culture_sxy/vision_text_bg_03.png");
+    background-image: url("../../img/enterprise_culture_sxy/vision_text_bg_03.png");
 }
 .company_vision .vision_box .company_desc h1{
     font-size: 24px;
@@ -81,6 +80,9 @@ body, html {
     -webkit-line-clamp: 5;
     overflow: hidden;
     margin-top: 62px;
+}
+.company_vision .vision_box .company_desc p a{
+	color: #0d4159;
 }
 .vision_lb{
     width: 1200px;
@@ -213,7 +215,7 @@ body, html {
 .mission_list li .mission_title{
     width: 223px;
     height: 61px;
-    background-image: url("../img/enterprise_culture_sxy/mission_img_06.png");
+    background-image: url("../../img/enterprise_culture_sxy/mission_img_06.png");
 }
 .mission_list li .mission_title section{
     display: flex;
@@ -246,12 +248,15 @@ body, html {
     text-align: justify;
     margin-top: 50px;
 }
+.mission_list li p a {
+	color: #0d4159;
+}
 /*公司使命结束*/
 /*员工风采开始*/
 .staff_presence{
     width: 100%;
     height: 762px;
-    background-image: url('../img/enterprise_culture_sxy/vision_bg_02.png');
+    background-image: url('../../img/enterprise_culture_sxy/vision_bg_02.png');
     background-size: cover;
 }
 .staff_presence .staff_box{
@@ -265,7 +270,7 @@ body, html {
     height: 426px;
     background-color: #fff;
     padding: 60px 40px 70px 40px;
-    background-image: url('../img/enterprise_culture_sxy/vision_text_bg_03.png');
+    background-image: url('../../img/enterprise_culture_sxy/vision_text_bg_03.png');
     position: relative;
     left: 0;
     top: 40px;
@@ -298,6 +303,9 @@ body, html {
     -webkit-line-clamp: 5;
     overflow: hidden;
     margin-top: 62px;
+}
+.staff_presence .staff_box .staff_desc p a{
+	color: #0d4159;
 }
 .staff_presence .staff_box .staff_img{
     width: 705px;
@@ -412,7 +420,7 @@ body, html {
     border-left: 1px solid #fff;
     border-right: 1px solid #fff;
     padding-left: 17px;
-    background-image: url("../img/enterprise_culture_sxy/staff_03.png");
+    background-image: url("../../img/enterprise_culture_sxy/staff_03.png");
     background-size: cover;
 }
 .environment li:nth-child(3){
@@ -448,6 +456,9 @@ body, html {
     overflow: hidden;
     margin-top: 40px;
 }
+.environment li:nth-child(2) p a{
+	color: #0d4159;
+}
 .environment li:nth-child(3) img{
     width: 349px;
     height: 251px;
@@ -464,7 +475,7 @@ body, html {
     height: 316px;
     border-left: 1px solid #fff;
     padding-left: 26px;
-    background-image: url("../img/enterprise_culture_sxy/develop_bg_03.png");
+    background-image: url("../../img/enterprise_culture_sxy/develop_bg_03.png");
     background-size: cover;
 }
 .development li:nth-child(2){
@@ -515,6 +526,9 @@ body, html {
     height: 174px;
     overflow: hidden;
     margin-top: 40px;
+}
+.development li:nth-child(1) p a {
+	color: #0d4159;
 }
 .development  li:hover img{
     transform: scale(1.2);
