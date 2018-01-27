@@ -8,7 +8,7 @@
  * by 太常系统 www.sxtaichang.com
  */
 defined('InShopNC') or exit('Access Invalid!');
-class videoModel{
+class videoModel {
     /**
      * 列表
      *
@@ -62,6 +62,10 @@ class videoModel{
         if ($condition['video_id'] != ''){
             $condition_str .= " and video_id in (". $condition['video_id'] .")";
         }
+       if ($condition['video_ids'] != ''){
+            //if(is_array($condition['ac_ids']))$condition['ac_ids']	= implode(',',$condition['ac_ids']);
+            $condition_str .= " and video.video_id in(". $condition['video_ids'] .")";
+        }
         if ($condition['vd_id'] != ''){
             $condition_str .= " and video.vd_id = '". $condition['vd_id'] ."'";
         }
@@ -94,8 +98,30 @@ class videoModel{
             $param = array();
             $param['table'] = 'video';
             $param['field'] = 'video_id';
-            $param['value'] = intval($id);
+            $param["value"]=$id;
             $result = Db::getRow($param);
+            return $result;
+        }else {
+            return false;
+        }
+    }
+    /**
+     * 取单个内容2
+     *
+     * @param int $id ID
+     * @return array 数组类型的返回结果
+     */
+    public function getOneArticle1($id){
+        if (intval($id) > 0){
+            $param = array();
+            $param['table'] = 'video,video_class,upload';
+            $param['field'] = '*';
+            $param['join_type']="left join";
+            $param['join_on']=array('video.vd_id = video_class.vd_id',"video.video_id=upload.item_id");
+            $param['where'] = "video_id=".$id;
+            $result = Db::select($param);
+            $on = 'video.vd_id = video_class.vd_id';
+            // $reeult=Db::table("video,video_class")->field("*")->join('left')->on($on)->where($condition)->page($page)->order($order)->limit($limit)->select();
             return $result;
         }else {
             return false;
