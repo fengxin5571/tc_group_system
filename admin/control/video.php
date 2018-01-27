@@ -145,6 +145,7 @@ class videoControl extends SystemControl{
             if ($error != ''){
                 showMessage($error);
             }else {
+                
                 $insert_array = array();
                 $insert_array['video_title'] = trim($_POST['video_title']);
                 $insert_array['vd_id'] = intval($_POST['vd_id']);

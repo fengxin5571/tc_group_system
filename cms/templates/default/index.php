@@ -58,7 +58,7 @@ if(is_file($index_file)) {
                     <div class="news_text">
                         <h3>0<?php echo $key+1;?></h3>
                         <div class="news_cont">
-                            <a href=""><?php echo str_cut($article['article_title'],25)?></a>
+                            <a href="<?php echo urlCMS("article","article_detail",array('article_id'=>$article['article_id']))?>"><?php echo str_cut($article['article_title'],25)?></a>
                             <p><?php echo str_cut($article['article_abstract'],64)?></p>
                         </div>
                     </div>
