@@ -66,7 +66,7 @@
                             <div class="rank_title">
                                 <a href="<?php echo urlCMS("video","video_detail" ,array("video_id"=>$video_ranking['video_id']))?>"><?php echo $video_ranking['video_title']?></a>
                                 <div class="rank_author">
-                                    <p>作者：<span>示例</span></p>
+                                    <p>作者：<span><?php echo $video_ranking['video_author']?></span></p>
                                     <div class="play_time">
                                         <img src="<?php echo CMS_TEMPLATES_URL;?>/img/videolist_sxy/rank_03.png" alt="">
                                         <span><?php echo $video_ranking['video_count']?></span>
@@ -161,11 +161,7 @@
        	<?php }?>
        
     </section>
-    <!--分页-->
-     <!--分页-->
-    	<div class="pagination">
-            <?php echo $output['show_page'];?>
-        </div>
+    	
 </section>
 
 <script>

@@ -67,7 +67,7 @@ focus_adv_append += '<option value="'+ap_id+'">'+adv_info['ap_name']+'</option>'
   <div class="homepage-focus" id="homepageFocusTab">
     <ul class="tab-menu">
       <li class="current" form="upload_screen_form"><?php echo '视频大图推荐';?></li>
-      <li form="upload_focus_form"><?php echo '四张联动组图';?></li>
+      <li form="upload_focus_form"><?php echo '视频首页精品推荐下三个图';?></li>
     </ul>
     <form id="upload_screen_form" class="tab-content" name="upload_screen_form" enctype="multipart/form-data" method="post" action="index.php?act=web_api&op=screen_pic" target="upload_pic">
       <input type="hidden" name="form_submit" value="ok" />

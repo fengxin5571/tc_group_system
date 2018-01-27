@@ -45,21 +45,15 @@ class videoControl extends CMSHomeControl{
         $video_ranking=$video_model->getVideoList($condition);
         Tpl::output('video_ranking',$video_ranking);
         
-        /**
-         * 分页
-         * */
-        $page	= new Page();
-        $page->setEachNum(12);
-        $page->setStyle(7);
-        
         //获取视频分类
         $video_class_model	= Model('video_class');
-        $condition	= array();   
+        $condition	= array();  
         $video_class=$video_class_model->getClassList($condition);
   
         foreach($video_class as $class){
             $condition['vd_id']=$class['vd_id'];
-            $video_list["$class[vd_id]"]=$video_model->getVideoList($condition,$page);
+            $condition['order']="rand()";
+            $video_list["$class[vd_id]"]=$video_model->getVideoList($condition);
             if($video_list["$class[vd_id]"]){
                 foreach($video_list["$class[vd_id]"] as &$v){
                     $v['video_time']=date("Y/m/d",$v['video_time']);
@@ -76,7 +70,9 @@ class videoControl extends CMSHomeControl{
         }
         //查询全部视频
         $condition	= array();
-        $video_all=$video_model->getVideoList($condition,$page);
+        $condition['limit']=12;
+        $condition['order']="rand()";
+        $video_all=$video_model->getVideoList($condition);
         
         foreach($video_all as &$all){
             $all['video_time']=date("Y/m/d",$all['video_time']);
@@ -86,200 +82,13 @@ class videoControl extends CMSHomeControl{
             foreach ($file_name as $file){
                 $all['file_name']=UPLOAD_SITE_URL.'/'.ATTACH_ARTICLE.'/'.$file['file_name'];
             }
-        }
-        
-        Tpl::output('show_page',$page->show());
+        }        
         
         Tpl::output('video_all',$video_all);
-        
         Tpl::output('video_class',$video_class);
         Tpl::output('vd_id',$_GET['vd_id']);
         Tpl::output('video_list',$video_list);
         Tpl::showpage('video_list');
     }
 
-    /**
-     * 文章详情
-     */
-    public function article_detailOp() {
-        $article_id = intval($_GET['article_id']);
-        if($article_id <= 0) {
-            showMessage(Language::get('wrong_argument'),'','','error');
-        }
-
-        $model_article = Model('cms_article');
-        $article_detail = $model_article->getOne(array('article_id'=>$article_id));
-        if(empty($article_detail)) {
-            showMessage(Language::get('article_not_exist'), CMS_SITE_URL, '', 'error');
-        }
-
-        if(intval($article_detail['article_state']) !== self::ARTICLE_STATE_PUBLISHED) {
-            if($this->publisher_type !== self::ARTICLE_TYPE_ADMIN) {
-                if(empty($_SESSION['member_id']) || $_SESSION['member_id'] != $this->publisher_id) {
-                    showMessage(Language::get('article_not_exist'), CMS_SITE_URL, '', 'error');
-                }
-            }
-        }
-        /**
-         * 寻找上一篇与下一篇
-         */
-        $pre_article	=  $model_article->getOne(array('article_id'=>($article_id-1)));
-        $next_article   =  $model_article->getOne(array('article_id'=>($article_id+1)));
-        Tpl::output('pre_article', $pre_article);
-        Tpl::output('next_article', $next_article);
-
-        //相关文章
-        $article_link_list = $this->get_article_link_list($article_detail['article_link']);
-        foreach($article_link_list as &$link_list){
-            $link_list['article_image']=unserialize($link_list['article_image']);
-        }
-        Tpl::output('article_link_list', $article_link_list);
-
-        //相关商品
-        $article_goods_list = unserialize($article_detail['article_goods']);
-        Tpl::output('article_goods_list', $article_goods_list);
-       //作者发布文章数
-       $author_article_list=$model_article->getList(array('article_publisher_id'=>$article_detail['article_publisher_id']), null, 'article_sort asc, article_id desc');
-        Tpl::output("author_article_list",$author_article_list);
-        
-        //获取投稿文章用户资料
-        if($article_detail['article_type']==2){
-            $model_member = Model('member');
-            $member_info = $model_member->getMemberInfoByID($article_detail['article_publisher_id']);
-            $article_detail['member_info']=$member_info;
-            
-        }
-        //计数加1
-        $model_article->modify(array('article_click'=>array('exp','article_click+1')),array('article_id'=>$article_id));
-
-        //文章心情
-        $article_attitude_list = array();
-        $article_attitude_list[1] = Language::get('attitude1');
-        $article_attitude_list[2] = Language::get('attitude2');
-        $article_attitude_list[3] = Language::get('attitude3');
-        $article_attitude_list[4] = Language::get('attitude4');
-        $article_attitude_list[5] = Language::get('attitude5');
-        $article_attitude_list[6] = Language::get('attitude6');
-        Tpl::output('article_attitude_list', $article_attitude_list);
-
-        //分享
-        $this->get_share_app_list();
-        Tpl::output('article_detail', $article_detail);
-        Tpl::output('detail_object_id', $article_id);
-        $this->get_article_sidebar();
-
-        //seo
-        Tpl::output('seo_title', $article_detail['article_title']);
-
-        Tpl::showpage('article_detail');
-    }
-
-    /**
-     * 文章评论
-     */
-    public function article_comment_detailOp() {
-        $article_id = intval($_GET['article_id']);
-        if($article_id <= 0) {
-            showMessage(Language::get('wrong_argument'),'','','error');
-        }
-
-        $model_article = Model('cms_article');
-        $article_detail = $model_article->getOne(array('article_id'=>$article_id));
-        if(empty($article_detail)) {
-            showMessage(Language::get('article_not_exist'), CMS_SITE_URL, '', 'error');
-        }
-
-        if(intval($article_detail['article_state']) !== self::ARTICLE_STATE_PUBLISHED) {
-            if($this->publisher_type !== self::ARTICLE_TYPE_ADMIN) {
-                if(empty($_SESSION['member_id']) || $_SESSION['member_id'] != $this->publisher_id) {
-                    showMessage(Language::get('article_not_exist'), CMS_SITE_URL, '', 'error');
-                }
-            }
-        }
-
-        $article_hot_comment = $model_article->getList(array('article_state'=>self::ARTICLE_STATE_PUBLISHED), null, 'article_comment_count desc', '*', 10);
-        Tpl::output('hot_comment', $article_hot_comment);
-        Tpl::output('article_detail', $article_detail);
-        Tpl::output('detail_object_id', $article_id);
-        Tpl::output('comment_all', 'all');
-
-
-        //推荐文章
-        $this->get_article_comment();
-
-        Tpl::showpage('comment_detail');
-    }
-
-
-    /**
-     * 文章列表
-     */
-	public function article_searchOp() {
-        $condition = array();
-        $condition['article_title'] = array("like",'%'.trim($_GET['keyword']).'%');
-        $condition['article_state'] = self::ARTICLE_STATE_PUBLISHED;
-        $model_article = Model('cms_article');
-        $article_list = $model_article->getList($condition, 20, 'article_sort asc, article_id desc');
-        Tpl::output('show_page', $model_article->showpage(2));
-        Tpl::output('total_num', $model_article->gettotalnum());
-        Tpl::output('article_list', $article_list);
-        $this->get_article_sidebar();
-
-        Tpl::showpage('search_article');
-	}
-
-    /**
-     * 根据标签搜索
-     */
-	public function article_tag_searchOp() {
-        $article_list = array();
-        if(intval($_GET['tag_id']) > 0) {
-            $model_article = Model('cms_article');
-
-            $condition = array();
-            $condition['relation_tag_id'] = $_GET['tag_id'];
-            $condition['article_state'] = self::ARTICLE_STATE_PUBLISHED;
-            $article_list = $model_article->getListByTagID($condition, 20, 'article_sort asc, article_id desc');
-
-            Tpl::output('show_page', $model_article->showpage(2));
-            Tpl::output('total_num', $model_article->gettotalnum());
-        }
-
-        Tpl::output('article_list', $article_list);
-        $this->get_article_sidebar();
-
-        Tpl::showpage('search_article');
-    }
-
-    /**
-     * 文章侧栏
-     */
-    private function get_article_sidebar() {
-
-        $model_tag = Model('cms_tag');
-        $model_article = Model('cms_article');
-
-        //标签
-        $cms_tag_list = $model_tag->getList(TRUE, null, 'tag_sort asc', '', 10);
-        $cms_tag_list = array_under_reset($cms_tag_list, 'tag_id');
-        Tpl::output('cms_tag_list', $cms_tag_list);
-        //推荐文章(图文)
-        $condition = array();
-        $condition['article_commend_image_flag'] = 1;
-        $article_commend_image_list = $model_article->getList($condition, 5, 'article_id desc', '*', 3);
-        Tpl::output('article_commend_image_list', $article_commend_image_list);
-
-        //推荐文章
-        $this->get_article_comment();
-
-    }
-   /*
-    * 招商图片页面
-    */
-    function article_showOp(){
-        $article_type=$_REQUEST['article_type'];
-        $article_type=$article_type?$article_type:1;
-        Tpl::output("article_type",$article_type);
-        Tpl::showpage('static_article');
-    }
 }

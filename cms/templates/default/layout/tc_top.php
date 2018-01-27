@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>首页</title>
-	<link href="<?php echo CMS_TEMPLATES_URL;?>/css/layout.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="<?php echo CMS_TEMPLATES_URL;?>/css/cms/commonality.css">
     <link rel="stylesheet" href="<?php echo CMS_TEMPLATES_URL;?>/css/cms/tc_index_header.css">
     <link rel="stylesheet" href="<?php echo CMS_TEMPLATES_URL;?>/css/cms/swiper.min.css">

@@ -59,6 +59,9 @@ class videoModel{
         if ($condition['video_show'] != ''){
             $condition_str .= " and video.video_show = '". $condition['video_show'] ."'";
         }
+        if ($condition['video_id'] != ''){
+            $condition_str .= " and video_id in (". $condition['video_id'] .")";
+        }
         if ($condition['vd_id'] != ''){
             $condition_str .= " and video.vd_id = '". $condition['vd_id'] ."'";
         }

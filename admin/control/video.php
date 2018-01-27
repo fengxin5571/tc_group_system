@@ -145,7 +145,6 @@ class videoControl extends SystemControl{
             if ($error != ''){
                 showMessage($error);
             }else {
-    
                 $insert_array = array();
                 $insert_array['video_title'] = trim($_POST['video_title']);
                 $insert_array['vd_id'] = intval($_POST['vd_id']);
@@ -156,6 +155,8 @@ class videoControl extends SystemControl{
                 $insert_array['video_time'] = time();
                 $insert_array['video_recommend']= intval($_POST['video_recommend']);
                 $insert_array['video_ad_url'] = trim($_POST['video_ad_url']);
+                $insert_array['video_author'] = trim($_POST['video_author']);
+                $insert_array['video_link'] = trim($_POST['video_link']);//相关视频
                 $result = $model_article->add($insert_array);
                 if ($result){
                     /**
@@ -223,6 +224,7 @@ class videoControl extends SystemControl{
         Tpl::output('PHPSESSID',session_id());
         Tpl::output('vd_id',intval($_GET['vd_id']));
         TPl::output("special_list",$special_list);
+        Tpl::output('admin_info',$this->getAdminInfo());
         Tpl::output('parent_list',$parent_list);
         Tpl::output('file_upload',$file_upload);
         Tpl::showpage('video.add');
@@ -250,7 +252,6 @@ class videoControl extends SystemControl{
             if ($error != ''){
                 showMessage($error);
             }else {
-    
                 $update_array = array();
                 $update_array['video_id'] = intval($_POST['video_id']);
                 $update_array['video_title'] = trim($_POST['video_title']);
@@ -261,6 +262,8 @@ class videoControl extends SystemControl{
                 $update_array['video_content'] = trim($_POST['video_content']);
                 $update_array['video_ad_url'] = trim($_POST['video_ad_url']);
                 $update_array['video_recommend']=intval($_POST['video_recommend']);
+                $update_array['video_author']=trim($_POST['video_author']);
+                $update_array['video_link']=trim($_POST['video_link']);
                 
                 if(!empty($_POST['video_ad_url_old'])&&$_POST['video_ad_url']!=$_POST['video_ad_url_old']){//如果修改过视频，则删除原来的视频
                     @unlink(BASE_UPLOAD_PATH.DS.DS.'video'.DS.$_POST['video_ad_url_old']);
@@ -303,6 +306,12 @@ class videoControl extends SystemControl{
         $article_array = $model_article->getOneArticle(intval($_GET['video_id']));
         if (empty($article_array)){
             showMessage($lang['param_error']);
+        }
+        
+        //相关视频
+        if($article_array['video_link']){
+            $article_link_list = $this->_get_video_link_list($article_array['video_link']);
+            Tpl::output('video_link_list', $article_link_list);
         }
         /**
          * 文章类别模型实例化
@@ -532,6 +541,39 @@ class videoControl extends SystemControl{
         }
         // Return Success JSON-RPC response
         die('{"jsonrpc" : "2.0", "result" : '.$fileName.', "id" : "id"}');
+    }
+    
+    
+    /**
+     * 视频列表
+     */
+    public function video_listOp() {
+        //获取文章列表
+        $condition = array();
+        if($_GET['search_type'] == 'video_id') {
+            $condition['video_id'] = intval($_GET['search_keyword']);
+        } else {
+            $condition['video_title'] = array('like','%'.trim($_GET['search_keyword']).'%');
+        }
+    
+        $model_video = Model('video');
+        $video_list = $model_video->getVideoList($condition);
+        Tpl::output('video_list', $video_list);
+        Tpl::showpage('api_video_list','null_layout');
+    }
+    
+    /**
+     * 获取文章相关文章
+     */
+    private function _get_video_link_list($video_link) {
+        $video_link_list = array();
+        if(!empty($video_link)) {
+            $model_video = Model('video');
+            $condition = array();
+            $condition['video_id'] =$video_link;
+            $video_link_list = $model_video->getVideoList($condition);
+        }
+        return $video_link_list;
     }
 }
 ?>
