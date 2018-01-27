@@ -376,7 +376,6 @@ class web_apiControl extends SystemControl {
 			$code_type = $code['code_type'];
 			$var_name = $code['var_name'];
 			$code_info = $_POST[$var_name];
-
 			$key = intval($_POST['key']);
 			$slide_id = intval($_POST['slide_id']);
 			$pic_id = intval($_POST['pic_id']);
@@ -392,10 +391,11 @@ class web_apiControl extends SystemControl {
     			if (!empty($pic_name)) {
     				$pic_info['pic_img'] = $pic_name;
     			}
-
+    			
 			    $code_info[$slide_id]['pic_list'][$pic_id] = $pic_info;
 			    Tpl::output('pic',$pic_info);
 			}
+			
 			$code_info = $model_web_config->get_str($code_info,$code_type);
 			$model_web_config->updateCode(array('code_id'=> $code_id),array('code_info'=> $code_info));
 

@@ -154,7 +154,7 @@
                         <div class="history_img">
                             <img src="<?php echo CMS_TEMPLATES_URL;?>/img/company_info_sxy/history_img_06.png" alt="">
                         </div>
-                        <p>1、打造50家旗舰店+30家样板店、打造50名优秀店长,校企深度合作，助力学子圆梦。<br/>2、公司广告陆续登录各大卫视,食维健项目启动。<br/>3、独易网挂牌上市。</p>
+                        <p>1、打造50家旗舰店+30家样板店、打造50名优秀店长。<br/>2、校企深度合作，助力学子圆梦。</p>
                     </div>
                     <div class="history_time">2017年</div>
                 </li>
@@ -165,12 +165,12 @@
                         <p></p>
                     </div>
                     <div class="history_content">
-                        <p>示例文字示例文字示例文文字示例文文字示例文字示例文文文字示例文字示例文文字示例文字示例文字示例字示例文字字示例文字示例文字示例文字示例字示例文字示例文字示例文字示例</p>
+                        <p>3、公司广告陆续登录各大卫视。<br/>4、食维健项目启动。<br/>5、独易网挂牌上市。</p>
                         <div class="history_img">
                             <img src="<?php echo CMS_TEMPLATES_URL;?>/img/company_info_sxy/history_img_09.png" alt="">
                         </div>
                     </div>
-                    <div class="history_time">2015年</div>
+                    <div class="history_time">2017年</div>
                 </li>
                 <li>
                     <div class="coordinates">
@@ -179,9 +179,9 @@
                         <p></p>
                     </div>
                     <div class="history_content">
-                        <p>示例示例文文字示例文字示例示例示例文文字示例文字示例文示例示例文例文示例示例文文字示例例文示例示例文文字示例例文示例示例文文字示例例文示例示例文文字示例文字示例文字示例文示例示例文文字示例文字示例文文文文字示例文字示例文文字示例文字示例文字示例字示例文字字示例文字示例文字示例文字示例字示例文字示例文字示例文字示例</p>
+                        <p>1、健康新零售项目启动，【太常·独一张】正式跨入新零售！<br>2、【太常·独一张】评为2017-2018年度中国最最具口碑价值品牌<br>3、董事长张军芳女士荣膺2017-2018年度中国品牌创新年度风云人物</p>
                     </div>
-                    <div class="history_time">2015年</div>
+                    <div class="history_time">2018年</div>
                 </li>
             </ul>
         </div>

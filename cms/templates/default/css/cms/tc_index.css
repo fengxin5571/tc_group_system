@@ -90,7 +90,10 @@ body, html {
     margin-left: 117px;
 }
 .left_meet .tc_instro_img li:last-child a{
-    width: 22px;
+   
+}
+.tc_introduce{
+	 width: 22px;
     height: 22px;
     background: #55dfeb;
     text-align: center;
@@ -349,7 +352,8 @@ body, html {
     overflow: hidden;
 }
 .culture_box li:nth-child(1) .culture_text p,
-.culture_box li:nth-child(5) .culture_text p{
+.culture_box li:nth-child(5) .culture_text p
+{
     font-size: 16px;
     color: #fff;
     line-height: 30px;

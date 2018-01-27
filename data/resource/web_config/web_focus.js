@@ -503,6 +503,50 @@ function add_focus(add_type) {//增加
 		}
 	}
 }
+function add_focus1(add_type) {//增加
+	var text_type = '图片调用';
+	for (var i = 1; i <= focus_max; i++) {//防止数组下标重复
+		if (focus_obj.find("div[focus_id='"+i+"']").size()==0) {//编号不存在时添加
+			var add_html = '';
+			if(i==1){
+				text_type="独一张门店";
+			}else if(i==2){
+				text_type="独易网";
+			}else if(i==3){
+				text_type="食维健门店";
+			}
+			if(add_type == 'adv') {
+			    text_type = '广告调用';
+			}
+			add_html = '<div focus_id="'+i+'" class="focus-trigeminy-group" title="可上下拖拽更改显示顺序">'+text_type+
+			'<a class="del" href="JavaScript:del_focus('+i+');" title="删除">X</a><ul></ul></div>';
+			focus_obj.find("#btn_add_list").before(add_html);
+			for (var pic_id = 1; pic_id <= 7; pic_id++) {
+			    var text_append = '';
+			    text_append += '<li list="'+add_type+'" pic_id="'+pic_id+'" onclick="select_focus1('+i+',this);" title="可左右拖拽更改图片排列顺序">';
+				text_append += '<div class="focus-thumb">';
+			    text_append += '<img title="" src=""/>';
+				text_append += '</div>';
+        	    text_append += '<input name="focus_list['+i+'][pic_list]['+pic_id+'][pic_id]" value="'+pic_id+'" type="hidden">';
+        	    text_append += '<input name="focus_list['+i+'][pic_list]['+pic_id+'][pic_name]" value="" type="hidden">';
+        	    if(add_type == 'adv') {
+        	        text_append += '<input name="focus_list['+i+'][pic_list]['+pic_id+'][ap_id]" value="" type="hidden">';
+        	    } else {
+        	        text_append += '<input name="focus_list['+i+'][pic_list]['+pic_id+'][pic_url]" value="" type="hidden">';
+        	    }
+        	    text_append += '<input name="focus_list['+i+'][pic_list]['+pic_id+'][pic_img]" value="" type="hidden">';
+			    text_append += '</li>';
+			    focus_obj.find("div[focus_id='"+i+"'] ul").append(text_append);
+			    if(add_type == 'adv') {
+			        focus_obj.find("div[focus_id='"+i+"'] li[pic_id='"+pic_id+"']").trigger("click");
+			    }
+			}
+			focus_obj.find("div ul").sortable({ items: 'li' });
+			focus_obj.find("div[focus_id='"+i+"'] li[pic_id='1']").trigger("click");//默认选中第一个图片
+			break;
+		}
+	}
+}
 function select_focus(focus_id,pic) {//选中图片
     var obj = $(pic);
     var pic_id = obj.attr("pic_id");
@@ -532,6 +576,56 @@ function select_focus(focus_id,pic) {//选中图片
         focus_obj.find("textarea[name='focus_pic[pic_content]']").val(pic_content);
         focus_obj.find(".type-file-file").val('');
         focus_obj.find(".type-file-text").val('');
+        focus_upload_obj.show();
+    }
+}
+function select_focus1(focus_id,pic) {//业务体系选中图片
+    var obj = $(pic);
+    var pic_id = obj.attr("pic_id");
+    var list = obj.attr("list");
+    focus_obj.find("li").removeClass("selected");
+    focus_obj.find("input[name='key']").val(focus_id);
+    obj.addClass("selected");
+    if(list == 'adv') {
+        focus_upload_obj.hide();
+        var a_id = obj.find("input[name*='[ap_id]']").val();
+        if(a_id == '') {//未选择广告位时用默认的
+            $("#ap_id_focus").trigger("onchange");
+        } else {
+            $("#ap_id_focus").val(a_id);
+        }
+        focus_ap_obj.show();
+    } else {
+        focus_ap_obj.hide();
+        focus_upload_obj.find("#middle1").hide();
+    	focus_upload_obj.find("#middle2").hide();
+        var pic_name = obj.find("input[name*='[pic_name]']").val();
+        var pic_url = obj.find("input[name*='[pic_url]']").val();
+        var pic_txt=  obj.find("input[name*='[pic_txt]']").val();
+        focus_obj.find("input[name='slide_id']").val(focus_id);
+        focus_obj.find("input[name='pic_id']").val(pic_id);
+        focus_obj.find("input[name='focus_pic[pic_name]']").val(pic_name);
+        focus_obj.find("input[name='focus_pic[pic_url]']").val(pic_url);
+        focus_obj.find("textarea[name='focus_pic[pic_txt]']").val(pic_txt);
+        focus_obj.find(".type-file-file").val('');
+        focus_obj.find(".type-file-text").val('');
+        if(pic_id==1){
+        	focus_upload_obj.find(".prompt").html("为确保显示效果正确，请选择W:532px H:214px的清晰图片作为联动广告图组单图。");
+        }else if(pic_id==2){
+        	focus_upload_obj.find(".prompt").html("为确保显示效果正确，请选择W:354px H:214px的清晰图片作为联动广告图组单图。");
+        }else if(pic_id==3){
+        	focus_upload_obj.find(".prompt").html("为确保显示效果正确，请选择W:306px H:405px的清晰图片作为联动广告图组单图。");
+        }else if(pic_id==4){
+        	focus_upload_obj.find("#middle1").show();
+        	focus_upload_obj.find("#middle2").show();
+        	focus_upload_obj.find(".prompt").html("为确保显示效果正确，请选择W:341px H:446px的清晰图片作为联动广告图组单图。");
+        }else if(pic_id==5){
+        	focus_upload_obj.find(".prompt").html("为确保显示效果正确，请选择W:341px H:207px的清晰图片作为联动广告图组单图。");
+        }else if(pic_id==6){
+        	focus_upload_obj.find(".prompt").html("为确保显示效果正确，请选择W:545px H:207px的清晰图片作为联动广告图组单图。");
+        }else if(pic_id==7){
+        	focus_upload_obj.find(".prompt").html("为确保显示效果正确，请选择W:306px H:463px的清晰图片作为联动广告图组单图。");
+        }
         focus_upload_obj.show();
     }
 }
