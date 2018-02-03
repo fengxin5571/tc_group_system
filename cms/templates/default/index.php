@@ -78,6 +78,20 @@ if(is_file($index_file)) {
 </div>
 <!--初识太常结束-->
 <!--企业文化开始-->
+<div class="company_culture">
+    <div class="tc_title_img">
+        <img src="<?php echo CMS_TEMPLATES_URL ?>/img/tc_index/tc_index_title_11.png" alt="">
+    </div>
+    <div class="culture_box">
+       <?php echo loadadv(59);?>
+    </div>
+    <div class="view_more">
+        <a href="<?php echo urlCMS("article","enterprise_culture")?>"><img src="<?php echo CMS_TEMPLATES_URL ?>/img/tc_index/more_03.png" alt=""></a>
+    </div>
+    <div class="cgyjc" style="margin-top: 16px">
+        <img src="<?php echo CMS_TEMPLATES_URL ?>/img/tc_index/tc_index_title_07.png" alt="">
+    </div>
+</div>
 <!--企业文化结束-->
 
 <!--业务体系开始-->  

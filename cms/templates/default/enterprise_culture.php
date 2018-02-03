@@ -37,12 +37,12 @@
             <div class="vision_lb_box">
                 <ul class="vision_img_list">
                     <?php foreach ($output['code_index_screen_list']['code_info'] as $value) {?>
-                         <a href="<?php echo $value['pic_url']?>" title="<?php echo $value['pic_name']?>">
+                      
                             <li>
                                 <img src="<?php echo UPLOAD_SITE_URL.DS.$value['pic_img'];?>" alt="" >
                                 <div class="vision_mask"></div>
                             </li>
-                        </a>
+                        
                     <?php }?>
                 </ul>
             </div>
@@ -115,12 +115,10 @@
             <div class="staff_lb_box">
                 <ul class="staff_img_list">
                    <?php foreach ($output["code_screen_list"]['code_info'] as $value) {?>
-                       <a href="<?php echo $value['pic_url']?>" title="<?php echo $value['pic_name']?>">
                             <li>
                                 <img src="<?php echo UPLOAD_SITE_URL.DS.$value['pic_img'];?>" alt="" >
                                 <div class="staff_mask"></div>
                             </li>
-                       </a>
                    <?php }?>
                 </ul>
             </div>

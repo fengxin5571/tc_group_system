@@ -22,15 +22,15 @@
             </div>
             <ul class="video_list">
                 <li>
-                    <a href="<?php echo $output['code_screen_list']['code_info']['1']['pic_url']?>"><img src="<?php echo UPLOAD_SITE_URL.'/'.$output['code_screen_list']['code_info']['1']['pic_img'];?>" alt=""></a>
+                    <a href="<?php echo $output['code_screen_list']['code_info']['1']['pic_url']?>"><img src="<?php echo UPLOAD_SITE_URL.'/'.$output['code_screen_list']['code_info']['1']['pic_img'];?>" alt="" width="534" height="303"></a>
                    <p class="video_Title"><?php echo str_cut($output['code_screen_list']['code_info']['1']['pic_name'], 12)?></p>
                 </li>
                 <li>
-                    <a href="<?php echo $output['code_screen_list']['code_info']['2']['pic_url']?>"><img src="<?php echo UPLOAD_SITE_URL.'/'.$output['code_screen_list']['code_info']['2']['pic_img'];?>" alt=""></a>
+                    <a href="<?php echo $output['code_screen_list']['code_info']['2']['pic_url']?>"><img src="<?php echo UPLOAD_SITE_URL.'/'.$output['code_screen_list']['code_info']['2']['pic_img'];?>" alt="" width="262" height="149"></a>
                     <p class="video_Title"><?php echo str_cut($output['code_screen_list']['code_info']['2']['pic_name'], 12)?></p>
                 </li>
                 <li>
-                    <a href="<?php echo $output['code_screen_list']['code_info']['3']['pic_url']?>"><img src="<?php echo UPLOAD_SITE_URL.'/'.$output['code_screen_list']['code_info']['3']['pic_img'];?>" alt=""></a>
+                    <a href="<?php echo $output['code_screen_list']['code_info']['3']['pic_url']?>"><img src="<?php echo UPLOAD_SITE_URL.'/'.$output['code_screen_list']['code_info']['3']['pic_img'];?>" alt="" width="262" height="149"></a>
                     <p class="video_Title"><?php echo str_cut($output['code_screen_list']['code_info']['3']['pic_name'], 12)?></p>
                 </li>
             </ul>

@@ -247,150 +247,15 @@ body, html {
 /*企业文化开始*/
 .culture_box{
     width: 100%;
+    height: auto;
+    overflow: hidden;
     margin-top: 36px;
-    display: grid;
-    grid-template-columns: 34.375% 0 31.25% 0 34.375%;
-    grid-template-rows: auto 0 auto;
 }
-.culture_box li:first-child{
-    grid-column: 1/ 2;
-    grid-row: 1 / 2;
-}
-.culture_box li img{
-    transform: scale(1);
-    transition: all 1.5s ease 0s;
-}
-.culture_box li:hover img{
-    transform: scale(1.2);
-    transition: all 1.5s ease 0s;
-}
-.culture_box li:nth-child(2){
-     grid-column: 3/ 4;
-     grid-row: 1 / 4;
-    background-color: #000000;
-}
-.culture_box li:nth-child(3){
-     grid-column: 5/ 6;
-     grid-row: 1 / 2;
-}
-.culture_box li:nth-child(4){
-    grid-column: 1/ 2;
-    grid-row: 3 / 4;
-}
-.culture_box li:nth-child(5){
-    grid-column: 5/ 6;
-    grid-row: 3 / 4;
-}
-.culture_box li .culture_img img{
+.culture_box img{
     display: block;
     width: 100%;
 }
-.culture_box li:nth-child(1) .culture_text,.culture_box li:nth-child(3) .culture_text{
-     width: 34%;
-     height: 100%;
-     float: left;
- }
-.culture_box li:nth-child(1) .culture_img,.culture_box li:nth-child(3) .culture_img{
-    width: 66%;
-    height: 100%;
-    float: right;
-    overflow: hidden;
-}
-.culture_box li:nth-child(4) .culture_text,.culture_box li:nth-child(5) .culture_text{
-    width: 34%;
-    height: 100%;
-    background-color: #4badda;
-    float: right;
-}
-.culture_box li:nth-child(4) .culture_img,.culture_box li:nth-child(5) .culture_img{
-    width: 66%;
-    height: 100%;
-    float: left;
-    overflow: hidden;
-}
-.culture_box li:nth-child(2) .culture_text{
-    width: 27.8%;
-    height: 100%;
-    background-color: #4badda;
-    float: right;
-}
-.culture_box li:nth-child(2) .culture_img{
-    width: 72.2%;
-    height: 100%;
-    float: left;
-    overflow: hidden;
-}
-.culture_box li:nth-child(1) .culture_text,.culture_box li:nth-child(5) .culture_text{
-    background-color: #4badda;
-}
-.culture_box li:nth-child(2) .culture_text{
-     background-color: #b8e0f9;
-}
-.culture_box li:nth-child(3) .culture_text{
-    background-color: #97cced;
-}
-.culture_box li:nth-child(4) .culture_text{
-    background-color: #a3d4eb;
-}
-.culture_box li:nth-child(1) .culture_text,
-.culture_box li:nth-child(3) .culture_text,
-.culture_box li:nth-child(4) .culture_text,
-.culture_box li:nth-child(5) .culture_text{
-    padding: 5% 3%;
-    overflow: hidden;
-}
-.culture_box li:nth-child(2) .culture_text{
-    padding: 15% 3% 7% 3%;
-    overflow: hidden;
-}
-.culture_box li:nth-child(1) .culture_text h1,
-.culture_box li:nth-child(5) .culture_text h1{
-    font-size: 18px;
-    color: #fff;
-    margin-bottom: 7%;
-    white-space: nowrap;
-    overflow: hidden;
-}
-.culture_box li:nth-child(1) .culture_text p,
-.culture_box li:nth-child(5) .culture_text p
-{
-    font-size: 16px;
-    color: #fff;
-    line-height: 30px;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 4;
-}
-.culture_box li:nth-child(5) .culture_text p a {
-	color: #fff;
-}
-.culture_box li:nth-child(3) .culture_text h1,
-.culture_box li:nth-child(4) .culture_text h1,
-.culture_box li:nth-child(2) .culture_text h1{
-    font-size: 18px;
-    color: #063a3e;
-    margin-bottom: 7%;
-    white-space: nowrap;
-    overflow: hidden;
-}
-.culture_box li:nth-child(3) .culture_text p,
-.culture_box li:nth-child(4) .culture_text p,
-.culture_box li:nth-child(2) .culture_text p{
-    font-size: 16px;
-    line-height: 30px;
-    color: #292929;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 4;
-}
-.culture_box li:nth-child(2) .culture_text p{
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 8;
-}
+
 .view_more{
     width: 100%;
     display: flex;
